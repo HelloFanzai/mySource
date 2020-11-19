@@ -1,0 +1,40 @@
+import React, {Component, createRef} from 'react';
+
+class App extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            checked : true,
+            valueNumber:9
+        }
+        this.ref = createRef();
+
+    }
+
+    render() {
+        return (
+            <React.Fragment>
+                <div>
+
+                    <button onClick={(e)=>{this.buttonHandler(e)}}>click</button>
+                    {this.state.checked === true ?
+                        <input type="text"
+                               onChange={(e)=> this.inputHandler(e)}
+                               value={this.state.valueNumber}/>:
+                        <div></div>}
+                </div>
+            </React.Fragment>
+        );
+    }
+    inputHandler(e){
+        this.setState({valueNumber:e.target.value})
+
+    }
+
+    buttonHandler(e) {
+        e.target.value = '';
+        this.setState({valueNumber:''})
+    }
+}
+
+export default App

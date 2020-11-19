@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //break 关键词用来退出一个 switch 和 循环语句 
+        // 单独的if 语句中不可以使用 brake 和 continue
+        // break 关键字会终止最近的循环语句
+
+        /* 可以为循环语句创建一个 label 来标识当前的循环
+              语法：
+              label:循环语句
+                    
+             使用break可以结束指定循环，而不是最近循环
+        */
+        theLoopOne:
+        for (let i = 0; i < 5; i++) {
+            document.write(' 外部' + i);
+            for (let j = 0; j < 5; j++) {
+                document.write(' 内部' + j);
+                if (i == 3) {
+                    break theLoopOne
+                }
+            }
+            document.write('<br>')
+        }
+        document.write('<br>')
+
+        /*
+            continue 关键字用来跳过当次循环
+            continue 默认只会跳出离它最近的循环
+        */
+       theLable:
+        for (let i = 0; i < 5; i++) {
+            for (let j = 0; j < 5; j++) {
+                if ( j == 1 ) {
+                    continue theLable
+                }
+                document.write('==>'+j)
+            }
+            document.write('@==>'+i+'<br>')
+        }
+
+        // let theCount = 0;
+        // theLoopOne:
+        // for (var i = 2; i <= 100; i++) {
+        //     for (var j = 2; j < i / 2; j++) {
+        //         if (i % j == 0) {
+        //             continue theLoopOne   //跳出j循环继续i循环
+        //         }
+        //     }
+        //     // console.log( 'the j is ', j );
+        //     if (j > i / 2) {
+        //         console.log(i, ++theCount);
+        //     }
+        // }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

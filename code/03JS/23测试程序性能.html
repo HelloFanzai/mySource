@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //测试如下的程序的性能
+        //在程序执行前，开启计时器
+        // console.time('计时器的名字') 用来开启一个计时器
+        // 它需要一个字符串作为参数，这个字符串将会作为计时器的标识
+
+        console.time('theTimer')
+
+        let theCount = 0;
+        theLoopOne:
+        for (var i = 2; i <= 10000; i++) {
+            for (var j = 2; j < i/2 ; j++) {
+                if (i % j == 0) {
+                    continue theLoopOne   //跳出j循环继续i循环
+                    //👆注释这句话查看性能差距
+                }
+            }
+            // console.log( 'the j is ', j );
+            if (j > i / 2) {
+                console.log(i, ++theCount);
+            }
+        }
+
+        //终止计时器
+        console.timeEnd('theTimer')
+
+
+        
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function theAddFn(params) {
+            let theResult = document.getElementById('theValue')
+            theResult.value = parseInt(theResult.value)+1
+        }
+        function theSubFn(params) {
+            let theResult = document.getElementById('theValue')
+            theResult.value=parseInt(theResult.value)-1
+        }
+    </script>
+</head>
+<body>
+    <button id="the++" onclick="theAddFn()" >"++"</button>
+    <input id="theValue" type="text" value='0' >
+    <button id="the--" onclick="theSubFn()" >"--"</button>
+</body>
+</html>

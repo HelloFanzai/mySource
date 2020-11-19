@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var a = 123;
+        /*
+        js中 16进制，需要用 0x 开头表示
+            8进制，需要用 0 开头表示
+            2进制，需要用 0b 开头表示,一些浏览器可能不支持
+        */
+        //16进制
+        a = 0x10; //16 
+        a = 0xff; //255 
+
+        //8进制
+        a = 070; //56
+
+        //2进制
+        a = 0b10;
+        //使用 直接用 parseInt() 转换，会因浏览器的不同被作为8进制或10进制
+        a = '070';
+        a = parseInt(a,10); //10进制
+        console.log(a);
+
+        a = parseInt(a,8); //8进制
+        console.log(a);
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

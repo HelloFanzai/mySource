@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        /*
+            自增 ++
+                对变量自身 +1，立刻操作
+                分为 后++:  a++  和前++: ++a
+                    两者都会立即使原变量+1
+                        不同的是 a++ 和 ++a的值不同
+                    a++ 的值等于 原值 a
+                    ++a 的值等于增值后的新值 a+1
+
+            自减 --
+                对变量自身基础 -1，立刻操作
+                分为 后--：a-- 和 前--：--a
+                    两者都会立即使原变量-1
+                        不同的是 a-- 和 --a的值不同
+                    a-- 的值等于 原值 a
+                    --a 的值等于增值后的新值 a+1
+        */
+        var a = 1;
+        console.log(a++); //此时 a++ 的输出值是 1
+        console.log("a=:"+a);
+        a = 1;
+        console.log(++a); //此时 ++a 的输出值是 2
+        console.log("a=:"+a);
+
+        var a = 10;
+        console.log(a--); //此时 a++ 的输出值是 10
+        console.log("a=:"+a);
+        a = 10;
+        console.log(--a); //此时 ++a 的输出值是 9
+        console.log("a=:"+a);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

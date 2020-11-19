@@ -1,0 +1,34 @@
+import React,{Component} from "react";
+import "./styles.css";
+
+export default class App extends Component {
+  constructor(props){
+    super(props);
+    this.state={
+      value:false
+    }
+  }
+  handleclick=()=>{
+    if(this.state.value){
+      this.setState({value:false});
+    }
+    else{
+      this.setState({value:true});
+    }
+  }
+  render(){
+    if(this.state.value){
+      return(
+        <div>
+          <h1>Hello</h1>
+          <button onClick={this.handleclick}>Click to hide</button>
+        </div>
+      )
+    }else
+    return(
+      <div>
+        <button onClick={this.handleclick}>Click to hide</button>
+      </div>
+    )
+  }
+}

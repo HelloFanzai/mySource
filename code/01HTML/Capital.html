@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function theChangeFn() {
+            let theString = document.getElementById('theString').value
+            console.log( theString );
+            document.getElementById('theString').value=theString[0].toUpperCase()+theString.slice(1)
+            // console.log( theString[0].toUpperCase() );
+        }
+    </script>
+
+</head>
+<body>
+    <p>ddd</p>
+    <input id="theString" type="text" value="wocao" >
+    <button onclick="theChangeFn()" >Change</button>
+</body>
+</html>

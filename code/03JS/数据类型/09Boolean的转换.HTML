@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var a =123; //true
+        a = -123; //true
+        a = 0; //false
+        a = NaN; //false
+        /*
+        用 Boolean() 函数，把其他数据转换为 Boolean
+            -数字转换Boolean，除了 0 和 NaN，其余都是true
+            
+            -字符串转换Boolean，除了 空串，其余都是true
+            
+            -null 和 undefined 转换Boolean，是true
+
+            -object 转换为 Boolean 会是 true
+
+
+        */
+        a = Boolean(a);
+        console.log(typeof a);
+        console.log(a);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

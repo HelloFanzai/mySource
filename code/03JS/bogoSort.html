@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Bogosort(arr){
+            var times = 0;
+
+            var isSorted = function(arr){
+                for(var i = 1; i < arr.length; i++){
+                    if (arr[i-1] > arr[i]) {
+                        return false;
+                    }
+                }
+                return true;
+            };
+
+            function trySort(arr){
+                let copyArr = arr;
+                let resultArr = new Array;
+                let length = arr.length;
+                for (let i = 0; i < length; i++) {
+                    resultArr[i]= +copyArr.splice( Math.floor( Math.random() * copyArr.length ),1 );
+
+                    // console.log(`random: ${random},此时arr[${random}]=${copyArr[random]} 此时i=${i},并且copyArr.length=${copyArr.length}`);                    
+                }   
+                times++;
+                
+                console.log(`试了 ${times} 次,新数组目前是:${resultArr}`);
+                return resultArr;   
+            }
+
+            function doSort(arr){
+                let sorted = false;
+                while(!sorted){
+                    arr = trySort(arr);
+                    sorted = isSorted(arr);                    
+                }
+                return arr;
+            }
+
+            return doSort(arr);
+        }
+
+        var arra = [-10,3,66,42,-1,55,77,10]; 
+             
+        console.log(`Original Array is ${arra}`); 
+        console.log(`bogoSorted Array is：${Bogosort(arra)}`);
+            
+    </script>
+</head>
+<body style="background-color: pink;">
+    
+</body>
+</html>

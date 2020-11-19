@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        通过程序，输出如下图形：
+        *
+        **
+        ***
+        ****
+        *****
+
+        *****
+        *****
+        *****
+        *****
+
+        */
+        //    向body中输出一个内容
+        document.write('*** <br>')
+
+        // 通过for循环输出图形
+        for (let i = 0; i < 5; i++) {
+            //循环内部继续循环 
+            for (let j = 0; j <= i; j++) {
+                document.write('*')
+
+            }
+            document.write('<br>')
+        }
+
+        // 倒叙输出
+        for (let i = 0; i < 5; i++) {
+            //循环内部继续循环 
+
+            // for (let j = 5; j > i; j--) {
+            for (let j = 0; j < 5 - i; j++) {
+                document.write('@')
+
+            }
+            document.write('<br>')
+        }
+
+        // 打印99乘法表
+        document.write('<br>')
+        document.write('打印99乘法表')
+        for (let i = 1; i <= 9; i++) {
+            for (let j = 1; j <= i; j++) {
+                document.write(`<span> ${j}*${i}=${i * j}  </span>`)
+            }
+            document.write('<br>')
+        }
+
+        // 打印出1~100的所有质数
+        document.write('<br>')
+        document.write('打印出1~100的所有质数<br>')
+        for (let i = 2; i <= 100; i++) {
+
+            //判断i是否是质数
+            // 获取1-i之间的所有数
+            let theSwitch = true;
+            for (let j = 2; j < i / 2; j++) {
+
+                if ((i % j) == 0) {
+                    theSwitch = false
+                }
+
+            }
+            if (theSwitch) {
+                document.write(i, ' yes')
+                document.writeln('<br>')
+
+                //writeln 只是在字符串后面添加上“\r\n”，它并不会在网页显示的时候换行，只是输出的源代码换行而已
+            }
+        }
+
+        // // 100的它的因数肯定不会超过他自身的一半
+        // for (var i = 2; i <= 100; i++) {
+        //     for (var j = 2; j < i / 2; j++) {
+        //         if (i % j == 0) {
+        //             break;  //跳出j循环继续i循环
+        //         }
+        //     }
+        //     console.log('the j is ', j);
+        //     if (j > i / 2) {
+        //         console.log(i);
+        //     }
+        // }
+
+    </script>
+    <style>
+        body {
+            width: 2000px;
+        }
+
+        span {
+            display: inline-block;
+            width: 4rem;
+        }
+    </style>
+</head>
+
+<body>
+    yes
+</body>
+
+</html>

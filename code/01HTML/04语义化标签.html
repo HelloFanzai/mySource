@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        在网页中 html 负责网页的结构
+        所以在使用HTML标签是，应该关注的是标签的语义，而不是样式
+
+        标题标签：h1~h6 一共有6级标签
+            从重要性，递减，h1最重要，h6最不重要
+            h1在网页中的重要性，仅次于title，一般只有一个h1
+            一般情况下标签只会使用h1~h3，h4~h6很少用
+            标题标签都是块元素
+        在页面中独占一行的元素叫块元素(block element)
+            
+    -->
+    <h1>h1</h1>
+    <h2>h2</h2>
+    <h3>h3</h3>
+    <h4>h4</h4>
+    <h5>h5</h5>
+    <h6>h6</h6>
+
+    <hgroup>
+        <h1>h1</h1>
+        <h2>h2</h2>
+        <h2>h2</h2>
+    </hgroup>
+
+    <!-- 
+        p标签表示页面中的一个段落，也是一个块元素
+     -->
+     <p>这里表示一个段落 Paragraph </p>
+
+     <p>a <em>good</em> day</p>
+     <!-- 
+         em表示强调，显示斜体
+         不会独占一行，被成为行内元素(inline element)
+      -->
+
+      <p>must have a <strong>job</strong></p>
+       <!-- 
+         em表示强调，显示加粗
+         不会独占一行，被成为行内元素(inline element)
+      -->
+
+      鲁迅说：
+      <blockquote>
+          <!-- 长引用 -->
+          我没说过这句话！
+      </blockquote>
+
+      孔子说：
+      <q>  
+          <!-- 短引用 -->
+          我也不清楚
+      </q>
+
+      <br>
+      <!-- br表示换行 -->
+</body>
+</html>

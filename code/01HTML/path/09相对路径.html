@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        当需要跳转刀服务器或项目内部的页面时，一般会使用相对路径
+            相对路径都会使用 . 或者 .. 开头
+             ./
+             ../
+            ./可以省略不写，若不写？./ 或 ..// 则相当于写了 ./
+
+            ./表示当前文件所在目录
+                -这个文件，是09相对路径.html
+                - ./等于 09相对路径.html所在的目录：path
+            ../表示当前文件所在目录的上一级目录
+
+     -->
+    <a href="./t1.html">hyperlink</a>
+    <br>
+    <a href="../07列表.html">hyperlink2</a>
+    <br>
+    <a href="./inner/t2.HTML">link3</a>
+    <br>
+    <a href="../path/outer/t3.html">link3</a>
+    <br>
+</body>
+</html>

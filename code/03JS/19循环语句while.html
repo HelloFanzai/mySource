@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        /*
+        循环语句：
+            通过循环语句可以反复的执行一段代码多次
+
+        while 循环
+            语法：
+            while(条件表达式)
+            {
+                语句
+            }
+
+            while语句，先对表达式判断，再执行语句
+                若为true则继续循环，直至条件为false终止循环
+
+            判断语句一直为true的循环叫死循环，慎用
+            可用break来终止循环
+
+        do...while 循环
+            语法：
+            do
+            {
+                语句
+            }while(条件表达式)
+            执行流程:先执行语句，再进行条件表达式判断
+                可以保证至少执行一次
+        */
+
+        document.write(1123+"<br>");//向页面输出
+        
+
+        var n1 = 1;
+        while(n1<=10)
+        {
+            // console.log(n1);
+            n1=n1+1
+            document.write(n1);
+            n1++;
+        }
+
+        var n2 = 1;
+        do
+        {
+            // console.log(n2);
+            // document.write(n2+2);
+
+        }while(n2<=10)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

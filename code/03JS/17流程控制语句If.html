@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* 流程控制语句
+            -通过流程控制语句可控制程序执行的流程
+
+            语句分类：
+            1. 条件判断语句
+            2. 条件分支语句
+            3. 循环语句
+
+            条件判断语句：
+            -使用条件判断语句可以在执行某个语句之前进行判断
+                如条件成立则执行，条件不成立则不执行
+            - if 语句
+            -语法一：
+                if(表达式)
+                {
+                    语句
+                }
+                先判断 表达式，若true则执行，否则不执行
+                    只能控制紧随其后的语句或代码块
+            
+            -语法二：
+                if(表达式)
+                {
+                    语句
+                }
+                else
+                {
+                    语句
+                }
+                先求值判断if后的表达式，
+                    若true执行if后的语句
+                    若false执行else后的语句
+        */
+        if(true) alert("haha");
+
+        if(true)
+        {
+            alert("heihei")
+        }
+        else
+        {console.log("haha")}
+
+        /*
+
+            -语法三：
+                if(条件表达式)
+                {
+                    语句
+
+                }else if(条件表达式)
+                        {
+                            语句
+                        }else if(条件表达式)
+                                {
+                                    语句
+                                }
+                                else
+                                    {
+                                        语句
+                                    }
+            if..else if...else
+            多重if嵌套，顺序是 一个一个向下判断
+            若执行一个条件表达式后的语句，则结束代码块其他下部语句不执行
+        */
+        var a=prompt("input ~");
+        //prompt 返回值是string
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

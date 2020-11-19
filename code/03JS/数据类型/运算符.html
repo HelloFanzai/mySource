@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        运算符也叫操作符
+            通过运算对一个或多个值进行运算
+            例如：typeof 就是运算符，可以获得一个值的类型,返回值是字符串
+
+        算数运算符
+            --对非Number值运算，会先转换为Number再运算
+                有非数字会转为NaN，
+            --任何值和 NaN 做运算还是 NaN
+            +   对两个值加法运算,并将结果返回
+                --字符串相加，会做拼串操作
+                --任何值和String相加，会做拼串，
+                    
+                -   对两个值减法运算,并将结果返回
+                    --对非Number值运算，会先转换为Number再运算
+
+                *   对两个值乘法运算,并将结果返回
+                    --对非Number值运算，会先转换为Number再运算
+
+                /   对两个值除法运算,并将结果返回
+                    --对非Number值运算，会先转换为Number再运算
+                
+                可以用 -0， *1，/1，把数值转换为Number
+                    
+            % 取模/取余预算
+        */
+        var a = 123;
+        var result = typeof a;
+        result = true + false; //返回 1
+        a = a + ""; //数值和空串相加，可以把a转换为String
+
+        console.log(a);
+        console.log(result);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

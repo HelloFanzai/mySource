@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+    </script>
+</head>
+<body style="background-color: pink;" onclick="jisuan()" >
+    <form action="">
+        <input type="button" value="计算"><br>
+        <output id="output0" ></output>
+    </form>
+
+    <script>
+        function jisuan(){
+            var totalM=0;
+            var money='';
+            for (let day = 1; day <= 30; day++) {
+                totalM += Math.pow(2,day-1);
+                console.log(Math.log2(1296)/Math.log2(6));
+                
+                
+                money += `<br>day ${day}=${Math.pow(2,day-1)/100}元，总共是${totalM/100}元` ;
+            }
+            document.getElementById('output0').innerHTML=money;  
+            
+        }
+    </script>
+</body>
+</html>

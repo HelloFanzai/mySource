@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+            条件运算符也叫 三元运算符
+            语法：
+                条件表达式?语句1:语句2;
+            -执行流程：
+                条件运算符在执行时，先对表达式进行求值
+                    若为true 则执行语句1，并返回执行结果
+                    若为false 则执行语句2，并返回执行结果
+        */
+        var a = 30;
+        var b = 220;
+        // a>b?alert("a>b"):alert("a<b");
+        var c = 145;
+        var max = a > b ? a : b;
+        max = max>c?max:c;
+        console.log(max);
+
+        max = a > b ? (a > c ? a : c) : (b > c ? b : c);
+        // 不方便阅读
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

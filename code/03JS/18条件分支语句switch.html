@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*  条件分支语句也叫 switch语句
+            语法：
+                switch(条件表达式)
+                {
+                    case 表达式:
+                                语句
+                                break;
+                    case 表达式:
+                                语句
+                                break;
+                    case 表达式:
+                                语句
+                                break;
+                    case 表达式:
+                                语句
+                                break;
+                    default:
+                            语句
+                            break;
+                }
+
+                执行流程，switch case 会在执行时会
+                    从上到下依次将 case 后的值和 switch 后的条件表达式的值进行全等 === 比较
+                    若比较结果为 true 则从当前case 处开始执行代码
+                        若没break，则下部代码全执行
+                    若比较结果为 false ，则继续向下比较
+                    若所有比较结果都为false, 则执行default后的语句
+
+        */
+
+        var n1 =1;
+        switch(n1)
+        {
+            case 1:
+                    console.log("1");
+                    break;
+            case 2:
+                    console.log("2");
+                    break;
+            case 3:
+                    console.log("3");
+                    break;
+            default:
+                    console.log("?");
+                    break;
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

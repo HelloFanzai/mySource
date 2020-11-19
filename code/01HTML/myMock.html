@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function myAdd() {
+            let theResul = document.getElementById('theInput').value
+            document.getElementById('theInput').value = parseInt(theResul)+100
+            console.log( theResul );
+        }
+        function mySub() {
+            let theResul = document.getElementById('theInput').value
+            document.getElementById('theInput').value = parseInt(theResul)-100
+            console.log( theResul );
+        }
+
+    </script>
+</head>
+<body>
+    <input id="theInput" type="text" value="0">
+    <!-- <p id="theInput" >0</p> -->
+    <button onclick="myAdd()" >Add</button>
+    <button onclick="mySub()" >Sub</button>
+</body>
+</html>

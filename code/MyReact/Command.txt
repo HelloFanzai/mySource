@@ -1,0 +1,10 @@
+npx create-react-app mylist
+cd mylist
+npm start
+
+npm install --save radium
+
+
+
+
+npm install redux react-redux --save

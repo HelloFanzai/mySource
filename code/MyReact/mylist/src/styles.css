@@ -1,0 +1,12 @@
+div{
+    text-align: center;
+}
+.Person{
+    display: block;
+    /* position: relative; */
+    width: 50%;
+    border: 2px solid pink;
+    padding: 4px;
+    margin: auto;
+    text-align: center;
+}

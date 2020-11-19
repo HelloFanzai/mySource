@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #baba{
+            border: 2px solid red;
+            background-color: pink;
+            width: 5em;
+            height: 5rem;
+        }
+        h1:hover{
+            background-color: azure;
+        }
+
+        .dropdown-content {
+            display:none;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display:block;
+        }
+    </style>
+    <script>
+        function addMore() {
+            console.log('yes');
+            var newH1 = document.createElement("h1");
+            document.body.appendChild(newH1).innerHTML = document.getElementById('baba').innerHTML;
+        }
+    </script>
+</head>
+
+<body>
+    <div id="theDiv">123
+        <h1 id="baba" onclick="addMore()">卧槽</h1>
+    </div>
+
+    <div class="dropdown">
+        <span>Mouse over me</span>
+        <div class="dropdown-content">
+            <p>隐藏文字</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
