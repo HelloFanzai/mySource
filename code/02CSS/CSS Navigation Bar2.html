@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu {
+            font-size: 12px;
+            width: 100%;
+            position:fixed;
+            background:pink;
+
+
+        }
+
+        .menu li {
+            /*水平菜单*/
+            float: left;
+            list-style: none;
+            position: relative;
+            /*把包含块移动li元素*/
+        }
+
+        .menu a {
+            display: block;
+            height: 32px;
+            width: 100px;
+            line-height: 32px;
+            color: red;
+            background:pink;
+
+            text-decoration: none;
+            text-align: center;
+            /* overflow: hidden; */
+            /*★★★★*/
+        }
+
+        .menu a:hover {
+            background: #369;
+            color: #fff;
+        }
+
+        /*新增的二级菜单部分*/
+        .menu ul ul {
+            visibility: hidden;
+            /*隐藏所有子菜单（二级的,三级的）*/
+            position: absolute;
+            left: 0px;
+            top: 32px;
+        }
+
+        /*指定是显示二级子菜单*/
+        .menu ul li:hover ul.second{
+            visibility: visible;
+        }
+
+        .menu ul ul li {
+            clear: both;
+            /*垂直显示*/
+            text-align: left;
+        }
+
+        .menu .third,
+        .menu .fourth,
+        .menu .fifth,
+        .menu .sixth {
+            top: 0px;
+            /*重设子菜单相对于包含块哪个位置出现*/
+            left: 100px;
+        }
+
+        /*指定是显示三级子菜单*/
+        .menu ul ul li:hover ul.third,
+        .menu ul ul a:hover ul.third {
+            visibility: visible;
+        }
+
+        /*指定是显示四级子菜单*/
+        .menu ul ul ul li:hover ul.fourth,
+        .menu ul ul ul a:hover ul.fourth {
+            visibility: visible;
+        }
+
+        /*指定是显示五级子菜单*/
+        .menu ul ul ul ul li:hover ul.fifth,
+        .menu ul ul ul ul a:hover ul.fifth {
+            visibility: visible;
+        }
+    
+    </style>
+</head>
+
+<body>
+    <h3>my navigation</h3>
+    <div class="menu">
+        <ul>
+            <li>
+                <a href="#">菜单一</a>
+                <ul class="second">
+                    <li>
+                        <a href="#">二级菜单_11</a>
+                        <ul class="third">
+                            <li>
+                                <a href="#">三级菜单_11</a>
+
+                            </li>
+                            <li><a href="#">三级菜单_12</a></li>
+                            <li><a href="#">三级菜单_13</a></li>
+                            <li>
+                                <a href="#">三级菜单_14</a>
+                                <ul class="fourth">
+                                    <li>
+                                        <a href="#">四级菜单_11</a>
+                                        <ul class="fifth">
+                                            <li>
+                                                <a href="#">五级菜单_11</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">五级菜单_11</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">五级菜单_11</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">四级菜单_12</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">二级菜单_12</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">菜单二</a>
+                <ul class="second">
+                    <li><a href="#">二级菜单_21</a></li>
+                    <li>
+                        <a href="#">二级菜单_22</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">菜单三</a>
+                <ul class="second">
+                    <li><a href="#">二级菜单_31</a></li>
+                    <li><a href="#">二级菜单_32</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">菜单四</a>
+                <ul class="second">
+                    <li>
+                        <a href="#">二级菜单_41</a>
+                    </li>
+                    <li>
+                        <a href="#">二级菜单_42</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
