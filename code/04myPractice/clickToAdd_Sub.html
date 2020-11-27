@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function myAdd1() {
+            let theResul = document.getElementById('theInput1').innerText
+            document.getElementById('theInput1').innerText = parseInt(theResul)+100
+            console.log( theResul );
+        }
+        function mySub1() {
+            let theResul = document.getElementById('theInput1').innerText
+            document.getElementById('theInput1').innerText = parseInt(theResul)-100
+            console.log( theResul );
+        }
+        // ---------
+        function myAdd2() {
+            let theResul = document.getElementById('theInput2').value
+            document.getElementById('theInput2').value = parseInt(theResul)+100
+            console.log( theResul );
+        }
+        function mySub2() {
+            let theResul = document.getElementById('theInput2').value
+            document.getElementById('theInput2').value = parseInt(theResul)-100
+            console.log( theResul );
+        }
+
+    </script>
+</head>
+<body>
+    <p id="theInput1" >0</p>
+    <button onclick="myAdd1()" >Add</button>
+    <button onclick="mySub1()" >Sub</button>
+    <p>--------------------------------------------</p>
+     <input id="theInput2" type="text" value=0>
+     <button onclick="myAdd2()" >Add</button>
+     <button onclick="mySub2()" >Sub</button>
+</body>
+</html>
