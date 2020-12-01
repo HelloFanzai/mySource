@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .grid-base {
+            width: 600px;
+            height: 600px;
+            display: grid;
+            grid-template: repeat(8, 1fr)/repeat(8, 1fr);
+            background-color: goldenrod;
+            border: 3px solid wheat;
+            border-radius: 10px;
+
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+
+        }
+
+        .grid-item {
+            border: 2px solid goldenrod;
+            background-color: white;
+        }
+        .black{
+            background-color:black;
+        }
+    </style>
+</head>
+
+<body>
+    <p>this is my html</p>
+    <div class="grid-base" id="theDiv" >
+
+    </div>
+
+    <script>
+        let matches=document.getElementById('theDiv')
+        for (let i = 1; i <= 8; i++) {
+            for (let j = 1; j <= 8; j++) {
+                
+                var divEle = document.createElement("div");
+                divEle.classList.add('grid-item');
+        
+                if ( i % 2 == 0 && j % 2 !== 0 ) {
+                    divEle.classList.add('black')
+                    // divEle.classList.add('black')
+                }
+                if ( i % 2 !== 0 && j % 2 == 0 ) {
+                    divEle.classList.add('black')
+                    // divEle.classList.add('black')
+                }
+
+                matches.appendChild(divEle);
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

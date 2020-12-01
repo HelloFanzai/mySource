@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .divBABA {
+            display: grid;
+            /* grid-template-columns: auto auto auto; */
+            grid-template: repeat(8, 1fr)/repeat(8, 1fr);
+
+            width: 648px;
+            height: 648px;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            text-align: center;
+        }
+
+        .theDiv {
+            border: solid 2px goldenrod;
+            background-color: gray;
+
+        }
+
+        .theColor {
+            background-color: brown;
+        }
+    </style>
+    <script>
+        function myTest() {
+            let temp = document.getElementById("container");
+            let temp2 = temp.getElementsByClassName("theDiv");
+            let theCount = 0;
+            for (let i = 0; i <= 7; i++) {
+                for (let j = 0; j <= 7; j++) {
+
+                    if ( i % 2 == 0 && j %2 != 0 ) {
+                        // temp2[theCount].classList.add('theColor')
+                        temp2[theCount].className += " theColor"
+                    }
+                    if ( i % 2 !== 0  && j %2 == 0 ) {
+                        // temp2[theCount].classList.add('theColor')
+                        temp2[theCount].className += " theColor"
+                    }
+                    theCount++
+                }
+
+            }
+   
+        }
+    </script>
+</head>
+
+<body onload="myTest()">
+    <div class="divBABA" id="container">
+        <div class="theDiv"> </div> <div class="theDiv"> </div> <div class="theDiv"> </div> <div class="theDiv"> </div>
+        <div class="theDiv"> </div> <div class="theDiv"> </div> <div class="theDiv"> </div> <div class="theDiv"> </div>
+        <div class="theDiv"> </div> <div class="theDiv"> </div> <div class="theDiv"> </div> <div class="theDiv"> </div>
+        <div class="theDiv"> </div> <div class="theDiv"> </div> <div class="theDiv"> </div> <div class="theDiv"> </div>
+        <div class="theDiv"> </div> <div class="theDiv"> </div> <div class="theDiv"> </div> <div class="theDiv"> </div>
+        <div class="theDiv"> </div> <div class="theDiv"> </div> <div class="theDiv"> </div> <div class="theDiv"> </div>
+        <div class="theDiv"> </div> <div class="theDiv"> </div> <div class="theDiv"> </div> <div class="theDiv"> </div>
+        <div class="theDiv"> </div> <div class="theDiv"> </div> <div class="theDiv"> </div> <div class="theDiv"> </div>
+        <div class="theDiv"> </div> <div class="theDiv"> </div> <div class="theDiv"> </div> <div class="theDiv"> </div>
+        <div class="theDiv"> </div> <div class="theDiv"> </div> <div class="theDiv"> </div> <div class="theDiv"> </div>
+        <div class="theDiv"> </div> <div class="theDiv"> </div> <div class="theDiv"> </div> <div class="theDiv"> </div>
+        <div class="theDiv"> </div> <div class="theDiv"> </div> <div class="theDiv"> </div> <div class="theDiv"> </div>
+        <div class="theDiv"> </div> <div class="theDiv"> </div> <div class="theDiv"> </div> <div class="theDiv"> </div>
+        <div class="theDiv"> </div> <div class="theDiv"> </div> <div class="theDiv"> </div> <div class="theDiv"> </div>
+        <div class="theDiv"> </div> <div class="theDiv"> </div> <div class="theDiv"> </div> <div class="theDiv"> </div>
+        <div class="theDiv"> </div> <div class="theDiv"> </div> <div class="theDiv"> </div> <div class="theDiv"> </div>
+        <div class="theDiv"> </div> <div class="theDiv"> </div> <div class="theDiv"> </div> <div class="theDiv"> </div>
+        <div class="theDiv"> </div> <div class="theDiv"> </div> <div class="theDiv"> </div> <div class="theDiv"> </div>
+    </div>
+
+</body>
+
+</html>
