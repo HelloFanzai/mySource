@@ -3,9 +3,4 @@ function theA() {
     return A++
 }
 
-
-
-
-theA()
-
 console.log( theA() );
