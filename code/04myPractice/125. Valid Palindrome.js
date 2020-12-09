@@ -7,8 +7,8 @@ var isPalindrome = function(s) {
     let theHalfLength=Math.floor(s.length/2)
     console.log( s,' ',theHalfLength );
     for (let i = 0; i <theHalfLength ; i++) {
+        console.log( i,' ',s[i],'  ',s[s.length-i-1] );
         if ( s[i] != s[s.length-i-1] ) {
-            console.log( i,' ',s[i],'  ',s[s.length-i-1] );
             return false
         }
     }
@@ -20,5 +20,5 @@ var isPalindrome = function(s) {
 //     return s === s.split("").reverse().join("");
 // };
 
-s="ABCDCBA";
+s="A man, a plan, a canal: Panama";
 console.log( isPalindrome(s) );
