@@ -8,7 +8,7 @@
 
         // var s = "kadfjkajfkhgofqnmvc";
         // console.log(Array.from(s).sort().join(""));//aacdfffghjjkkkmnoqv
-        // console.log(Array.from(s).sort().reverse().join(""));//aacdfffghjjkkkmnoqv
+        // console.log(Array.from(s).sort().reverse().join(""));//vqonmkkkjjhgfffdcaa
         //字符串排序
 
         //ES6 去重
