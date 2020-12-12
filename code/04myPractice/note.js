@@ -11,10 +11,13 @@
         // console.log(Array.from(s).sort().reverse().join(""));//vqonmkkkjjhgfffdcaa
         //字符串排序
 
+        //数组填充
+        // let theArray=new Array(10).fill(0)
+
         //ES6 去重
         // a1=[1,2,2,3,3,3,4,4,4,4]
         // let b1 = [...new Set(a1)]
-        // console.log(b1);
+        // console.log(b1);   //[ 1, 2, 3, 4 ]
 
         //parseInt 变成数字
         // S=112; S = [...(s+"" )]; //[ '1', '1', '2' ]

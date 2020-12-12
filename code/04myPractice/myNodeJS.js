@@ -1,7 +1,7 @@
 const fs = require('fs')
 var data = '';
 
-var readerStream = fs.createReadStream('input.txt')
+var readerStream = fs.createReadStream('myNodeJS.txt')
 
 readerStream.setEncoding('utf8')
 readerStream.on('data', function (chunk) {
