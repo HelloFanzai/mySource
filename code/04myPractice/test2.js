@@ -1,4 +1,4 @@
-a1=Math.pow(2,29)-1
+a1='001'
 
-
-console.log( a );
+console.log( a1 || 1 );
+console.log( a1 ?? 1 );
