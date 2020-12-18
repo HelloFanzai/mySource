@@ -6,7 +6,7 @@ export default class theChild extends Component {
     constructor(props){
         super(props);
         this.state={ 
-            inputValue:'See here',
+            inputValue:'See here👇',
         }
         
     }
