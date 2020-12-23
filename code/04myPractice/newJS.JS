@@ -19,8 +19,3 @@
 //     'theId':'id1'
 // }
 // console.log( theObj3.theId );
-
-let 
-
-
-console.log( theStudentB );
