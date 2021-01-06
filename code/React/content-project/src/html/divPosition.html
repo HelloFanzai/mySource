@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>divPosition</title>
+    <style>
+    </style>
+</head>
+<body>
+    <p>Move your mouse</p>
+    <p id="screen-log"></p>
+
+    <script>
+        let screenLog = document.querySelector('#screen-log');
+        document.addEventListener('mousemove', (e)=>{
+            screenLog.innerHTML =
+                ` Screen X/Y: ${e.screenX}, ${e.screenY} <br/>
+                  clientX X/Y: ${e.clientX}, ${e.clientY}`;
+        })
+
+        a = "ab"
+        console.log(parseInt(a))
+    </script>
+
+</body>
+</html>

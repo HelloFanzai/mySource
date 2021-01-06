@@ -1,0 +1,19 @@
+.App{
+    text-align: center;
+}
+
+.Person{
+    width: 60%;
+    margin:auto;
+    border:3px solid #eee;
+    box-shadow: 0 2px 3px #CCC;
+    padding: 16px;
+    text-align: center;
+}
+
+.lightblue{
+    color: lightblue;
+}
+.bold{
+    font-weight: bold;
+}
