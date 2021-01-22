@@ -23,16 +23,16 @@
         // S=112; S = [...(s+"" )]; //[ '1', '1', '2' ]
 // //十进制转其他
         // var x=110;
-        // w(x);
-        // w(x.toString(8));
-        // w(x.toString(32));
-        // w(x.toString(16));
+        // x.toString(2);
+        // x.toString(8);
+        // x.toString(16);
+        // x.toString(32);
 
 // //其他转十进制
         // var x='110';
-        // w(parseInt(x,2));
-        // w(parseInt(x,8));
-        // w(parseInt(x,16));
+        // parseInt(x,2);
+        // parseInt(x,8);
+        // parseInt(x,16);
 //using Exclamation mark(!)
 console.log(!!null); //logs false
 console.log(!!undefined); //logs false
