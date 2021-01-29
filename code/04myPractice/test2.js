@@ -1,7 +1,6 @@
-function name1() {
-    let a='0'
-    // return a.indexOf('00')
-    let b=100000000
-    return b.toString(2)
+function myFN(theInput) {
+    return (0.2+0.1)*3
 }
-console.log( name1() );
+
+let theInput=123
+console.log( myFN(theInput) );
