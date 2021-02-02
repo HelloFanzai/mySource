@@ -1,6 +1,6 @@
 function myFN(theInput) {
-    return (0.2+0.1)*3
+    return theInput.sort((a, b) => b - a)[1]
 }
 
-let theInput=123
+let theInput=[2,3,4,1,6,8]
 console.log( myFN(theInput) );
