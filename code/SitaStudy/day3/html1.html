@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <label for="" id="demo"></label>
+    <script>
+        document.getElementById('demo').innerHTML = 5+6;
+
+        let theTest ={
+            'array':[1,2,3],
+            'boolean':true,
+            'null':null,
+        }
+        localStorage.setItem('name',JSON.stringify(theTest))
+
+        localStorage.setItem('name',"Xiaoming")
+        let result= localStorage.getItem('name')
+        console.log(result);
+
+        navigator.geolocation.getCurrentPosition(succsscallback,failurecallback,option)
+        function succsscallback(event) {
+            console.log(event.coord.latitude+','+event.coord.latitude);
+        }
+        function failurecallback(error) {
+            console.log(error);
+            
+        }
+
+    </script>
+</body>
+</html>

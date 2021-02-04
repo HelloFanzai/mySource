@@ -1,38 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .theForm{
+            /* border: 2px solid pink; */
+            
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            text-align: center;
+            background-color: goldenrod;
+        }
+    </style>
 </head>
+
 <body>
-    User Name:
-    <input type="text">
-    <br>
-    Password:
-    <input type="text">
-    <br>
-    <button>1</button>
-    <button>2</button> <br>
-    <select name="" id="">
-        <optgroup label="optgroup1" >
-            <option value="option1">option11</option>
-            <option value="option2">option12</option>
-        </optgroup>
-        <optgroup label="optgroup2" >
-            <option value="option1">option21</option>
-            <option value="option2">option22</option>
-        </optgroup>
-    </select>
-    <br>
-    <input type="radio" name="theRadio" >r1
-    <input type="radio" name="theRadio" >r2
-    <!-- when the name of in radio same，only one can be chose -->
-    <br>
-    <input type="color"> 👈color piker <br>
-    <input type="date"> 👈date <br>
-    <input type="number" value="33" step="3" min="30" max="50" > 👈number <br>
-    
-    
+    <form action="" class="theForm" >
+        <label for="">User Name:</label>
+        <input type="text" placeholder="type your User Name">
+        <br>
+        <label for="">Password:</label>
+        <input type="password" placeholder="type your password">
+        <br>
+        <button>Submit</button>
+    </form>
+
+
 </body>
+
 </html>
