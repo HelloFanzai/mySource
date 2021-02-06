@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p:hover {
+            color: red;
+            text-shadow: 2px 2px 3px pink;
+        }
+
+        label:nth-child(2){
+            background-color: pink;
+        }
+
+        #div1 {
+            width: 200px;
+            background-color: darkred;
+            color: yellow;
+            transition: width 0.6s;
+        }
+        #div1:hover {
+            width: 100vw;
+        }
+
+        #theLink:hover{
+            font-style: italic;
+            background-color: pink;
+        }
+        #theLink:visited{
+            background-color: blue;
+        }
+        
+        #theLink:active{
+            background-color: red;
+        }
+
+    </style>
+</head>
+
+<body> 
+    <p>wocāo</p> <br>
+    <div>wocāo div <br>
+        <label >wocáo label1 </label> 
+        <label >wocǎo label2</label>
+        <label >wocao label3</label>
+    </div>
+    
+    <div>wo cāo div</div>
+    
+
+    <div id="div1">hover me</div>
+
+    <a id="theLink" href="https://www.w3schools.com/cssref/css_selectors.asp">CSS Selector Reference</a>
+</body>
+
+</html>
