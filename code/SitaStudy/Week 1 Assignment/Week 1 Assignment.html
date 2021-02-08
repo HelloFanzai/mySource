@@ -6,52 +6,131 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- <script src="./theJS.js"></script> -->
     <style>
-        body{
+        body {
             /* background-image: url(./下载.png); */
             background-repeat: no-repeat;
         }
-        .theTitle{
+
+        .theTitle {
             color: #ffffff;
         }
-        .theMenu{
+
+        .theMenu {
             color: #979797;
+            height: 50px;
+            width: 100vw;
+            border-bottom-style: solid;
+            border-color: #979797;
+            border-width: 1px;
+            line-height: 50px;
+            padding-left: 50px;
         }
-        .theButton{
-            float:right1;
+
+        .theButton,#subButton{
+            float: right;
         }
-        .theButton:link{
-            text-decoration:none;
+
+        .theButton:link {
+            text-decoration: none;
         }
-        .theIcon{
+
+        .theIcon {
             height: 25px;
             width: 25px;
         }
 
-
+        #mainMenu,.subMenu{
+            display: none;
+        }
     </style>
+
+    <script>
+        function theLv1(theClassName) {
+            var them1 = document.getElementById(theClassName)
+            var theDiv = them1.style.display;
+            if (theDiv == "none")
+                them1.style.display = "block";
+            else
+                them1.style.display = "none";
+        }
+        function theLv2() {
+            console.log('theLv2');
+        }
+    </script>
+
 </head>
 
-<body style="background-color: black;" >
+<body style="background-color: black;">
+
     <a class="theButton" href="#">
         <img class="theIcon" src="./Apple.png" alt="">
         &nbsp
     </a>
     <a class="theButton" href="#">
-        <img class="theIcon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHifEzCIWCgDc35av5TaDhmnU34Ac0hndG9g&usqp=CAU" alt="">
+        <img class="theIcon"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHifEzCIWCgDc35av5TaDhmnU34Ac0hndG9g&usqp=CAU"
+            alt="">
         &nbsp
     </a>
-    <div class="theTitle">
-        <img src="" alt="">
-        
+
+    <label class="theTitle" for="theCheckbox" onclick="theLv1('mainMenu')">
         🍎 Talent Point
-        <div class="theMenu">Talent</div>
-        <div class="theMenu">Connections</div>
-        <div class="theMenu">Intelligence</div>
-        <div class="theMenu">Workspace</div>
-        <div class="theMenu">Johhny Appleseed</div>
+    </label>
+    <!-- <img src="" alt=""> -->
+    <div id="mainMenu">
+        <div class="theMenu"  onclick="theLv2()">
+            Talent
+            <label for="" onclick="theLv1('theSubMenu1_1')" class="subButton">X</label>
+            <div class="subMenu" id="theSubMenu1_1">
+                <div >1_1~~~</div>
+                <div >1_2~~~~</div>
+                <div >1_3~~~~~</div>
+            </div>
+        </div>
+        <div class="theMenu" id="theSubMenu1_2">
+            Connections
+            <label for="" onclick="theLv1('theSubMenu2_1')" class="subButton">X</label>
+            <div class="subMenu" id="theSubMenu2_1">
+                <div >2_1~~~</div>
+                <div >2_2~~~~</div>
+                <div >2_3~~~~~</div>
+            </div>
+        </div>
+        <div class="theMenu" id="theSubMenu1_3">
+            Intelligence
+            <label for="" onclick="theLv1('theSubMenu3_1')" class="subMsubButtonenu">X</label>
+            <div class="subMenu" id="theSubMenu3_1">
+                <div >3_1~~~</div>
+                <div >3_2~~~~</div>
+                <div >3_3~~~~~</div>
+            </div>
+        </div>
+        <div class="theMenu" id="theSubMenu1_4">
+            Workspace
+            <label for="" onclick="theLv1('theSubMenu4_1')" class="subButton">X</label>
+            <div class="subMenu" id="theSubMenu4_1">
+                <div >4_1~~~</div>
+                <div >4_2~~~~</div>
+                <div >4_3~~~~~</div>
+            </div>
+        </div>
+        <div class="theMenu" id="theSubMenu1_5">
+            Johhny Appleseed
+            <label for="" onclick="theLv1('theSubMenu5_1')" class="subButton">X</label>
+            <div class="subMenu" id="theSubMenu5_1">
+                <div >5_1~~~</div>
+                <div >5_2~~~~</div>
+                <div >5_3~~~~~</div>
+            </div>
+        </div>
     </div>
-    
+
+
+
+
+
 
 
 </body>
