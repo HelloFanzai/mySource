@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .theNewBlue{
+            color: blue;
+        }
+    </style>
+    <script>
+        function blue() {
+            let theT=document.querySelectorAll('.theP').forEach(e=>{
+                // e.className += ' theNewBlue'
+                e.style.color = 'blue'
+            })
+            
+        }
+        function red() {
+            document.getElementById('my-para3').style.color = 'red';
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <p id="my-para1" class="theP" >This is a Green Color Text</p>
+        <p id="my-para2" class="theP" >This is a Green Color Text</p>
+        <p id="my-para3" class="theP" >This is a Green Color Text</p>
+        <button onclick="blue();">Change All to Blue</button>
+        <button onclick="red();">Change to Red</button>
+    </div>
+
+  
+</body>
+
+</html>
