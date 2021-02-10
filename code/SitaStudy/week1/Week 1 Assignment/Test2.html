@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #mainMenu,#theLv1Div,#theLv2Div,#theLv3Div,.the5dClass{
+            display: none;
+        }
+        #the5C:checked ~ #the5dId{
+            display: block;
+        }
+        #the3C:checked ~ #theLv3Div{
+            display: block;
+        }
+        /* #theApple:hover,#the5dId{
+            display: block;
+        } */
+
+    </style>
+    <script>
+         function theLv1(theClassName) {
+            var them1 = document.getElementById(theClassName)
+            var theDiv = them1.style.display;
+            if (theDiv == "none")
+                them1.style.display = "block";
+            else
+                them1.style.display = "none";
+        }
+     
+    </script>
+</head>
+<body>
+    <div>
+        <div style="float: left;">
+            <div onclick="theLv1('mainMenu')" >1</div>
+            <div>2</div>
+        </div>
+        <label for="" id="theApple">苹果</label>
+        <a href="" style="float: right;"  >🔔</a>
+        <a href="" style="float: right;" >🔍</a>
+    </div> <br>
+    <div id="mainMenu" >
+        <div>
+            <label for="" >T</label>
+        </div>
+        <div>
+            <label for="" onclick="theLv1('theLv1Div')">1=></label>
+        </div>
+        <div id="theLv1Div">
+            <div class="theLv1Div" >1-1</div>
+            <div class="theLv1Div" >1-2</div>
+            <div class="theLv1Div" >1-3</div>
+        </div>
+        <div>
+            <label for="" onclick="theLv1('theLv2Div')">2=></label>
+        </div>
+        <div id="theLv2Div">
+            <div class="theLv1Div" >2-1</div>
+            <div class="theLv1Div" >2-2</div>
+            <div class="theLv1Div" >2-3</div>
+        </div>
+        <div>
+            <label for="the3C" onclick="theLv1('theLv3Div')">3=></label>
+        </div>
+        <input type="checkbox" name="" id="the3C">
+        <div id="theLv3Div">
+            <div class="theLv1Div" >3-1</div>
+            <div class="theLv1Div" >3-2</div>
+            <div class="theLv1Div" >3-3</div>
+        </div>
+        
+        <div>
+            <label for="the4">4</label><br>
+        </div>
+
+        <div>
+            <div>
+                <label for="the5C">5</label>
+            </div>
+            <input type="checkbox" name="" id="the5C">
+            <div id="the5dId" class="the5dClass" >
+                <div>5-1</div>
+                <div>5-2</div>
+                <div>5-3</div>
+            </div>
+        </div>
+        
+
+
+    </div>
+</body>
+</html>
