@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background-color: black;
+        }
+        #theD{
+            /* border: 1px pink solid; */
+            height: 26px;
+            width: 26px;
+        }
+        .menu-icon-wrapper {
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .menu-icon-first{
+            width: 26px;
+            height: 2px;
+            background-color: pink;
+            margin-top: 6.5px;
+            transition: 0.2s;
+        }
+        .menu-icon-second {
+            width: 26px;
+            height: 2px;
+            background-color: pink;
+            margin-top: 8px;
+            transition: 0.2s;
+        }
+
+
+        /* 旋转第一条横线 */
+
+        /* .close .menu-icon-first {
+            transform: translate(0px,5px) rotate(-45deg);
+        } */
+
+        /* 旋转第三条横线 */
+
+        /* .close .menu-icon-second {
+            transform: translate(0px,-5px) rotate(45deg);
+        } */
+
+        /* 旋转第一条横线 */
+        #theCheckbox:checked~.menu-icon-first {
+            transform: translate(0px,5px) rotate(-45deg);
+        }
+        /* 旋转第三条横线 */
+        #theCheckbox:checked~.menu-icon-second {
+            transform: translate(0px,-5px) rotate(45deg);
+        }
+        #theCheckbox{
+            display: none;
+        }
+    </style>
+    <script>
+        function toggle(menu) {
+            menu.classList.toggle("open");
+            menu.classList.toggle("close");
+        }
+    </script>
+
+</head>
+
+<body>
+    <!-- <div id="theD" class="menu-icon-wrapper open" onclick="toggle(this)"> -->
+    <div id="theD" class="menu-icon-wrapper open" >
+        <label for="theCheckbox">
+            <input type="checkbox" name="" id="theCheckbox">
+            <div class="menu-icon-first"></div>
+            <div class="menu-icon-second"></div>
+        </label>
+    </div>
+</body>
+
+</html>

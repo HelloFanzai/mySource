@@ -5,6 +5,17 @@
         // slice():方法可从已有的数组中返回选定的元素,arrayObject.slice(start,end)
         // slice()方法并不会修改数组，而是返回一个子数组
         // splice() 方法用于添加或删除数组中的元素，修改原数组，可替换元素
+        var s1 = "America";
+        console.log(s1.substring(2,5)) //eri
+        // substring() 方法用于提取字符串中介于两个指定下标之间的字符。 
+        // substring() 方法返回的子串包括开始处的字符，但不包括结束处的字符。
+        lastIndexOf()
+        //lastIndexOf() 方12法可返回一个指定的字符串值最后出现的位置
+        stringObject.replace(regexp/substr,replacement) //只能用于string
+        // trim() 方法用于删除字符串的头尾空白符
+        // arrayObject.concat(arrayX,arrayX,......,arrayX)
+        // concat() 方法用于连接两个或多个数组
+        console.log( [...a,...b] ); //ES6 连接数组
 
         // var s = "kadfjkajfkhgofqnmvc";
         // console.log(Array.from(s).sort().join(""));//aacdfffghjjkkkmnoqv
@@ -33,6 +44,12 @@
         // parseInt(x,2);
         // parseInt(x,8);
         // parseInt(x,16);
+
+        // 大写字母A 到Z 的值是从65 到90 小写a到z 是从91 到 122
+        // 字符转ascii码：用charCodeAt();
+        // ascii码砖字符：用fromCharCode();
+
+
 //using Exclamation mark(!)
 console.log(!!null); //logs false
 console.log(!!undefined); //logs false

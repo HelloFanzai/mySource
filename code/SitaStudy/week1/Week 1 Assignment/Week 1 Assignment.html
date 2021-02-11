@@ -6,61 +6,348 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
     <style>
-        body{
+        @font-face {
+            font-family: appleFont;
+            src: url("MyriadPro-Regular-14.otf")；
+        }
+
+        /* for Dropping */
+        #mainMenu,
+        .theCheckbox,
+        .theSubDivClass {
+            display: none;
+        }
+
+        .theCheckbox:checked~#mainMenu {
+            display: block;
+        }
+
+
+        /* .theCheckbox:checked~.theSubDivClass {
+            display: block;
+        } */
+
+        /* Made separately for future upgrades */
+        #the1C:checked~#theDiv1Id {
+            display: block;
+        }
+
+        #the2C:checked~#theDiv2Id {
+            display: block;
+        }
+
+        #the3C:checked~#theDiv3Id {
+            display: block;
+        }
+
+        #the5C:checked~#theDiv5Id {
+            display: block;
+        }
+
+
+
+        /* for css style */
+        body {
+            font-family: appleFont;
             background-color: black;
         }
-        #theD{
-            /* border: 1px pink solid; */
-            height: 26px;
-            width: 26px;
-        }
-        .menu-icon-wrapper {
-            display: inline-block;
-            cursor: pointer;
+
+        /*     for bar position */
+        #mainBar {
+            text-align: center;
         }
 
-        .menu-icon-first{
+        #theMenuLable1 {
+            display: inline;
+            color: #ffffff;
+        }
+
+        #theApple {
+            display: inline;
+        }
+
+        #theLink {
+            float: right;
+            display: inline;
+        }
+
+        .theLinkClass {
+            text-decoration: none
+        }
+
+        #mainBar,
+        #mainMenu {
+            background-color: black;
+        }
+
+        #theApple {
+            color: #ffffff;
+            font-size: 18pt;
+
+        }
+
+        #theLabe0Id,
+        #theLabe1Id,
+        #theLabe2Id,
+        #theLabe3Id,
+        #theLabe4Id {
+            color: #ffffff;
+            font-size: 18pt;
+            height: 50px;
+            /* width: 100vw; */
+            border-bottom-style: solid;
+            border-color: #979797;
+            border-width: 1px;
+            line-height: 50px;
+            padding-left: 50px;
+
+        }
+
+        #theLabe5Id {
+            font-size: 18pt;
+            color: #979797;
+            height: 50px;
+            /* width: 100vw; */
+            border-bottom-style: solid;
+            border-color: #979797;
+            border-width: 1px;
+            line-height: 50px;
+            padding-left: 50px;
+
+
+        }
+
+        .theSubDivClass {
+            font-size: 16pt;
+            color: #979797;
+            margin-left: 65px;
+            margin-bottom: 15px;
+        }
+
+        #theLabe0Id {
+            border-left-style: solid;
+            border-left-color: #4fc7ef;
+            border-left-width: 5px;
+        }
+
+        #theLabe1Id {
+            border-left-style: solid;
+            border-left-color: #ed357b;
+            border-left-width: 5px;
+            margin-left: 0%;
+        }
+
+        #theLabe2Id {
+            border-left-style: solid;
+            border-left-color: #f87705;
+            border-left-width: 5px;
+        }
+
+        #theLabe3Id {
+            border-left-style: solid;
+            border-left-color: #8801e6;
+            border-left-width: 5px;
+        }
+
+        #theLabe4Id {
+            border-left-style: solid;
+            border-left-color: #93ca6a;
+            border-left-width: 5px;
+        }
+
+        #theLabe5Id {
+            border-left-style: solid;
+            border-left-color: #838383;
+            border-left-width: 5px;
+            left: 50%;
+        }
+
+        .theLv1Div {
+            height: 40px;
+        }
+
+        /* animation */
+        #theHamburgerMenu {
+            width: 26px;
+            height: 26px;
+            cursor: pointer;
+            float: left;
+        }
+
+        #theMenuDiv1stLine {
             width: 26px;
             height: 2px;
-            background-color: pink;
+            background-color: #ffffff;
             margin-top: 6.5px;
             transition: 0.2s;
         }
-        .menu-icon-second {
+
+        #theMenuDiv2ndLine {
             width: 26px;
             height: 2px;
-            background-color: pink;
+            background-color: #ffffff;
             margin-top: 8px;
             transition: 0.2s;
         }
 
-        /* 旋转第一条横线 */
-        .close .menu-icon-first {
-            transform: translate(0px,5px) rotate(-45deg);
-            /* transform: translate(0px,6px) rotate(-45deg); */
+        /* rotate 1st div line */
+        .close #theMenuDiv1stLine {
+            transform: translate(0px, 5px) rotate(-45deg);
+        }
+
+        /*  rotate 2nd div line  */
+        .close #theMenuDiv2ndLine {
+            transform: translate(0px, -5px) rotate(45deg);
+        }
+
+        .theSubMenuButton1st {
+            width: 12px;
+            height: 2px;
+            margin-top: 26px;
+            transition: 0.2s;
+            transform: rotate(-90deg);
+            background-color: #ffffff;
+            margin-right: 16px;
+            margin-right: 26px;
+        }
+
+        .theSubMenuButton2nd {
+            width: 12px;
+            height: 2px;
+            background-color:#ffffff;
+            margin-top: -2px;
+            transition: 0.2s;
+            /* margin-left: 50rem; */
+
+        }
+        .theXSubButton {
+            float: right;
+            cursor: pointer;
+            
+        }
+        .close .theSubMenuButton1st{
+            transform:rotate(-45deg);
         }
         /* 旋转第三条横线 */
-        .close .menu-icon-second {
-            transform: translate(0px,-5px) rotate(45deg);
-            /* transform: translate(0px,-6px) rotate(45deg); */
+        .close .theSubMenuButton2nd{
+            transform:rotate(45deg);
         }
     </style>
     <script>
+        function theBellFn() {
+            alert('theBellFn wroked')
+            console.log('theBellFn wroked');
+        }
+        function theSearchFn() {
+            alert('theSearch wroked')
+            console.log('theSearchFn wroked');
+        }
         function toggle(menu) {
             menu.classList.toggle("open");
             menu.classList.toggle("close");
-        }
-    </script>
 
+            let theStateOfCheckbox = document.getElementById('the0C')
+            if (theStateOfCheckbox.checked == true) {
+                document.getElementById('theApple').innerHTML = '🍐Talent Point'
+            } else {
+                document.getElementById('theApple').innerHTML = '🍐Recruitment'
+            }
+
+        }
+
+    </script>
 </head>
 
 <body>
-    <div id="theD" class="menu-icon-wrapper open" onclick="toggle(this)">
-        <div class="menu-icon-first"></div>
-        <!-- <div class="menu-icon-second"></div> -->
-        <div class="menu-icon-second"></div>
+    <div id="mainBar">
+
+        <div id="theMenuLable1">
+            <label for="the0C" onclick="toggle(this)">
+                <div id="theHamburgerMenu">
+                    <div class="theMenuDiv" id="theMenuDiv1stLine"></div>
+                    <div class="theMenuDiv" id="theMenuDiv2ndLine"></div>
+                </div>
+            </label>
+        </div>
+
+        <div id="theApple">
+            <!-- <label id="theApple" for="" >🍎APPLE</label> -->
+            🍐Talent Point
+        </div>
+
+        <div id="theLink">
+            <a class="theLinkClass" href="#" id="theSearch" onclick="theSearchFn()">🔍</a>
+            <a class="theLinkClass" href="#" id="theBell" onclick="theBellFn()">🔔</a>
+        </div>
+    </div>
+    <input type="checkbox" name="" id="the0C" class="theCheckbox">
+    <div id="mainMenu">
+        <div id="theLabe0Id">
+            <label for="">Talent</label>
+        </div>
+        <div id="theLabe1Id">
+            <label for="the1C">Connections
+                <div class="theXSubButton" onclick="toggle(this)">
+                    <div class="theSubMenuButton1st" id="theSubMenuButton1_1"></div>
+                    <div class="theSubMenuButton2nd" id="theSubMenuButton1_2"></div>
+                </div>
+            </label>
+        </div>
+        <input type="checkbox" name="" id="the1C" class="theCheckbox">
+        <div id="theDiv1Id" class="theSubDivClass">
+            <div class="theLv1Div">Pipelines</div>
+            <div class="theLv1Div">Requisition</div>
+            <div class="theLv1Div">Projects</div>
+        </div>
+
+        <div id="theLabe2Id">
+            <label for="the2C">Intelligence
+                <div class="theXSubButton" onclick="toggle(this)">
+                    <div class="theSubMenuButton1st" id="theSubMenuButton2_1"></div>
+                    <div class="theSubMenuButton2nd" id="theSubMenuButton2_2"></div>
+                </div>
+            </label>
+
+        </div>
+        <input type="checkbox" name="" id="the2C" class="theCheckbox">
+        <div id="theDiv2Id" class="theSubDivClass">
+            <div class="theLv1Div">Companies</div>
+            <div class="theLv1Div">Schools</div>
+        </div>
+
+        <div id="theLabe3Id">
+            <label for="the3C" onclick="theLv1('theLv3Div')">Workspace
+                <div class="theXSubButton" onclick="toggle(this)">
+                    <div class="theSubMenuButton1st" id="theSubMenuButton1_1"></div>
+                    <div class="theSubMenuButton2nd" id="theSubMenuButton1_2"></div>
+                </div>
+            </label>
+
+        </div>
+        <input type="checkbox" name="" id="the3C" class="theCheckbox">
+        <div id="theDiv3Id" class="theSubDivClass">
+            <div class="theLv1Div">3-1</div>
+            <div class="theLv1Div">3-2</div>
+            <div class="theLv1Div">3-3</div>
+        </div>
+
+        <div id="theLabe4Id">
+            <label for="the4">Insights</label><br>
+        </div>
+
+        <div id="theLabe5Id">
+            <label for="the5C">Johhny Appleseed ∨
+                <div class="theSubMenuButton2_1" id="theSubMenuButton1_1" style="display: inline-block;"></div>
+                <div class="theSubMenuButton2_2" id="theSubMenuButton1_2" style="display: inline-block;"></div>
+            </label>
+        </div>
+        <input type="checkbox" name="" id="the5C" class="theCheckbox">
+        <div id="theDiv5Id" class="theSubDivClass">
+            <div class="theLv1Div">5-1</div>
+            <div class="theLv1Div">5-2</div>
+            <div class="theLv1Div">5-3</div>
+        </div>
     </div>
 </body>
 
