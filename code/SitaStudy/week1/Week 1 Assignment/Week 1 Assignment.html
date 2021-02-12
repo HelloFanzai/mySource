@@ -45,8 +45,6 @@
             display: block;
         }
 
-
-
         /* for css style */
         body {
             font-family: appleFont;
@@ -101,7 +99,6 @@
             border-width: 1px;
             line-height: 50px;
             padding-left: 50px;
-
         }
 
         #theLabe5Id {
@@ -114,8 +111,6 @@
             border-width: 1px;
             line-height: 50px;
             padding-left: 50px;
-
-
         }
 
         .theSubDivClass {
@@ -215,23 +210,24 @@
         .theSubMenuButton2nd {
             width: 12px;
             height: 2px;
-            background-color:#ffffff;
+            background-color: #ffffff;
             margin-top: -2px;
             transition: 0.2s;
-            /* margin-left: 50rem; */
-
         }
+
         .theXSubButton {
             float: right;
             cursor: pointer;
-            
+
         }
-        .close .theSubMenuButton1st{
-            transform:rotate(-45deg);
+
+        .close .theSubMenuButton1st {
+            transform: rotate(-45deg);
         }
+
         /* 旋转第三条横线 */
-        .close .theSubMenuButton2nd{
-            transform:rotate(45deg);
+        .close .theSubMenuButton2nd {
+            transform: rotate(45deg);
         }
     </style>
     <script>
@@ -244,16 +240,17 @@
             console.log('theSearchFn wroked');
         }
         function toggle(menu) {
+            console.log(menu);
             menu.classList.toggle("open");
             menu.classList.toggle("close");
 
             let theStateOfCheckbox = document.getElementById('the0C')
             if (theStateOfCheckbox.checked == true) {
-                document.getElementById('theApple').innerHTML = '🍐Talent Point'
+                document.getElementById('theApple').innerHTML = '🍎Talent Point'
             } else {
-                document.getElementById('theApple').innerHTML = '🍐Recruitment'
+                document.getElementById('theApple').innerHTML = '🍎Recruitment'
+                
             }
-
         }
 
     </script>
@@ -273,7 +270,7 @@
 
         <div id="theApple">
             <!-- <label id="theApple" for="" >🍎APPLE</label> -->
-            🍐Talent Point
+            🍎Talent Point
         </div>
 
         <div id="theLink">
@@ -287,7 +284,7 @@
             <label for="">Talent</label>
         </div>
         <div id="theLabe1Id">
-            <label for="the1C">Connections
+            <label for="the1C" onclick="toggle(this)">Connections
                 <div class="theXSubButton" onclick="toggle(this)">
                     <div class="theSubMenuButton1st" id="theSubMenuButton1_1"></div>
                     <div class="theSubMenuButton2nd" id="theSubMenuButton1_2"></div>
@@ -302,7 +299,7 @@
         </div>
 
         <div id="theLabe2Id">
-            <label for="the2C">Intelligence
+            <label for="the2C" onclick="toggle(this)">Intelligence
                 <div class="theXSubButton" onclick="toggle(this)">
                     <div class="theSubMenuButton1st" id="theSubMenuButton2_1"></div>
                     <div class="theSubMenuButton2nd" id="theSubMenuButton2_2"></div>
@@ -317,7 +314,7 @@
         </div>
 
         <div id="theLabe3Id">
-            <label for="the3C" onclick="theLv1('theLv3Div')">Workspace
+            <label for="the3C" onclick="toggle(this)">Workspace
                 <div class="theXSubButton" onclick="toggle(this)">
                     <div class="theSubMenuButton1st" id="theSubMenuButton1_1"></div>
                     <div class="theSubMenuButton2nd" id="theSubMenuButton1_2"></div>

@@ -4,6 +4,7 @@
         //join("") 把数组转换成字符串
         // slice():方法可从已有的数组中返回选定的元素,arrayObject.slice(start,end)
         // slice()方法并不会修改数组，而是返回一个子数组
+        // arrayObject.splice(index,howmany,item1,.....,itemX)
         // splice() 方法用于添加或删除数组中的元素，修改原数组，可替换元素
         var s1 = "America";
         console.log(s1.substring(2,5)) //eri
@@ -62,3 +63,9 @@ console.log(!!1); //logs true
 console.log(!!0); //logs false
 console.log(!![].length); //logs false
 console.log(!![1, 2].length); //logs true
+
+// 通过Object.keys来获取obj的长度
+var obj = {'name' : 'fly' , 'sex' : 'male' , 'age' : '14'};
+var arr = Object.keys(obj);
+console.log(arr); // ['name','sex','age']
+console.log(arr.length); //3
