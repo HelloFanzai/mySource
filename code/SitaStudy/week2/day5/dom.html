@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+      
+    </script>
+</head>
+
+<body>
+    <buttun id="mybtn" onclick="">Click Here</buttun>
+    <br>
+    <input id="myip" type="text" />
+
+
+    <script>
+        var mybtn = document.getElementById("mybtn");
+        mybtn.addEventListener("click", myfunc);
+
+        function myfunc() {
+            alert("btn cliked");
+        }
+
+        document.addEventListener("mousemove", functionname);
+        function functionname(e) {
+            console.log(e.pageX + "," + e.pageY);
+        }
+
+        document.getElementById("myip").addEventListener("keypress", functionname);
+        function functionname(wocao) {
+            console.log(wocao.which);
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>
