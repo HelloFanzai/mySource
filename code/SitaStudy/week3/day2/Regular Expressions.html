@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <title>Regular Expressions</title>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Regular Expressions</h1>
+    <form id="f1" action="http://localhost/serverpage.aspx">
+        Email:
+        <input type="text" id="txtemail">
+        <span id="spanemail" class="error"></span><br>
+        Mobile:
+        <input type="text" id="txtmobile">
+        <span id="spanmobile" class="error"></span><br>
+        <input type="submit" value="Login">
+    </form>
+    <script>
+        document.getElementById("f1").addEventListener("submit", fun1);
+        function fun1(event) {
+            //event = browser given information
+            var s1 = document.getElementById("txtemail").value;
+            var regexpemail = /\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/; //for email format
+            alert(regexpemail.test(s1))
+            if (regexpemail.test(s1) == false) {
+                event.preventDefault();
+                document.getElementById("spanemail").innerHTML = "Invalid email";
+            } else {
+                document.getElementById("spanemail").innerHTML = "";
+            }
+            var s2 = document.getElementById("txtmobile").value;
+            var regexpmobile = /^[789]\d{9}$/; //numberi for start with 7 8 9 come with 9 numbers
+            alert(regexpmobile.test(s2))
+            if (regexpmobile.test(s2) == false) {
+                event.preventDefault();
+                document.getElementById("spanmobile").innerHTML = "Invalid mobile";
+            } else {
+                document.getElementById("spanmobile").innerHTML = "";
+            }
+        }
+    </script>
+</body>
+
+</html>

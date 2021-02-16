@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function theFn1() {
+            document.getElementById('result').innerHTML = '666'
+            document.getElementById('myDiv').innerHTML = '666'
+        }
+
+        function func() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    // document.getElementById("result").innerHTML =
+                        myTab(this.responseText) 
+                }
+            };
+            // xhttp.open("GET", "./data233.json", true);
+            xhttp.open("GET", "http://157.245.240.228:8080/cloudJson/cloudJson", true);
+            // xhttp.open("GET", "URL", true);
+            xhttp.send();
+        }
+
+
+        function myTab(resp) {
+            var mystudents = JSON.parse(resp).data[0];
+            var mydiv = document.getElementById("myDiv");
+            var mytable = "<table border='1'>"
+            var mythead = "<thead>"
+            var mytbody = "<tbody>"
+
+            for (var i = 0; i < mystudents.length; i++) {// iterate array
+                mytbody += "<tr>"
+                for (key in mystudents[i]) {// iterate object
+                    console.log(key, mystudents[i][key]);
+                    if (i == 0) {
+                        mythead += "<th>" + key + "</th>"
+                    }
+                    mytbody += "<td>" + mystudents[i][key] + "</td>"
+                }
+                mytbody += "<tr>"
+            }
+            mytbody += "</thead>"
+            mytbody += "</tbody>"
+            mytable += mythead + mytbody + "</table>"
+            mydiv.innerHTML = mytable;
+        }   
+    </script>
+</head>
+
+<body>
+    <div>
+        <button onclick="func()">wow</button>
+        <button id="theNone" onclick="theFn1()">None</button>
+        <div id="result">233</div>
+    </div>
+    <div>
+        <div id="myDiv" >2234</div>
+        <button onclick="myTab(resp)">show</button>
+    </div>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status" target="_blank">HTTP response status codes</a>
+    <p>HTTPS和HTTP的区别主要如下：<br>
+        1、https协议需要到ca申请证书，一般免费证书较少，因而需要一定费用。<br>
+        2、http是超文本传输协议，信息是明文传输，https则是具有安全性的ssl加密传输协议。<br>
+        3、http和https使用的是完全不同的连接方式，用的端口也不一样，前者是80，后者是443。<br>
+        4、http的连接很简单，是无状态的；HTTPS协议是由SSL+HTTP协议构建的可进行加密传输、身份认证的网络协议，比http协议安全。<br>
+
+    </p>
+</body>
+
+</html>
