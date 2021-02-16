@@ -1,22 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="./fontawesome-free-5.15.2-web/css/all.css" rel="stylesheet">
-    
+
     <style>
-        .fab{
+        .fab {
             color: pink;
         }
     </style>
+    <script>
+        function theA() {
+            document.getElementById('clickIdMenu1').innerHTML = '<i class="fas fa-times"></i>'
+            console.log('thea');
+
+        }
+
+        function openNav() {
+
+            let theValue = document.getElementById("clickIdMenu2")
+
+            if (theValue.innerHTML == '123') {
+                theValue.innerHTML = '<i class="fab fa-apple"></i>'
+            }else{
+                theValue.innerHTML = '123'
+            }
+
+
+            // document.getElementById("clickIdMenu").innerHTML = "<i class="fa fa - times"></i>"
+            // document.getElementById("sidenav").style.width = "100%";
+            console.log('123');
+        }
+
+        function closeNav() { document.getElementById("sidenav").style.width = "0"; }
+        function clickMenu() {       /* x.classList.toggle("fa fa-times"); */               // element.classList.toggle("closebtn");      
+        }
+
+
+    </script>
+
+
+
+
 </head>
+
 <body>
-    <a href="">
-        <i class="fab fa-apple"></i>
-        <i class="fal fa-search"></i>
-    </a>
+    <!-- <a href=""> -->
+        
+        <!-- <i class="fal fa-search"></i> -->
+        <!-- <i class="fas fa-times"></i> -->
+    <!-- </a> -->
+    <!-- <span id="clickIdMenu1" onclick="theA()">'&#9776 2234</span> -->
+    <br>
+    
+    <br>
+    <span id="clickIdMenu2" onclick="openNav()">1134</span>
+
 </body>
+
 </html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Apple</title>
+  <link rel="stylesheet" href="apple.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="shortcut icon" href="apple-touch-icon.png" />
+  <script>
+    function openNav() {
+
+      let theValue = document.getElementById("clickIdMenu");
+
+      if (theValue.innerHTML == '<i class="fa fa-times"></i>') {
+        theValue.innerHTML = '<i class="fa fa-bars" aria-hidden="true"></i>'
+        document.getElementById("sidenav").style.width = "0";
+      }else {
+        theValue.innerHTML = '<i class="fa fa-times"></i>'
+        document.getElementById("sidenav").style.width = "100%";
+      }
+    }
+
+
+    function opensubNav() {
+      let thePlus = document.getElementById("clickplus");
+
+      if (thePlus.innerHTML == '<i class="fa fa-plus"></i>') {
+        document.getElementById("subNav2").style.display = "block";
+
+        thePlus.innerHTML = '<i class="fa fa-times"></i>'
+      }else {
+        thePlus.innerHTML = '<i class="fa fa-plus"></i>'
+        document.getElementById("subNav2").style.display = "none";
+
+      }
+    }
+    
+    function opensubNav2() {
+      let thePlus = document.getElementById("clickplus2");
+
+      if (thePlus.innerHTML == '<i class="fa fa-plus"></i>') {
+        document.getElementById("theSubMenu3").style.display = "block";
+        thePlus.innerHTML = '<i class="fa fa-times"></i>'
+      }else {
+        thePlus.innerHTML = '<i class="fa fa-plus"></i>'
+        document.getElementById("theSubMenu3").style.display = "none";
+      }
+    }
+    function opensubNav3() {
+      let thePlus = document.getElementById("clickplus3");
+
+      if (thePlus.innerHTML == '<i class="fa fa-plus"></i>') {
+        thePlus.innerHTML = '<i class="fa fa-times"></i>'
+      }else {
+        thePlus.innerHTML = '<i class="fa fa-plus"></i>'
+      }
+    }
+  
+
+
+  </script>
+</head>
+
+<body>
+
+
+  <div id="sidenav1" class="topnav1">
+    <!-- <div id="threeline" onclick="openNav()"><span id="clickIdMenu" onclick=""><i class="fa fa-bars" -->
+    <div id="threeline" onclick="openNav()"><span id="clickIdMenu" onclick=""><i class="fa fa-bars"
+          aria-hidden="true"></i> </span></div>
+    <div id="center" onclick=""><a herf="#"> Talent Point</a></div>
+
+    <div id="bell">
+      <a href="#"><i class="fa fa-bell"></i></a>
+      <a href="#"><i class="fa fa-fw fa-search"></i></a>
+    </div>
+
+  </div>
+
+
+  <div id="sidenav" class="topnav">
+    <div id="talent" href="#">Talent</div>
+
+    <div id="subNav1" >
+      <div id="connections" herf="#">Connections</div>
+      <div id="plus1" onclick="opensubNav()">
+        <span id="clickplus" ><i class="fa fa-plus"></i></span>
+      </div>
+    </div>
+
+    <div id="subNav2" class="thetotalplus">
+      <div id="pipelines" herf="#">Pipelines</div>
+      <div id="requisition" herf="#">Requisition</div>
+      <div id="projects" herf="#">Projects</div>
+    </div>
+
+    <div id="subNav3" class="thetotalplus">
+      <div id="plus2" onclick="opensubNav2()"><span id="clickplus2"><i class="fa fa-plus"></i></span></div>
+      <div id="intelligence" href="#">Intelligence</div>
+
+      <div id="theSubMenu3" > 
+        <div id="companies" herf="#">Companies</div>
+        <div id="schools" herf="#">Schools</div>
+      </div>
+
+    </div>
+
+    <div id="workspace" href="#">Workspace</div>
+    <div id="plus3" onclick="opensubNav3()"><span id="clickplus3"><i class="fa fa-plus"></i></span>
+    </div>
+
+    <div id="insights" href="#">Insights</div>
+    <div id="johhny" href="#">Johhny Appleseed</div>
+
+  </div>
+  <div id="theDivtest1">test1</div>
+
+  <script>
+    //function openNav() {
+    //document.getElementById("clickIdMenu").innerHTML="<i class="fa fa-times"></i>"
+    //document.getElementById("sidenav").style.width = "100%";
+  //}
+
+
+  </script>
+</body>
+
+</html>

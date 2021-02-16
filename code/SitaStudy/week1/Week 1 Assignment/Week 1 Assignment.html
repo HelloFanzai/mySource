@@ -125,38 +125,53 @@
             border-left-style: solid;
             border-left-color: #4fc7ef;
             border-left-width: 5px;
+            margin-left: -8px;
+
         }
 
         #theLabe1Id {
             border-left-style: solid;
             border-left-color: #ed357b;
             border-left-width: 5px;
-            margin-left: 0%;
+            margin-left: -8px;
         }
 
         #theLabe2Id {
             border-left-style: solid;
             border-left-color: #f87705;
             border-left-width: 5px;
+            margin-left: -8px;
+
         }
 
         #theLabe3Id {
             border-left-style: solid;
             border-left-color: #8801e6;
             border-left-width: 5px;
+            margin-left: -8px;
+
+
+            width: 100vw;
+            max-width: 100%;
+            /* height: 100vh; */
+
         }
 
         #theLabe4Id {
             border-left-style: solid;
             border-left-color: #93ca6a;
             border-left-width: 5px;
+            margin-left: -8px;
+
         }
 
         #theLabe5Id {
             border-left-style: solid;
             border-left-color: #838383;
             border-left-width: 5px;
-            left: 50%;
+            /* left: 50%; */
+            margin-left: -8px;
+
         }
 
         .theLv1Div {
@@ -230,12 +245,11 @@
             transform: rotate(45deg);
         }
 
-        i{
+        i {
             color: #ffffff;
             font-size: 18pt;
             margin: 4px;
         }
-
     </style>
     <script>
         function theBellFn() {
@@ -256,7 +270,7 @@
                 document.getElementById('theApple').innerHTML = '<i class="fab fa-apple"></i>Talent Point'
             } else {
                 document.getElementById('theApple').innerHTML = '<i class="fab fa-apple"></i>Recruitment'
-                
+
             }
         }
 
@@ -266,7 +280,6 @@
 
 <body>
     <div id="mainBar">
-
         <div id="theMenuLable1">
             <label for="the0C" onclick="toggle(this)">
                 <div id="theHamburgerMenu">
@@ -280,6 +293,8 @@
             <i class="fab fa-apple"></i>Talent Point
         </div>
 
+        <input type="button" value="" class="" >
+
         <div id="theLink">
             <a class="theLinkClass" href="#" id="theSearch" onclick="theSearchFn()">
                 <i class="fas fa-search"></i>
@@ -289,6 +304,11 @@
             </a>
         </div>
     </div>
+
+
+
+
+
     <input type="checkbox" name="" id="the0C" class="theCheckbox">
     <div id="mainMenu">
         <div id="theLabe0Id">
