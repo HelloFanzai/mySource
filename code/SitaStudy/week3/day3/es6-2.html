@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <title>Method Overriding</title>
+</head>
+
+<body>
+    <h1>Method Overriding</h1>
+    <script>
+        class Person {
+            constructor(name, age) {
+                this.name = name; this.age = age;
+            }
+            display() {
+                return "name is " + this.name + ", age is " + this.age;
+            }
+        }
+        class Student extends Person {
+            constructor(name, age, studentid, marks) {
+                super(name, age);
+                this.studentid = studentid;
+                this.marks = marks;
+            }
+            display() {
+                return super.display() + ", studentid is " + this.studentid + ", marks is " + this.marks;
+            }
+        }
+        class Employee extends Person {
+            constructor(name, age, employeeid, salary) {
+                super(name, age);
+                this.employeeid = employeeid;
+                this.salary = salary;
+            }
+            display() {
+                return super.display() + ", employeeid is " + this.employeeid + ", salary is " + this.salary;
+            }
+        }
+        var s = new Student("scott", 20, 101, 78);
+        console.log(s.display());
+        var e = new Employee("smith", 25, 201, 9500);
+        console.log(e.display()); 
+    </script>
+</body

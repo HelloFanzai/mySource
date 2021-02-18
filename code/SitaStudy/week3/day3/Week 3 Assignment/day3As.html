@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .theMainPart {
+            border: none;
+            background-color: transparent;
+        }
+
+        #theMainDiv {
+            border: 2px solid pink;
+            width: fit-content;
+
+        }
+    </style>
+    <script>
+        function theEventFn() {
+            document.getElementById("theMainInput").addEventListener("focus", theFocusFn, true);
+            document.getElementById("theMainInput").addEventListener("blur", theBlurFn, true);
+            document.getElementById("theMainInput").addEventListener("keypress", theKeyTest);
+            function theKeyTest(wocao) {
+                let theInputValue = document.getElementById("theMainInput").value
+                let theOptionsArray = [
+                    "student on the bus", "useless stuff", "stubhub tickets", "unusual", "user study", " english teacher", "long distant", "search widget",
+                    "monkeyking", "make american great again", "working in progress", "passion fruit", "forget the past", "led", "global warming effect", "former president",
+                    "keep going", "soft landing", "interest", "darkness", "mapkit", "declared war", "young generations", "jump ahead",
+                    "shall", "modern design", "piece of cake", "any circumstances", "rough journey",
+                    "breath subtlely", "grade", "bank association",
+                    "zero", "go ahead", "strong woman", "biscuit basket", "slabs", "western logic thinking", "keep fighting", "xbox series x",
+                    "sell and buy", "smaller than nothing", "beside", "vehicle garage", "jack in the box", " good mood", "stock dropped", "energy man",
+                    "dog", "pacific ocean", "rubbed", "trunk", "glass", "window", "xfinity phone number", "wake me up in the first day of september morning",
+                    "successful launching", "including", "look out", "put together", "US army", "zillow estate", "season flu", "respect and love",
+                    "characteristic", "writing a letter", "grey goose", "load", "fought forever", "summer last", "feathers fade away", "equal right"
+                ]
+                let theOptions = ''
+                console.log(wocao.which, ' ', theInputValue);
+
+                document.getElementById('theList').innerHTML = theOptions;
+
+                for (var i = 0; i < theOptionsArray.length; i++) {
+                    theOptions += '<option value="' + theOptionsArray[i] + '" />';
+                }
+                document.getElementById('theList').innerHTML = theOptions;
+
+                if (wocao.which == 13) {
+                    console.log('woca entry:', theInputValue);
+                    alert('submited')
+                    theResetButtonFn()
+                }
+                // if (wocao.which == 27) {
+                //     console.log('woca esc:', theInputValue);
+                //     theResetButtonFn()
+                // }
+
+            }
+        }
+        function theFocusFn() {
+            let theInputValue = document.getElementById("theMainInput").value
+            console.log(theInputValue);
+            document.getElementById("theMainInput").style.background = "yellow";
+        }
+        function theBlurFn() {
+            document.getElementById("theMainInput").style.background = "";
+        }
+        function theResetButtonFn() {
+            document.getElementById("theMainInput").value = "";
+            document.getElementById("theList").innerHTML = "";
+        }
+        function theSearchButtonFn() {
+            alert('Submited')
+        }
+    </script>
+</head>
+
+<body onload="theEventFn()">
+    <div id="theMainDiv">
+        <button id="theSearchButton" class="theMainPart" onclick="theSearchButtonFn()" >🔍</button>
+        <input list="theList" id="theMainInput" class="theMainPart" type="text" placeholder="666">
+        <datalist id="theList">
+            <option value='test1'></option>
+            <option value="test2"></option>
+            <option value="test3"></option>
+            <!-- <option value= "<strong>123</strong>"> </option> -->
+            <!-- theOptions +="<strong>" + Test + "</strong>"; -->
+
+            <option value="test4"></option>
+            <option value="test5"></option>
+        </datalist>
+        
+        <input id="theResetButton" class="theMainPart" type="button" value=✖ onclick="theResetButtonFn()">
+    </div>
+
+
+    <script>
+        // document.getElementById("theMainInput").addEventListener("focus", myFunctiona, true);
+        // document.getElementById("theMainInput").addEventListener("blur", myFunctionb, true);
+        // function myFunctiona() {
+        //     document.getElementById("theMainInput").style.background = "yellow";
+        // }
+        // function myFunctionb() {
+        //     document.getElementById("theMainInput").style.background = "red";
+        // }
+    </script>
+</body>
+
+</html>

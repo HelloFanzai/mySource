@@ -1,0 +1,45 @@
+<html>
+
+<head>
+    <title>Set and Get Methods</title>
+</head>
+
+<body>
+    <h1>Set and Get Methods</h1>
+    <script>
+        class Person {
+            constructor() {
+                this.name = null;
+                this.age = 0;
+            }
+            set Name(value) {
+                if (value.length <= 20) {
+                    this.name = value;
+                }
+            }
+            get Name() {
+                return this.name;
+            }
+            set Age(value) {
+                if (value >= 18 && value <= 70) {
+                    this.age = value;
+                }
+            }
+            get Age() {
+                return this.age;
+            }
+        }
+
+        var p = new Person();
+        p.Name = "abcdefghijklmnopqrstuvwxyz";
+        p.Age = 800;
+        console.log(p.Name);
+        console.log(p.Age);
+        p.Name = "Scott";
+        p.Age = 30;
+        console.log(p.Name);
+        console.log(p.Age); 
+    </script>
+</body>
+
+</html>
