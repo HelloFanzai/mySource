@@ -10,6 +10,7 @@
         .theMainPart {
             border: none;
             background-color: transparent;
+            user-select: none;
         }
 
         #theMainDiv {
@@ -79,7 +80,9 @@
 
 <body onload="theEventFn()">
     <div id="theMainDiv">
-        <button id="theSearchButton" class="theMainPart" onclick="theSearchButtonFn()" >🔍</button>
+        <!-- <button id="theSearchButton" class="theMainPart" onclick="theSearchButtonFn()" >🔍</button> -->
+        <!-- <span  >🔍</span> -->
+        <label class="theMainPart" for="theMainInput">🔍</label>
         <input list="theList" id="theMainInput" class="theMainPart" type="text" placeholder="666">
         <datalist id="theList">
             <option value='test1'></option>
@@ -94,6 +97,7 @@
         
         <input id="theResetButton" class="theMainPart" type="button" value=✖ onclick="theResetButtonFn()">
     </div>
+    <input type="text">👈new input
 
 
     <script>

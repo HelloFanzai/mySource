@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <SCript>
+        function wocaFn() {
+            document.body.addEventListener("keyup", theKeyTest);
+            console.log('ok');
+            function theKeyTest(wocao) {
+                console.log(wocao);
+                if (wocao.which == 13) {
+                    console.log('woca entry:');
+                    alert('按了entry')
+                }   
+                if (wocao.which == 9) {
+                    console.log('woca entry:');
+                    alert('按了tab')
+                }   
+                if (wocao.which == 27) {
+                    console.log('woca entry:');
+                    alert('按了ESC')
+                }   
+           
+            }
+        }
+    </SCript>
+</head>
+
+
+<body onload="wocaFn()">
+<!-- <body onclick="wocaFn()"> -->
+<!-- <body > -->
+    <div>
+        <input id="theInput1" type="text">
+        <input id="theInput2" type="text">
+    </div>
+
+    <!-- <script>
+       document.body.addEventListener("keyup", theKeyTest);
+            console.log('ok');
+            function theKeyTest(wocao) {
+                console.log(wocao);
+                if (wocao.which == 13) {
+                    console.log('woca entry:');
+                    alert('按了entry')
+                }   
+                if (wocao.which == 9) {
+                    console.log('woca entry:');
+                    alert('按了tab')
+                }   
+                if (wocao.which == 27) {
+                    console.log('woca entry:');
+                    alert('按了ESC')
+                }   
+           
+            }
+    </script> -->
+</body>
+</html>
