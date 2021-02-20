@@ -7,8 +7,12 @@ function mypowerball() {
     }
     redBall.push( Math.floor( Math.random()*27 ) )
     whileBall.sort( (a,b)=>a-b )
-    console.log('While Ball is ：',whileBall);
-    console.log('red Ball is ：',redBall);
+    console.log('While Ball is ：',whileBall,'~ red Ball is ：',redBall);
+    // console.log();
 }
 
+mypowerball()
+mypowerball()
+mypowerball()
+mypowerball()
 mypowerball()

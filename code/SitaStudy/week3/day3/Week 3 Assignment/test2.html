@@ -10,7 +10,7 @@
             document.body.addEventListener("keyup", theKeyTest);
             console.log('ok');
             function theKeyTest(wocao) {
-                console.log(wocao);
+                console.log(wocao.which);
                 if (wocao.which == 13) {
                     console.log('woca entry:');
                     alert('按了entry')
