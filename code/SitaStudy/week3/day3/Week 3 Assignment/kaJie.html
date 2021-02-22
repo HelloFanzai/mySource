@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font: 16px Arial;
+        }
+
+        /*the container must be positioned relative:*/
+        #search-box {
+            position: relative;
+            display: inline-block;
+            width: 300px;
+        }
+
+        /* input::before{
+    content: "\26B2";
+  }
+  input::after{
+    content: "\00D7";
+  } */
+
+        input {
+            border: 1px solid black;
+            background-color: #f1f1f1;
+            padding: 10px 45px;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        .search-icon {
+            /* display: inline-block; */
+            position: absolute;
+            /* float: right; */
+            font-size: 25px;
+            top: 0px;
+            left: 0px;
+            padding: 4px 10px;
+        }
+
+        .reset-btn {
+            /* display: inline-block; */
+            position: absolute;
+            /* float: right; */
+            font-size: 35px;
+            top: 0px;
+            right: 0px;
+            padding: 0px 8px;
+            visibility: hidden;
+        }
+
+        .reset-btn.show {
+            visibility: visible;
+        }
+
+        .match-items {
+            position: absolute;
+            border: 1px solid;
+            z-index: 999999;
+            /*position the autocomplete items to be the same width as the container:*/
+            top: 100%;
+            margin-top: 2px;
+            left: 0;
+            right: 0;
+            height: 200px;
+            overflow: auto;
+        }
+
+        .match-items div {
+            padding: 10px;
+            cursor: pointer;
+            background-color: #fff;
+            border-bottom: 1px solid #d4d4d4;
+        }
+
+        /*when hovering an item:*/
+        .match-items div:hover {
+            background-color: #e9e9e9;
+        }
+
+        /*when navigating through the items using the arrow keys:*/
+        .item-active {
+            background-color: DodgerBlue !important;
+            color: #ffffff;
+
+        }
+
+        .tab-focus {
+            border: 1px solid DodgerBlue;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" id="search-box">
+        <!-- <div id="search-box"> -->
+        <span class="search-icon">🔍</span>
+        <span><input type="text" id="myInput" autocomplete="off" tabindex="1"></span>
+        <span class="reset-btn" tabindex="2">&#215;</span>
+        <!-- </div> -->
+    </form>
+
+    <script>
+        function findMatch(myInput, data) {
+            // var data = JSON.parse(resp);
+            var currentFocus;
+            var tabFocus;
+            var btn = document.querySelector(".reset-btn");
+            /*execute a function when someone writes in the text field:*/
+            myInput.addEventListener("input", function (e) {
+                // e.preventDefault();
+                var a;
+                var b;
+                var val = this.value;
+                btn.classList.add("show");
+                closeAllLists();
+                if (!val) { return false; }
+                currentFocus = -1;
+                tabFocus = 0;
+                a = document.createElement("DIV");
+                a.setAttribute("id", "match-list");
+                a.setAttribute("class", "match-items");
+                a.setAttribute("tabindex", "3");
+
+                this.parentNode.appendChild(a);
+
+                for (let i = 0; i < data.length; i++) {
+                    let fIndex = data[i].indexOf(val.toLowerCase())
+                    if (fIndex >= 0) {
+                        // console.log(fIndex);
+                        // console.log(data[i].substr(fIndex, myInput.value.length))
+                        b = document.createElement("DIV");
+
+
+                        b.innerHTML += data[i].substr(0, fIndex)
+                        b.innerHTML += "<b>" + data[i].substr(fIndex, val.length) + "</b>"
+                        b.innerHTML += data[i].substr(fIndex + val.length)
+                        /*insert a input field that will hold the current array item's value:*/
+                        b.innerHTML += "<input type='hidden' value='" + data[i] + "'>";
+                        /*execute a function when someone clicks on the item value (DIV element):*/
+                        b.addEventListener("click", function (e) {
+                            /*insert the value for the autocomplete text field:*/
+                            myInput.value = this.getElementsByTagName("input")[0].value;
+                            /*close the list of autocompleted values,or any other open lists of autocompleted values:*/
+                            closeAllLists();
+                        });
+                        a.appendChild(b);
+                    }
+                }
+            });
+
+            /*execute a function presses a key on the keyboard:*/
+            myInput.addEventListener("keydown", function (e) {
+                var x = document.getElementById("match-list");
+                if (x) x = x.getElementsByTagName("div");
+                if (e.keyCode == 40) {
+                    /*If the arrow DOWN key is pressed,increase the currentFocus variable:*/
+                    currentFocus++;
+                    /*and and make the current item more visible:*/
+                    addActive(x);
+                } else if (e.keyCode == 38) {
+                    /*If the arrow UP key is pressed,decrease the currentFocus variable:*/
+                    currentFocus--;
+                    /*and and make the current item more visible:*/
+                    addActive(x);
+                } else if (e.keyCode == 13) {
+                    /*If the ENTER key is pressed, prevent the form from being submitted,*/
+                    e.preventDefault();
+                    if (currentFocus > -1) {
+                        /*and simulate a click on the "active" item:*/
+                        if (x) x[currentFocus].click();
+                    }
+                }
+
+            });
+
+            document.querySelector('form').addEventListener("keydown", e => {
+                if (e.keyCode == 27) {
+                    if (e.target.contains(document.activeElement) && document.activeElement != myInput) {
+                        myInput.focus();
+                    } else {
+                        myInput.value = "";
+                    }
+                    closeAllLists();;
+                }
+            });
+
+            function addActive(x) {
+                /*a function to classify an item as "active":*/
+                if (!x) return false;
+                /*start by removing the "active" class on all items:*/
+                removeActive(x);
+                if (currentFocus >= x.length) currentFocus = 0;
+                if (currentFocus < 0) currentFocus = (x.length - 1);
+                /*add class "autocomplete-active":*/
+                x[currentFocus].classList.add("item-active");
+                x[currentFocus].scrollIntoView(false);
+            }
+            function removeActive(x) {
+                /*a function to remove the "active" class from all autocomplete items:*/
+                for (var i = 0; i < x.length; i++) {
+                    x[i].classList.remove("item-active");
+                }
+            }
+
+            function closeAllLists(elmnt) {
+                /*close all autocomplete lists in the document, except the one passed as an argument:*/
+                var x = document.getElementsByClassName("match-items");
+                for (var i = 0; i < x.length; i++) {
+                    if (elmnt != x[i] && elmnt != myInput) {
+                        x[i].parentNode.removeChild(x[i]);
+                    }
+                }
+            }
+
+            btn.addEventListener("click", function (e) {
+                closeAllLists();
+                myInput.value = "";
+                myInput.focus();
+                btn.classList.remove("show");
+            })
+            btn.addEventListener("keydown", function (e) {
+                if (document.activeElement = btn && e.keyCode == 13) {
+                    closeAllLists();
+                    myInput.value = "";
+                    myInput.focus();
+                    btn.classList.remove("show");
+                }
+
+            })
+
+
+            /*execute a function when someone clicks in the document:*/
+            document.addEventListener("click", function (e) {
+                closeAllLists(e.target);
+            });
+
+        }
+
+        var data = ["student on the bus", "useless stuff", "stubhub tickets", "unusual", "user study", " english teacher", "long distant", "search widget", "monkeyking", "make american great again", "working in progress", "passion fruit", "forget the past", "led", "global warming effect", "former president", "keep going", "soft landing", "interest", "darkness", "mapkit", "declared war", "young generations", "jump ahead", "shall", "modern design", "piece of cake", "any circumstances", "rough journey", "breath subtlely", "grade", "bank association", "zero", "go ahead", "strong woman", "biscuit basket", "slabs", "western logic thinking", "keep fighting", "xbox series x", "sell and buy", "smaller than nothing", "beside", "vehicle garage", "jack in the box", " good mood", "stock dropped", "energy man", "dog", "pacific ocean", "rubbed", "trunk", "glass", "window", "xfinity phone number", "wake me up in the first day of september morning", "successful launching", "including", "look out", "put together", "US army", "zillow estate", "season flu", "respect and love", "characteristic", "writing a letter", "grey goose", "load", "fought forever", "summer last", "feathers fade away", "equal right"];
+
+        findMatch(document.getElementById("myInput"), data);
+
+        var rest = [];
+        arr = [1, 2, ...rest]
+        console.log(arr);
+    </script>
+
+</body>
+
+
+</html>
