@@ -1,0 +1,18 @@
+<p>login works!</p>
+<input type="text" [(ngModel)]="myValue" > <span> {{myValue}} </span>
+<P> 那女孩对我说：{{theThing}} </P>
+<span [class]="myClass" >幸福的颜色</span>
+<button (click)='theClidkMethod(1)' >Good1</button>
+<button (click)='theClidkMethod("2")' >Good2</button>
+
+<div>
+    <form action="">
+        <h4>Login</h4>
+        UserName: <input type="text" [(ngModel)]="userName" name="userName11" id="theID1" #t1> <br>
+        passWord: <input type="text" [(ngModel)]="passWord" name="passWord22" id="theID2"> <br>
+        {{msg}} <br>
+        <input type="submit" value="Login" (click)=checkLgin(t1)> <br>
+        <span (click)="checkLgin(t1)">233 </span>
+
+    </form>
+</div>

@@ -1,0 +1,27 @@
+<p>register works!</p>
+<div>
+    <h4>data binding</h4>
+    FN:{{firstName}} <br>
+    LN:{{lastName}} <br>
+    Age:{{age}} <br>
+    receive nws letters:{{receivenwsletters}} <br>
+    gender:{{gender}} <br>
+    country:{{country}} <br>
+    address:{{address}} <br>
+    <a [href]="address">click</a>
+    <hr>
+    FN: <input type="text" [(ngModel)]="firstName" value="123"> <br>
+    LN: <input type="text" [(ngModel)]="lastName" > <br>
+    Age: <input type="text" [(ngModel)]="age" > <br>
+    receive nws letters:<input type="checkbox" [(ngModel)]="receivenwsletters" > <br>
+    gender: <input type="radio" [(ngModel)]="gender" value='Male' >Male
+      <input type="radio" [(ngModel)]="gender" value='Famale' > Famale<br>
+    country: 
+    <select [(ngModel)]="country">
+        <option >C4</option>
+        <option >USB</option>
+        <option >USA</option>
+    </select>
+    <input type="button" value="Change Data" (click)='changeData()' >
+    <input type="button" value="Reset Data" (click)='resetData()' >
+</div>
