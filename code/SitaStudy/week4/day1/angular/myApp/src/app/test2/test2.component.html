@@ -1,0 +1,26 @@
+<p>test2 works!</p>
+<div>
+    <h4>ngFor with Searching and Sorting</h4>
+    <input type="text" placeholder="Search" [(ngModel)]="str">
+    <input type="button" value="Search" (click)="onSearchClick()"> <br>
+    Sort: <select [(ngModel)]="sortcolumn">
+        <option>empId</option>
+        <option>empName</option>
+        <option>salary</option>
+    </select> <select [(ngModel)]="order">
+        <option value="1">Ascending Order</option>
+        <option value="-1">Descending Order</option>
+    </select> <input type="button" value="Sort" (click)="onSortClick()">
+    <table border="1">
+        <tr>
+            <th>Emp ID</th>
+            <th>Emp Name</th>
+            <th>Salary</th>
+        </tr>
+        <tr *ngFor="let employee of employees; let i = index">
+            <td>{{employee.empId}}</td>
+            <td>{{employee.empName}}</td>
+            <td>{{employee.salary}}</td>
+        </tr>
+    </table>
+</div>

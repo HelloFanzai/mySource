@@ -1,16 +1,24 @@
-// function myFN(theInput) {
-//     return theInput
-// }
+function theName(p) {
 
-// let theInput=[2,3,4,1,6,8]
-// console.log( myFN(theInput) );
-// What is equivalent of the following using React.creatElement? 
-const element = ( <h1 className="greeting!"> Hello, world! </h1> );
+    // if (p<=0) {
+    //     return true
+    // }else{
+    //     return false
+    // }
+    
+    // return ( p+1*1000) >= 0
+    return (p+1*1000)>=0 ? true : false
+
+    // JS map foreach filter
+
+}
+
+console.log( theName(100) );
+let thePP=999
+console.log( theName(thePP) );
 
 
-const element1 = React.createElement( 
-    'h1', 
-    {className:"greeting!"},
-     'Hello, world!' 
-);
+
+
+
 

@@ -16,3 +16,6 @@ npm i(install) @angular/router   //后期安装router
 
 ＋ generate module:
 ng g m ABC / ng generate module abc
+
+＋ generate class:
+ng g class abc

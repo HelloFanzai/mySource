@@ -1,0 +1,115 @@
+<p>test works!</p>
+<div>
+    <h4>ngFor with searching and sorting</h4>
+</div>
+<hr>
+<div>
+    <h4>ngFor with Object Array</h4>
+    <table border="2px">
+        <tr>
+            <th>Emp Id</th>
+            <th>Emp Name</th>
+            <th>Salad</th>
+            <th>Button</th>
+        </tr>
+        <tr *ngFor="let emp of employees; let i = index">
+            <td>{{emp.empId}}</td>
+            <td>{{emp.empName}}</td>
+            <td>{{emp.salary}}</td>
+            <td>
+                <input type="button" value="Delete" (click)='onDeleteClick(i)'>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" [(ngModel)]="newEmployee.empId" placeholder="Emp ID">
+            </td>
+            <td>
+                <input type="text" [(ngModel)]="newEmployee.empName" placeholder="Emp Name">                
+            </td>
+            <td>
+                <input type="text" [(ngModel)]="newEmployee.salary" placeholder="Salad">
+            </td>
+            <td>
+                <input type="button" value="Insert" (click)='onInsertClick()'>
+            </td>
+        </tr>
+        
+    </table>
+</div>
+<hr>
+<div>
+    <h4>ngFor with Object Array</h4>
+    <table border="2px">
+        <tr>
+            <th>Emp Id</th>
+            <th>Emp Name</th>
+            <th>Salad</th>
+        </tr>
+
+        <tr *ngFor="let emp of employees">
+            <td>{{emp.empId}}</td>
+            <td>{{emp.empName}}</td>
+            <td>{{emp.salary}}</td>
+        </tr>
+        
+    </table>
+</div>
+
+<hr>
+<div>
+    <h4>ngFor</h4>
+    <div *ngFor="let boy of boys"> {{boy}} </div>
+</div>
+<hr>
+<div>
+    <h4>ngSwitch</h4>
+    <select [(ngModel)]="country">
+        <option >USA</option>
+        <option >USB</option>
+        <option >USC</option>
+    </select>
+    <div [ngSwitch]="country">
+        <div *ngSwitchCase=" 'USA' ">country1</div>
+        <div *ngSwitchCase=" 'USB' ">country2</div>
+        <div *ngSwitchCase=" 'USC' ">country3</div>
+        <div *ngSwitchDefault>Thanks</div>
+    </div>
+</div>
+<hr>
+<div>
+    <h4>ngIf</h4>
+    <div *ngIf="theB==true && marks==70" style="background-color: pink;" >
+        Good
+    </div>
+    <div *ngIf="theB!=true && marks!=70" style="background-color: aqua;" >
+        not Good
+    </div>
+    <span>theB: {{theB}}~~ </span>
+    <span>b1: {{b1}} </span>
+</div>
+
+    <input type="text" [(ngModel)]="marks">
+    <input type="radio" [(ngModel)]="theB" value=true >true1
+    <input type="radio" [(ngModel)]="theB" value=false > false2<br>
+
+    <input type="radio" [(ngModel)]="b1" value="abc" >Male
+    <input type="radio" [(ngModel)]="b1" value='def' > Famale<br>
+    <select [(ngModel)]="b1" >
+        <option value='abc' >233</option>
+        <option value='def' >666</option>
+    </select>
+
+<div>
+    <h4>WOW</h4>
+    <div [style.color]="myColor" >
+        {{marks}}
+    </div>
+</div>
+
+<div>
+    <h4>haha</h4>
+    <div [ngClass]="myClass" >
+        {{marks}}
+    </div>
+</div>
