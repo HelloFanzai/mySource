@@ -13,6 +13,9 @@ import { USAComponent } from './usa/usa.component';
 import {UsaModuleModule} from './usa-module/usa-module.module';
 import { BabaComponent } from './baba/baba.component';
 import { SonComponent } from './son/son.component';
+import { LifecycleComponent } from './lifecycle/lifecycle.component';
+import { CompanyComponent } from './company/company.component';
+import { EmployeeComponent } from './employee/employee.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { SonComponent } from './son/son.component';
     Test2Component,
     USAComponent,
     BabaComponent,
-    SonComponent
+    SonComponent,
+    LifecycleComponent,
+    CompanyComponent,
+    EmployeeComponent,
     
   ],
   imports: [
