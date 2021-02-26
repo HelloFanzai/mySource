@@ -1,0 +1,15 @@
+<p>baba works!</p>
+<div class="babaClass">
+
+    <h4>the baba</h4>
+    <p>my #: {{thePhoneNum}} </p>
+    <input type="text" [(ngModel)]="thePhoneNum">
+
+    <app-son #theSon1></app-son>
+    <app-son #theSon2 ></app-son>
+    
+
+    <input type="button" (click)='theSon1.sonAiwo();theSon2.sonAiwo()' value="Der~">
+
+
+</div>

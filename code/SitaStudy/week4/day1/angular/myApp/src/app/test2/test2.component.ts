@@ -13,7 +13,7 @@ export class Test2Component {
     new Employee(2, "Allen", 7500),
     new Employee(3, "Jones", 9200),
     new Employee(4, "James", 9200),
-    new Employee(5, "Smith", 8400)
+    new Employee(5, "Smith", 8300)
   ];
   employees: Employee[] = [];
   constructor() {
