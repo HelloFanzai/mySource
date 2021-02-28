@@ -16,6 +16,7 @@ ul {
 
 .center {
   align-self: center;
+  text-align: center;
 }
 
 .flow-right {
@@ -46,6 +47,7 @@ ul {
   margin-top: 20px;
   padding: 20px;
   overflow-y: auto;
+  background-color: pink;
 }
 
 .todo-delete {
@@ -63,4 +65,22 @@ ul {
 
 .todo-container:first-of-type {
   border-top: 1px solid #333;
+}
+li{
+  border: #333 solid 1px;
+  margin-bottom: 1px;
+  display: block;
+}
+
+#theMainInput{
+  display: none;
+  
+}
+
+.show .theMainInput{
+  /* display:block; */
+}
+
+#theInputTest{
+  
 }

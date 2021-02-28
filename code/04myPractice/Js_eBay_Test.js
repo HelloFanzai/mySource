@@ -25,8 +25,10 @@ function name1(input1,input2) {
     }
     return myResult
 }
-input1=3;
-input2=['...---','..-','...---.-']
+input2=['...---','..-','...---.-','..-.-.-.---.-','.-.-.-.-.-']
+input1=input2.length;
+
+
 console.log( name1(input1,input2) );
 //判断字符: 1，‘.’开头；2，‘-’结尾；3，‘.’和‘-’的数量一致
 //返回正确的字符的数量
