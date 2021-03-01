@@ -6,6 +6,7 @@ html, body {
   background-color: #eee;
   margin: 0;
   padding: 0;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 ul {
@@ -38,7 +39,7 @@ ul {
   flex: none;
 }
 
-.button {
+.button{
   padding: 10px 20px;
 }
 
@@ -66,21 +67,18 @@ ul {
 .todo-container:first-of-type {
   border-top: 1px solid #333;
 }
-li{
+.todo-list-li{
   border: #333 solid 1px;
   margin-bottom: 1px;
   display: block;
+  
 }
 
 #theMainInput{
   display: none;
-  
+  margin-bottom: 10px;
 }
 
-.show .theMainInput{
-  /* display:block; */
-}
-
-#theInputTest{
-  
+input[type=checkbox]:checked~input{
+  background-color: greenyellow;
 }

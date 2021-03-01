@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul>li {
+            margin: 10px 0;
+        }
+
+        .item {
+            padding: 0px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" class="input" id="item_add" placeholder="输入要增加的项目">
+        <ul></ul>
+    </div>
+    <script>
+        var item_add = document.querySelector('#item_add')
+        var ul = document.querySelector('ul')
+        var del = document.querySelector('.item_d')
+        var edit = document.querySelector('.item_edit')
+        var edit_commit
+        item_add.addEventListener('keyup', function (event) {
+            var event = window.event || event;
+            var code = event.keyCode || event.which || event.charCode;
+            if (code === 13 && item_add.value != '') {
+                console.log(item_add.value)
+                var li = document.createElement('li')
+
+                var span = document.createElement('span')
+                span.innerHTML = item_add.value
+                span.setAttribute('class', 'item')
+                item_add.value = '';
+                var item_d = document.createElement('button')
+                item_d.innerHTML = 'x'
+                item_d.setAttribute('class', 'item_d')
+
+                var item_edit = document.createElement('button')
+                item_edit.innerHTML = 'edit'
+                item_edit.setAttribute('class', 'item_edit')
+                li.appendChild(span)
+                li.appendChild(item_d)
+                li.appendChild(item_edit)
+                ul.appendChild(li)
+
+
+            }
+            // e.stopPropagation();
+            // e.preventDefault(); 
+        })
+
+        ul.addEventListener('click', function (e) {
+            var e = e || window.event
+            console.log('button-transparent')
+            if (e.target.getAttribute('class') === 'item_d' && confirm('确定删除吗？')) {
+                ul.removeChild(e.target.parentNode)
+                console.log('已删除')
+            };
+            if (e.target.getAttribute('class') === 'item_edit') {
+
+                var value = e.target.parentNode.firstChild.innerText
+
+                console.log( value,'123' );
+
+                e.target.parentNode.removeChild(e.target.parentNode.firstChild)
+                var item_input = document.createElement('input')
+
+                item_input.value = value
+
+                var edit_commit = document.createElement('button')
+                e.target.parentNode.insertBefore(item_input, e.target.parentNode.firstChild)
+                e.target.setAttribute('class', 'edit_commit')
+                return;
+
+            }
+            if (e.target.getAttribute('class') === 'edit_commit') {
+                var value = e.target.parentNode.children[0].value;
+
+                // var value = e.target.parentNode.children[0].value;
+                
+
+                // e.target.parentNode.removeChild(e.target.parentNode.firstChild)
+                var span = document.createElement('span')
+                span.innerText = value
+                var remove_dom = e.target.parentNode.firstChild
+                e.target.parentNode.removeChild(e.target.parentNode.firstChild)
+                e.target.parentNode.insertBefore(span, e.target.parentNode.firstChild)
+
+                e.target.setAttribute('class', 'item_edit')
+                e.stopPropagation();
+                e.preventDefault();
+                return
+
+            }
+        })
+// 如何解决第二次修改无法呈现input框，且值变为了undefined
+//完美解决，当更改修改按钮的类时，需要return 否则会造成死循环
+    </script>
+</body>
+
+</html>
