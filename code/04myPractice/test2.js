@@ -1,24 +1,10 @@
-function theName(p) {
 
-    // if (p<=0) {
-    //     return true
-    // }else{
-    //     return false
-    // }
+let theA = '1'
+let theB = 1
+
+if ( theB=='1' ) {
+    console.log( 'yes' );
+}else{
+    console.log('no');
     
-    // return ( p+1*1000) >= 0
-    return (p+1*1000)>=0 ? true : false
-
-    // JS map foreach filter
-
 }
-
-console.log( theName(100) );
-let thePP=999
-console.log( theName(thePP) );
-
-
-
-
-
-

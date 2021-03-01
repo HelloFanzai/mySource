@@ -18,8 +18,6 @@ document.addEventListener('keyup',function (theE) {
   
 })
 
-
-
 function newTodo() {
   document.getElementById('theUserInput').value = ''
   document.getElementById('theMainInput').style.display = 'block'
@@ -33,33 +31,10 @@ function newTodo() {
     }
   }
 
-
-
-
-
-  // the1snInput.addEventListener('keyup', function (theE) {
-
-  //   if (theE.key=='Enter') {
-  //     return theEnter()
-  //   }
-
-  // })
-
 }
 
-// document.getElementById('item-count').innerHTML = document.getElementById('todo-list').children.length - 1
-
-
-
-
-
-
 function theEnter() {
-
-
   let theUserInput = document.getElementById('theUserInput').value
-
-
 
   let tempLi = document.createElement("li");
   let tempCheckBox = document.createElement("input");
@@ -76,8 +51,6 @@ function theEnter() {
   tempCheckBox.type = 'checkBox'
   tempInput.value = theUserInput
   tempInput.disabled = true
-
-
 
   tempLi.setAttribute('class', 'todo-list-li')
   tempLi.appendChild(tempCheckBox)
@@ -109,7 +82,6 @@ function theTest22(theE) {
   }
 }
 
-
 var oUl = document.getElementsByTagName("ul")[0];
 oUl.onclick = function (event) {
   // console.log(oUl);
@@ -124,9 +96,11 @@ oUl.onclick = function (event) {
       // console.log('if');
       theTep.disabled = false
       theTep.focus()
+      event.target.innerHTML='→OK←'
     } else {
       // console.log('else');
       theTep.disabled = true
+      event.target.innerHTML='Edit'
       // document.getElementById("theInputTest").focus()
   
     }
@@ -139,13 +113,11 @@ function theCount() {
   let theCheckbox = document.getElementsByName('theCheckbox')
   let theChecked = 0
 
-
   theCheckbox.forEach(e => {
     !e.checked || theChecked++
   })
   document.getElementById('unchecked-count').innerHTML = theCheckbox.length - theChecked
 }
-
 
 let the1svDiv = document.createElement("div")
 let the1svInput = document.createElement("input")
@@ -161,17 +133,6 @@ the1svBtn.onclick=function() {
   theEnter()
 }
 
-
 the1svDiv.appendChild(the1svInput)
 the1svDiv.appendChild(the1svBtn)
 document.getElementsByTagName("ul")[0].appendChild(the1svDiv)
-
-
-{/* <div id="theMainInput" class="theMainInput">
-<input id="theUserInput" type="text" placeholder="Adding new" name="input">
-<button onclick="theEnter()">Enter</button>
-</div> */}
-
-
-
-
