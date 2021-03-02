@@ -19,3 +19,9 @@ ng g m ABC / ng generate module abc
 
 ＋ generate class:
 ng g class abc
+
+＋ new generic directive definition:
+ng generate directive name / ng g d name 
+
+＋ new new generic pipe definition:
+ng g pipe name

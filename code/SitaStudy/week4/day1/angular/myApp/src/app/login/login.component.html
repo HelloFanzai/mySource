@@ -1,4 +1,25 @@
 <p>login works!</p>
+<div>
+    <span>Custom Pipes</span>
+    <!-- Video Duration:{{ videoduration | duration:'hoursandmi' }} -->
+</div>
+
+<div>
+    <span>123</span>
+    <img 
+        width="300px"
+        height="auto"
+        appTheName 
+        the2ndImg='./assets/Img/1.png'
+        the1stImg='./assets/Img/2.png'
+        alt="错误">
+
+
+        
+    
+</div>
+
+
 <input type="text" [(ngModel)]="myValue" > <span> {{myValue}} </span>
 <P> 那女孩对我说：{{theThing}} </P>
 <span [class]="myClass" >幸福的颜色</span>
@@ -13,6 +34,7 @@
         {{msg}} <br>
         <input type="submit" value="Login" (click)=checkLgin(t1)> <br>
         <span (click)="checkLgin(t1)">233 </span>
+        
 
     </form>
 </div>

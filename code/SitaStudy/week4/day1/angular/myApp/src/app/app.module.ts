@@ -16,6 +16,9 @@ import { SonComponent } from './son/son.component';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
 import { CompanyComponent } from './company/company.component';
 import { EmployeeComponent } from './employee/employee.component';
+import {LoginService} from './shared/services/login.service';
+import { TheNameDirective } from './shared/directives/the-name.directive';
+import { DurationPipe } from './shared/pipes/duration.pipe'
 
 @NgModule({
   declarations: [
@@ -30,6 +33,8 @@ import { EmployeeComponent } from './employee/employee.component';
     LifecycleComponent,
     CompanyComponent,
     EmployeeComponent,
+    TheNameDirective,
+    DurationPipe,
     
   ],
   imports: [
@@ -38,7 +43,7 @@ import { EmployeeComponent } from './employee/employee.component';
     FormsModule,
     UsaModuleModule
   ],
-  providers: [],
+  providers: [LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
