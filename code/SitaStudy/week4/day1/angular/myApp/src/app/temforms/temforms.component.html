@@ -1,0 +1,84 @@
+<p>temforms works!</p>
+<div>
+    <h4>Template Drive Forms</h4>
+    <form #myform='ngForm'>
+        Fisrtname: <input type="text" [(ngModel)]="firstName" name="username" required='required' minlength="3"
+            maxlength="20" pattern="[A-z]*$" #control1='ngModel'>
+        <span class="error"
+            *ngIf="control1.touched && control1.invalid && (control1.errors && control1.errors.required)">
+            FirstName can't be blank
+        </span>
+        <span class="error"
+            *ngIf="control1.touched && control1.invalid && (control1.errors && control1.errors.minlength)">
+            Min:3
+        </span>
+        <span class="error"
+            *ngIf="control1.touched && control1.invalid && (control1.errors && control1.errors.pattern)">
+            Alphabets only
+        </span>
+        <br>
+        Lisrtname: <input type="text" [(ngModel)]="lastName" name="lastname" required='required' minlength="3"
+            maxlength="20" pattern="[A-z]*$" #control2='ngModel'>
+        <span class="error"
+            *ngIf="control2.touched && control2.invalid && (control2.errors && control2.errors.required)">
+            FirstName can't be blank
+        </span>
+        <span class="error"
+            *ngIf="control2.touched && control2.invalid && (control2.errors && control2.errors.minlength)">
+            Min:3
+        </span>
+        <span class="error"
+            *ngIf="control2.touched && control2.invalid && (control2.errors && control2.errors.pattern)">
+            Alphabets only
+        </span>
+        <br>
+        Email: <input type="text" [(ngModel)]="email" name="email" required='required'
+            pattern="^[a-z0-9]+(\.[_a-z09]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" #control3='ngModel'>
+        <span class="error"
+            *ngIf="control3.touched && control3.invalid && (control3.errors && control3.errors.required)">
+            can't blank
+        </span>
+        <span class="error"
+            *ngIf="control3.touched && control3.invalid && (control3.errors && control3.errors.pattern)">
+            not valid
+        </span>
+        <br>
+        Amount: <input type="text" [(ngModel)]="amount" name="amount" required='required' pattern="^[0-9]*$"
+            #control4='ngModel'>
+        <span class="error"
+            *ngIf="control4.touched && control4.invalid && (control4.errors && control4.errors.required)">
+            can't blank
+        </span>
+        <span class="error"
+            *ngIf="control4.touched && control4.invalid && (control4.errors && control4.errors.pattern)">
+            not valid
+        </span>
+        <br>
+        Gender: <input type="radio" [(ngModel)]="gender" value="male" name="gender" required='required'
+            #control4='ngModel'> Male
+        <input type="radio" [(ngModel)]="gender" value="famale" name="gender" required='required' #control5='ngModel'>
+        Famale
+        <span class="error"
+            *ngIf="control5.touched && control5.invalid && (control5.errors && control5.errors.required)">
+            Select one
+        </span>
+        <br>
+        Country: <select [(ngModel)]="country" name="country" required='required' #control6='ngModel'>
+            <option value="">choose one</option>
+            <option >country 1</option>
+            <option >country 2</option>
+            <option >country 3</option>
+            <option >country 4</option>
+        </select>
+        <span class="error"
+            *ngIf="control6.touched && control6.invalid && (control6.errors && control6.errors.required)">
+            Select one
+        </span>
+        <br>
+        <input type="submit" value="Register" (click)='onRegisterClick(myform)'>
+        <br>
+        <div [innerHTML]='msg'>
+            msg
+        </div>
+    </form>
+</div>

@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -18,7 +18,9 @@ import { CompanyComponent } from './company/company.component';
 import { EmployeeComponent } from './employee/employee.component';
 import {LoginService} from './shared/services/login.service';
 import { TheNameDirective } from './shared/directives/the-name.directive';
-import { DurationPipe } from './shared/pipes/duration.pipe'
+import { DurationPipe } from './shared/pipes/duration.pipe';
+import { TemformsComponent } from './temforms/temforms.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component'
 
 @NgModule({
   declarations: [
@@ -35,13 +37,16 @@ import { DurationPipe } from './shared/pipes/duration.pipe'
     EmployeeComponent,
     TheNameDirective,
     DurationPipe,
+    TemformsComponent,
+    ReactiveFormComponent,
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    UsaModuleModule
+    UsaModuleModule,
+    ReactiveFormsModule
   ],
   providers: [LoginService],
   bootstrap: [AppComponent]
