@@ -1,6 +1,34 @@
 <p>Woca app.html</p>
+<div class="class1">
+    <h4>Routing</h4>
+    <a routerLink="home"> Home </a>&nbsp;
+    <a routerLink="about"> About </a>&nbsp;
+    <a routerLink="products"> Products </a>&nbsp;
+    <a routerLink="products/brand1"> Product1 </a>&nbsp;
+    <a routerLink="products/brand2"> Product2 </a>&nbsp;
+    <a routerLink="products/brand3"> Product3 </a>&nbsp;
+    <div id="container1">&nbsp;
+        <!-- <router-outlet> </router-outlet> -->
+    </div>
+</div>
+<hr>
+<span>top</span>
+<hr>
 
-<app-reactive-form></app-reactive-form>
+<div class="class2">
+    <h4>Child Routes</h4>
+    <div id="container2">
+    <span>→????????←</span>
+        <router-outlet> </router-outlet>  
+        <!-- onlt can be used 1 time -->
+    <span>→????????←</span>
+
+    </div>
+</div>
+
+
+
+<!-- <app-reactive-form></app-reactive-form> -->
 <!-- <app-temforms></app-temforms> -->
 <!-- <app-login></app-login> -->
 
@@ -35,4 +63,4 @@
 <!-- <span>fisrtname, lastname, email, phone, passowrd, gender, dob</span> -->
 
 
-<router-outlet></router-outlet>
+<!-- <router-outlet></router-outlet> -->

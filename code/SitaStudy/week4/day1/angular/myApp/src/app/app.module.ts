@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
+import {Routes, RouterModule} from "@angular/router"
+// import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
@@ -20,7 +21,51 @@ import {LoginService} from './shared/services/login.service';
 import { TheNameDirective } from './shared/directives/the-name.directive';
 import { DurationPipe } from './shared/pipes/duration.pipe';
 import { TemformsComponent } from './temforms/temforms.component';
-import { ReactiveFormComponent } from './reactive-form/reactive-form.component'
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { ProductsComponent } from './products/products.component'
+import { ProductsService } from './products.service';
+import { OnlineShoppingComponent } from './online-shopping/online-shopping.component';
+import { AppliancesComponent } from './appliances/appliances.component';
+import { ElectronicsComponent } from './electronics/electronics.component';
+import { FashionComponent } from './fashion/fashion.component';
+import { FurnitureComponent } from './furniture/furniture.component';
+import { LightingComponent } from './lighting/lighting.component';
+import { MobilesComponent } from './mobiles/mobiles.component';
+import { LaptopsComponent } from './laptops/laptops.component';
+import { MenComponent } from './men/men.component';
+import { WomenComponent } from './women/women.component';
+
+
+var myroutes: Routes =[
+  { path:'', component:HomeComponent},
+  { path:'home', component:HomeComponent},
+  { path:'about', component:AboutComponent},
+  { path:'products', component:ProductsComponent},
+  { path:'products/:brandname', component:ProductsComponent},
+]
+var myroutes2 = RouterModule.forRoot(myroutes)
+
+var myroutes2_2: Routes = [   
+  { path: "", component: OnlineShoppingComponent },   
+  { path: "electronics", component: ElectronicsComponent, 
+  children: [{ path: "mobiles", component: MobilesComponent },       
+  { path: "laptops", component: LaptopsComponent }]   
+  },   
+  { path: "appliances", component: AppliancesComponent, 
+  children: [{ path: "lighting", component: LightingComponent },       
+  { path: "furniture", component: FurnitureComponent }]   
+  },   
+  { path: "fashion", component: FashionComponent, 
+  children: [ { path: "men", component: MenComponent },       
+  { path: "women", component: WomenComponent }]   
+  } 
+  ]; 
+  var myroutes3 = RouterModule.forRoot(myroutes2_2); 
+
+
+
 
 @NgModule({
   declarations: [
@@ -39,16 +84,31 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component'
     DurationPipe,
     TemformsComponent,
     ReactiveFormComponent,
+    HomeComponent,
+    AboutComponent,
+    ProductsComponent,
+    OnlineShoppingComponent,
+    AppliancesComponent,
+    ElectronicsComponent,
+    FashionComponent,
+    FurnitureComponent,
+    LightingComponent,
+    MobilesComponent,
+    LaptopsComponent,
+    MenComponent,
+    WomenComponent,
     
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    // AppRoutingModule,
+    myroutes2,
+    myroutes3,
     FormsModule,
     UsaModuleModule,
     ReactiveFormsModule
   ],
-  providers: [LoginService],
+  providers: [ProductsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
