@@ -7,10 +7,10 @@ import { WashittonComponent } from "../washitton/washitton.component";
 import { NYCModuleModule } from '../nycmodule/nycmodule.module'
 
 @NgModule({
-  declarations: [NYCComponent,WashittonComponent],
+  declarations: [NYCComponent, WashittonComponent],
   imports: [
-    CommonModule,NYCModuleModule
+    CommonModule, NYCModuleModule
   ],
-  exports:[NYCComponent,WashittonComponent]
+  exports: [NYCComponent, WashittonComponent]
 })
 export class UsaModuleModule { }

@@ -1,45 +1,32 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, Inject } from '@angular/core'; 
+import { LoginStatusService } from "../login-status.service";
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
 })
-export class LoginComponent implements OnInit {
-
-  myValue:string ='WoW~'
-
-  theThing: string ='You are good guy'
-  myClass: string ='good'
-
-  userName:string=''
-  passWord:string=''
-  msg:string=''
-  checkLgin(theTxt){
-    console.log(this.userName);
-    console.log(this.passWord);
-    
-    if (this.userName == 'a' && this.passWord == 'a') {
-      
-      this.msg='Good'
-    }else{
-      this.msg='bad';
-      theTxt.focus()
+export class LoginComponent {
+  username: string = "";
+  password: string = "";
+  msg: string = "";
+  loginStatus: boolean;
+  constructor(@Inject(LoginStatusService) private loginStatusService: LoginStatusService) {
+    this.loginStatus = this.loginStatusService.isLoggedIn;
+  }
+  CheckLogin(txt1) {
+    if (this.username == "1" && this.password == "1") {
+      this.msg = "Successful login";
+      this.loginStatusService.isLoggedIn = true;
+      this.loginStatus = true;
+    } else {
+      this.msg = "Invalid login";
+      this.loginStatusService.isLoggedIn = false;
+      this.loginStatus = false;
+      txt1.focus();
     }
   }
-  theClidkMethod(theVal:any){
-    // alert(233)
-    if (theVal==1) {
-      // this.myClass='good'
-      this.myClass='good'
-    }else{
-      this.myClass='notGood'
-    }
+  Logout() {
+    this.loginStatusService.isLoggedIn = false;
+    this.loginStatus = false;
   }
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }

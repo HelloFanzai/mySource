@@ -14,14 +14,23 @@ Run the application:
 
 npm i(install) @angular/router   //后期安装router
 
-＋ generate module:
+➕ generate module:
 ng g m ABC / ng generate module abc
 
-＋ generate class:
+➕ generate class:
 ng g class abc
 
-＋ new generic directive definition:
+➕ Creates a new, generic service definition:
+ng g service <name>
+
+
+➕ new generic directive definition:
 ng generate directive name / ng g d name 
 
-＋ new new generic pipe definition:
+➕ new new generic pipe definition:
 ng g pipe name
+
+
+➕ new new generic interface definition:
+ng g interface name
+

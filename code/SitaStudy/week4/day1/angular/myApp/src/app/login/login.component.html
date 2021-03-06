@@ -1,40 +1,17 @@
 <p>login works!</p>
 <div>
-    <span>Custom Pipes</span>
-    <!-- Video Duration:{{ videoduration | duration:'hoursandmi' }} -->
-</div>
-
-<div>
-    <span>123</span>
-    <img 
-        width="300px"
-        height="auto"
-        appTheName 
-        the2ndImg='./assets/Img/1.png'
-        the1stImg='./assets/Img/2.png'
-        alt="错误">
-
-
-        
-    
-</div>
-
-
-<input type="text" [(ngModel)]="myValue" > <span> {{myValue}} </span>
-<P> 那女孩对我说：{{theThing}} </P>
-<span [class]="myClass" >幸福的颜色</span>
-<button (click)='theClidkMethod(1)' >Good1</button>
-<button (click)='theClidkMethod("2")' >Good2</button>
-
-<div>
-    <form action="">
-        <h4>Login</h4>
-        UserName: <input type="text" [(ngModel)]="userName" name="userName11" id="theID1" #t1> <br>
-        passWord: <input type="text" [(ngModel)]="passWord" name="passWord22" id="theID2"> <br>
-        {{msg}} <br>
-        <input type="submit" value="Login" (click)=checkLgin(t1)> <br>
-        <span (click)="checkLgin(t1)">233 </span>
-        
-
-    </form>
+    <div *ngIf="!loginStatus">
+        <form>
+            <h5>Login</h5>
+            Username: <input type="text" [(ngModel)]="username" name="username" #t1><br>
+            Password: <input type=" password" [(ngModel)]="password" name="password"><br>
+            <input type="submit" value="Login" (click)="CheckLogin(t1)"><br>
+            {{msg}} 
+        </form>
+    </div>
+    <div *ngIf="loginStatus">
+        <form>
+            <input type="submit" value="Logout" (click)="Logout()"><br>
+        </form>
+    </div>
 </div>

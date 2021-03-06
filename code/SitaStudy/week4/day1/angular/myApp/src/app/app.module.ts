@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
-import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
-import {Routes, RouterModule} from "@angular/router"
+import { Routes, RouterModule } from "@angular/router"
 // import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -11,13 +11,13 @@ import { TestComponent } from './test/test.component';
 import { Test2Component } from './test2/test2.component';
 import { USAComponent } from './usa/usa.component';
 
-import {UsaModuleModule} from './usa-module/usa-module.module';
+import { UsaModuleModule } from './usa-module/usa-module.module';
 import { BabaComponent } from './baba/baba.component';
 import { SonComponent } from './son/son.component';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
 import { CompanyComponent } from './company/company.component';
 import { EmployeeComponent } from './employee/employee.component';
-import {LoginService} from './shared/services/login.service';
+import { LoginService } from './shared/services/login.service';
 import { TheNameDirective } from './shared/directives/the-name.directive';
 import { DurationPipe } from './shared/pipes/duration.pipe';
 import { TemformsComponent } from './temforms/temforms.component';
@@ -36,33 +36,53 @@ import { MobilesComponent } from './mobiles/mobiles.component';
 import { LaptopsComponent } from './laptops/laptops.component';
 import { MenComponent } from './men/men.component';
 import { WomenComponent } from './women/women.component';
+import { LoginStatusService } from "./login-status.service";
+import { LoginAuthService } from './login-auth.service';
+import { ContactComponent } from './contact/contact.component';
+import { CanDeactivateGuardService } from './can-deactive-guard.service';
 
 
-var myroutes: Routes =[
-  { path:'', component:HomeComponent},
-  { path:'home', component:HomeComponent},
-  { path:'about', component:AboutComponent},
-  { path:'products', component:ProductsComponent},
-  { path:'products/:brandname', component:ProductsComponent},
+
+
+
+var myroutes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'products', component: ProductsComponent },
+  { path: 'products/:brandname', component: ProductsComponent },
 ]
 var myroutes2 = RouterModule.forRoot(myroutes)
 
-var myroutes2_2: Routes = [   
-  { path: "", component: OnlineShoppingComponent },   
-  { path: "electronics", component: ElectronicsComponent, 
-  children: [{ path: "mobiles", component: MobilesComponent },       
-  { path: "laptops", component: LaptopsComponent }]   
-  },   
-  { path: "appliances", component: AppliancesComponent, 
-  children: [{ path: "lighting", component: LightingComponent },       
-  { path: "furniture", component: FurnitureComponent }]   
-  },   
-  { path: "fashion", component: FashionComponent, 
-  children: [ { path: "men", component: MenComponent },       
-  { path: "women", component: WomenComponent }]   
-  } 
+var myroutes2_1: Routes = [
+  { path: "", component: OnlineShoppingComponent },
+  {
+    path: "electronics", component: ElectronicsComponent, canActivate: [LoginAuthService],
+    children: [
+      { path: "mobiles", component: MobilesComponent },
+      { path: "laptops", component: LaptopsComponent }]
+  },
+  {
+    path: "appliances", component: AppliancesComponent,
+    children: [
+      { path: "lighting", component: LightingComponent },
+      { path: "furniture", component: FurnitureComponent }]
+  },
+  {
+    path: "fashion", component: FashionComponent,
+    children: [
+      { path: "men", component: MenComponent },
+      { path: "women", component: WomenComponent }]
+  }];
+var myroutes2_2 = RouterModule.forRoot(myroutes2_1);
+
+var myroutes3: Routes = [   
+  { path: "", component: HomeComponent },   
+  { path: "home", component: HomeComponent, canDeactivate: [CanDeactivateGuardService] },   
+  { path: "about", component: AboutComponent },   
+  { path: "contact", component: ContactComponent } 
   ]; 
-  var myroutes3 = RouterModule.forRoot(myroutes2_2); 
+  var myroutes3_2 = RouterModule.forRoot(myroutes3); 
 
 
 
@@ -97,18 +117,19 @@ var myroutes2_2: Routes = [
     LaptopsComponent,
     MenComponent,
     WomenComponent,
-    
+
   ],
   imports: [
     BrowserModule,
     // AppRoutingModule,
     myroutes2,
-    myroutes3,
+    myroutes2_2,
+    myroutes3_2,
     FormsModule,
     UsaModuleModule,
     ReactiveFormsModule
   ],
-  providers: [ProductsService],
+  providers: [ProductsService, LoginStatusService, LoginAuthService,CanDeactivateGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
