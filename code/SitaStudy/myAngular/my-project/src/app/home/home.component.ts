@@ -9,7 +9,8 @@ import { Component, OnInit, Inject } from '@angular/core';
 })
 export class HomeComponent {
 
-  message!: string;
+  message: string = 'Date shows here';
+  theBtnName:string ='Show Data'
   constructor(@Inject(HttpClient) private http: HttpClient) { }
   onGetDataClick() {
 
@@ -20,15 +21,17 @@ export class HomeComponent {
 
   }
   onAjaxSuccess = (response: any) => {
-    if (this.message!='shows here') {
-      this.message = 'shows here';
+    if (this.message != 'Date shows here') {
+      this.message = 'Date shows here';
+      this.theBtnName = 'Show Data'
     } else {
       this.message = response;
+      this.theBtnName = 'Hide Data'
     }
   }
   onAjaxError = (error: any) => { alert(error); }
 
-
-
+  
+  
 
 }
