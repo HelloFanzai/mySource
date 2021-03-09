@@ -40,6 +40,8 @@ import { LoginStatusService } from "./login-status.service";
 import { LoginAuthService } from './login-auth.service';
 import { ContactComponent } from './contact/contact.component';
 import { CanDeactivateGuardService } from './can-deactive-guard.service';
+import { PopulationService } from './population.service';
+import { IndiaComponent } from './india/india.component';
 
 
 
@@ -117,6 +119,7 @@ var myroutes3: Routes = [
     LaptopsComponent,
     MenComponent,
     WomenComponent,
+    IndiaComponent,
 
   ],
   imports: [
@@ -129,7 +132,7 @@ var myroutes3: Routes = [
     UsaModuleModule,
     ReactiveFormsModule
   ],
-  providers: [ProductsService, LoginStatusService, LoginAuthService,CanDeactivateGuardService],
+  providers: [ProductsService, LoginStatusService, LoginAuthService,CanDeactivateGuardService,PopulationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

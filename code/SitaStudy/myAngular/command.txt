@@ -1,0 +1,36 @@
+Install the Angular CLI:
+  npm install -g @angular/cli
+
+Create a workspace and initial application:
+  ng new my-app
+
+Run the application:
+  cd my-app
+  ng serve --open    // ng serve --port 2333
+--open（或只用 -o）选项会自动打开浏览器，并访问 http://localhost:4200/。
+
+➕New Component
+  ng generate component xyz     //   ng g c xyz
+
+npm i(install) @angular/router   //后期安装router
+
+➕ generate module:
+ng g m ABC / ng generate module abc
+
+➕ generate class:
+ng g class abc
+
+➕ Creates a new, generic service definition:
+ng g service <name>
+
+
+➕ new generic directive definition:
+ng generate directive name / ng g d name 
+
+➕ new new generic pipe definition:
+ng g pipe name
+
+
+➕ new new generic interface definition:
+ng g interface name
+
