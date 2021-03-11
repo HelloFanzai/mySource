@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <div>
+        <table>
+            <tr>
+                <td>First</td>
+                <td>row</td>
+            </tr>
+            <tr>
+                <td>and</td>
+                <td>second</td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>First</td>
+                <td>row</td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        const tables = document.querySelectorAll('table')
+        console.log(tables)
+        let theArr = []
+        for (let i = 0; i < tables.length; i++) {
+            // if (theArr < tables[i].querySelectorAll('td').length) {
+            //     theArr = tables[i].querySelectorAll('td').length
+            // }
+            theArr.push(tables[i].querySelectorAll('td').length)
+        }
+        theArr=theArr.sort((a, b) => b - a)
+        console.log(theArr);
+
+  
+
+        // Get your list of all tables in the document.
+
+        // Map list of tables to list of number of <td> elements.
+        // const lengths =
+        //     Array.from(tables)
+        //         .map(table => table.querySelectorAll('td').length)
+
+        // // Get the max of the list of lengths and log to console.
+        // const max = Math.max(...lengths);
+        // console.log(max);
+    </script>
+
+</body>
+
+</html>
