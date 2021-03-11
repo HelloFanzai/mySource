@@ -7,7 +7,8 @@ import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from "@angular/common/http";
 import { LoginComponent } from './acount/login/login.component';
-import { RegisterComponent } from './acount/register/register.component'; 
+import { RegisterComponent } from './acount/register/register.component';
+import { AnimationsComponent } from './animations/animations.component'; 
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { RegisterComponent } from './acount/register/register.component';
     HomeComponent,
     LoginComponent,
     RegisterComponent,
+    AnimationsComponent,
     
     
   ],

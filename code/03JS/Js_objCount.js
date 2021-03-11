@@ -11,7 +11,6 @@ function theObjCount(theP) {
     let theResult = {}
 
     // for (const theI of theP) {
-    //     log
     //     theResult[theI] = theResult[theI] + 1 || 1
     // }
     
@@ -25,6 +24,8 @@ function theObjCount(theP) {
         }
         // theResult[theP[i]]=theResult[theP[i]]+1||1
     }
+
+    
     return theResult
 }
 
