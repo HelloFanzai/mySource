@@ -34,3 +34,8 @@ ng g pipe name
 ➕ new new generic interface definition:
 ng g interface name
 
+ng  build: Compiles an Angular app into an output directory named dist/ at the given output path. Must be executed from within a workspace directory.
+
+--prod: Set the build configuration to the production target.
+	ng  build  --prod 
+
