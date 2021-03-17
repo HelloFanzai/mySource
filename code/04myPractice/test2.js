@@ -1,10 +1,8 @@
+fn1('name11','name222')
 
-let theA = 0.1
-let theB = 0.2
-let theC= theA+theB
-if (theC.toFixed(2)==0.3) {
-    console.log('yes');
-}else{
-    console.log('woca');
-}
-
+let theO = { 'a0': 'name11', 
+            '1a': 'name222' ,
+            '属性1':123,
+            '属性2':1234
+            }
+console.log( theO.a0 );
