@@ -1,4 +1,4 @@
-let theString='ABC'
+let theString='ABCD'
 let myAnser
 
 myAnser=theString.split('') //[ 'A', 'B', 'C' ]
