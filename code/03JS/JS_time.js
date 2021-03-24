@@ -1,8 +1,8 @@
 function theName() {
     console.time('theTime')
-    let theA = 1
-    for (let i = 1; i < 1000; i++) {
-        theA = theA/i
+    let theA = 0
+    for (let i = 1; i <= 100; i++) {
+        theA = theA+i
     }
     console.timeEnd('theTime')
     return theA
