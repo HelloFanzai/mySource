@@ -35,7 +35,7 @@ theA = arrString.split('').reduce(function (res, cur) {
     // res[cur] ? res[cur] ++ : res[cur] = 1
     res[cur] =  ++res[cur] || 1
     return res;
-}, {})
+}, {'answer':'Wow'})
 
 console.log(arrString, '←（）→', theA);
 

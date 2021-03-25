@@ -1,0 +1,45 @@
+nav{
+    background-color:rgba(255, 194, 204,0.6)
+}
+
+#theLogoDiv{
+    
+}
+#theLogo{
+    
+}
+#theLogoDiv{
+    display: flex;
+}
+
+#theP{
+    /* position:relative; */
+    /* top:50%; */
+    /* left:50%; */
+    transform:translateY(50%)
+}
+
+.theLinkButton{
+    background-color: goldenrod;
+    text-decoration:none;
+    color: black;
+    flex: 1;
+    
+}
+.theLinkButton:hover{
+    font-size: large;
+    cursor: pointer;
+    border: 2px black dotted;
+    
+}
+.theLinkButton:active{
+    background-color: yellow;
+}
+
+#theButtonDiv{
+    display: flex;
+    text-align: center;
+    
+}
+
+

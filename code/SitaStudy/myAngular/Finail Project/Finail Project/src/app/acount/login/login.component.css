@@ -1,0 +1,14 @@
+#theMaindDiv{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    text-align: center;
+}
+.theInput{
+    background-color: transparent;
+    /* border: 1px blue solid;     */
+}
+.theInput:focus{
+    outline: none;
+    border: 2px blue solid;
+}

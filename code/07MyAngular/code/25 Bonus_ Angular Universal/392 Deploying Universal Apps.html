@@ -1,0 +1,18 @@
+
+                <html>
+                <head>
+                <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+                <title>392 Deploying Universal Apps</title>
+                </head>
+                <body>
+                <div class="container">
+                <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <p class="lead"><p>As mentioned in the previous lectures, you <strong>can't deploy an Angular Universal app to a static host</strong> (i.e. Firebase&nbsp;Hosting, AWS&nbsp;S3 etc will NOT&nbsp;work).</p><p>The reason for this is, that you're using<strong> Node.js</strong> to pre-render pages on the server and those Hosts don't support Node.js.</p><p>Hence you need a host that does - for example AWS&nbsp;ElasticBeanstalk or Heroku.</p><p>To these hosts, you need to upload your <code>dist/</code> folder along with the <code>package.json</code> file. On the web server, you then have to ensure that <code>npm install</code> is executed, followed by <code>npm serve:ssr</code>.</p><p>That's it - your app is now up and running on a web server!</p><p>Here's an example how you could host Universal apps via Firebase Cloud Functions (NOT&nbsp;Firebase Hosting): <a href="https://www.udemy.com/the-complete-guide-to-angular-2/learn/lecture/15267340#questions/7482486" rel="noopener noreferrer" target="_blank">https://www.udemy.com/the-complete-guide-to-angular-2/learn/lecture/15267340#questions/7482486</a></p></p>
+                </div>
+                </div>
+                </div>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+                </body>
+                </html>
+                

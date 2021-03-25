@@ -1,0 +1,25 @@
+
+table {
+  width: 100%;
+  /* text-align:center; */
+  
+}
+
+.mat-form-field {
+  width: 100%;
+  text-align:center;
+  display: inline;
+}
+
+button{
+  display: inline-block;
+}
+*{
+  background-color: rgba(255, 255, 255, 0.3); 
+}
+#theAddButton{
+  height: auto;
+}
+#theFnDiv{
+  display: flex;
+}

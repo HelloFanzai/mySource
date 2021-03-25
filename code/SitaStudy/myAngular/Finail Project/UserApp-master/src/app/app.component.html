@@ -1,0 +1,15 @@
+<nav>
+  <div id="theLogoDiv">
+    <img id="theLogo" src="../assets/Logo.png" alt="" width="50px" height="50px">
+    <p id="theP">Final Project</p>
+  </div>
+  <div id="theButtonDiv">
+    <a class="theLinkButton" routerLink="home">Home</a>
+    <a class="theLinkButton" routerLink="users">Users</a>
+    <a class="theLinkButton" *ngIf="!LoginStatusService.isLoggedIn" routerLink="login">Login</a>
+    <a class="theLinkButton" *ngIf="LoginStatusService.isLoggedIn" (click)="Logout()">Logout</a>
+    <a class="theLinkButton" routerLink="register">Register</a>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,18 @@
+
+                <html>
+                <head>
+                <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+                <title>401 Angular Universal Gotchas</title>
+                </head>
+                <body>
+                <div class="container">
+                <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <p class="lead"><p>You typically use Angular Universal to pre-render Angular pages on the server. Once the app then runs on the client, it's a normal SPA&nbsp;again.</p><p>Server-side rendering (SSR) can make sense because of SEO&nbsp;considerations (crawler should see what your users see) or because you want to deliver a finished page to your users (rather than creating the page in the browser).</p><p>But that also has one important implication: <strong>You MUST&nbsp;NOT&nbsp;use any browser-only APIs like </strong><code><strong>document.querySelector()</strong></code><strong>&nbsp; in your Angular code!</strong>&nbsp;</p><p>Simply because it will execute on the server and there, such APIs are not available.</p><p>That's why, in this course,&nbsp;I&nbsp;recommended to <strong>use Angular features only</strong>:&nbsp;These features are safe to use because Angular will check if a certain API&nbsp;can be used before it uses it.</p></p>
+                </div>
+                </div>
+                </div>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+                </body>
+                </html>
+                

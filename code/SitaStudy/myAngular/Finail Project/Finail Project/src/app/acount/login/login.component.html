@@ -1,0 +1,32 @@
+<div id="theMaindDiv">
+    <table>
+        <tr>
+            <td>
+                <div class="bg-image">
+                </div>
+
+                <div class="content" *ngIf="!LoginStatusService.isLoggedIn">
+                    <br>
+                    <form>
+                        <h4>Login Page</h4>
+                        <label for="theUid">UserID:</label>
+                        <input class="theInput" id="theUid" type="text" [(ngModel)]="uid" name="uid" #t1><br>
+                        <label for="thePassword">Password:</label>
+                        <input class="theInput" id="thePassword" type="password" [(ngModel)]="password" name="password"><br>
+                        <button (click)="CheckLogin(t1)">login</button>
+                        <br>
+                        <div>{{msg}}</div>
+                    </form>
+                </div>
+
+                <div class="content" *ngIf="LoginStatusService.isLoggedIn">
+                    <form>
+                        <input type="submit" value="Logout" (click)="Logout()"><br>
+                    </form>
+                </div>
+            </td>
+        </tr>
+
+
+    </table>
+</div>
