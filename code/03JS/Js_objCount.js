@@ -13,23 +13,29 @@ function theObjCount(theP) {
     // for (const theI of theP) {
     //     theResult[theI] = theResult[theI] + 1 || 1
     // }
-    
-    
+
     for (let i = 0; i < theP.length; i++) {
-    
-        if ( theResult[ theP[i] ] ) {
+        if (theResult[theP[i]]) {
             theResult[theP[i]]++
-        }else{
-            theResult[theP[i]]=1
+        } else {
+            theResult[theP[i]] = 1
         }
         // theResult[theP[i]]=theResult[theP[i]]+1||1
     }
-
-    
     return theResult
 }
 
 let theP = ['banana', 'apple', 'orange', 'orange']
 console.log(theObjCount(theP));
 
+
+let arrString = 'abcdaabc';
+let theA
+theA = arrString.split('').reduce(function (res, cur) {
+    // res[cur] ? res[cur] ++ : res[cur] = 1
+    res[cur] =  ++res[cur] || 1
+    return res;
+}, {})
+
+console.log(arrString, '←（）→', theA);
 

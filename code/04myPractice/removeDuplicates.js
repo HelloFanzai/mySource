@@ -25,8 +25,8 @@ function removeDuplicates(Mia姐) {
     let theObj = {}
 
     for (const theNum of Mia姐) {
-        
-        if ( theObj[theNum] ) {
+
+        if (theObj[theNum]) {
             // console.log('theNum=',theNum,theObj[theNum], '在');
             theObj[theNum]++
         } else {
@@ -35,18 +35,19 @@ function removeDuplicates(Mia姐) {
             theResult3.push(theNum)
         }
     }
-    console.log( 'theObj=',theObj );
+    console.log('theObj=', theObj);
     return theResult3
 }
 console.log(removeDuplicates(theArr));
 
 
 let theResult4 = []
-theResult4 = theArr.sort().reduce(function (a, b) {
+console.log(theArr.sort());
+theResult4 = theArr.sort((a, b) => a - b).reduce(function (a, b) {
     if (b != a[0]) {
         a.unshift(b)
-    } 
+    }
     return a
-}, []).reverse()
-console.log('第4种：',theResult4);
+}, ['answer:']).reverse()
+console.log('第4种：', theResult4);
 

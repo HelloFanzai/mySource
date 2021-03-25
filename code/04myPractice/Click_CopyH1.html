@@ -30,8 +30,11 @@
     <script>
         function addMore() {
             console.log('yes');
-            var newH1 = document.createElement("h1");
-            document.body.appendChild(newH1).innerHTML = document.getElementById('baba').innerHTML;
+            let newH1 = document.createElement("h1");
+            let theShowingDiv=document.getElementById('theShowingDiv')
+            // document.body.appendChild(newH1).innerHTML = document.getElementById('baba').innerHTML;
+            theShowingDiv.appendChild(newH1).innerHTML = document.getElementById('baba').innerHTML;
+
         }
     </script>
 </head>
@@ -46,6 +49,9 @@
         <div class="dropdown-content">
             <p>I was hidden</p>
         </div>
+    </div>
+    <div id="theShowingDiv" style="background-color: pink;" >
+        嘿嘿
     </div>
 
 </body>
