@@ -1,14 +1,9 @@
-function test(arg1,arg2){
-    
-    let theA=arg1+arg2
-    
-    console.log( theA );
-
-
-
-    return theA
+nums=[2,3,2]
+theOriArray=nums.concat() //[2,3,2]
+noDouArray=[2,3]
+for (const theX of noDouArray) {
+    console.log( theX );
+    theOriArray.indexOf(theX) != -1 ? theOriArray.splice(theOriArray.indexOf(theX), 1) : 1
 }
-test(1);
-test(1,2);
-test(1,2,3);
-test(1,2,3,4);
+
+console.log( `nums=${nums},ori=${theOriArray},noDo=${noDouArray}` );
