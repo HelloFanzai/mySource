@@ -17,30 +17,45 @@ export class ServersComponent implements OnInit {
 
   theColor = 'green'
   allowIt = false
+  theTime = new Date()
+
   theFn1() {
-    console.log('111');
+    console.log('fn111');
   }
   theFn12() {
-    console.log('222');
+    console.log('fn222');
   }
   theFn13() {
-    console.log('333');
+    console.log('fn333');
+  }
+
+
+  theTaggle() {
+    this.allowIt == true ? this.allowIt = false : this.allowIt = true
+    console.log(this.allowIt);
   }
 
   constructor() {
-    
+
     setTimeout(() => {
       this.allowIt = true
     }, 2000);
+
+    setInterval(() => {
+      this.theTime = new Date();
+    }, 1)
+  
 
     this.theFn13()
 
   }
 
   ngOnInit(): void {
+    this.theFn1()
+
 
   }
-  
-  
+
+
 
 }

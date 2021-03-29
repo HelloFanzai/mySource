@@ -1,7 +1,12 @@
 <p>servers works!</p>
-<button class="btn btn-primary" [disabled]='!allowIt' > {{'theColor'}} </button>
-<p [innerText]='allowIt' ></p>
+<button class="btn btn-primary" [disabled]='!allowIt'  (click)='theTaggle()' > {{allowIt}} </button>
+<p [innerText]='allowIt' (click)='theTaggle()'   style="background-color: pink;">==</p>
 1{{theColor}}1
+<input type="text" [(value)]="allowIt" >
+<input type="text"  [(ngModel)]="allowIt"  >
+<p >{{ theTime | date: 'yyyy-MM-dd EEEE HH:mm:ss.S'}}</p>
+<p >{{ theTime | date: 'yyyy-MM-dd EEEEEE HH:mm:ss.SS'}}</p>
+<p >{{ theTime | date: 'yyyy-MM-dd EEE HH:mm:ss.SSS'}}</p>
 <app-server></app-server>
 <app-server></app-server>
 

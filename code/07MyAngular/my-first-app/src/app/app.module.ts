@@ -13,13 +13,13 @@ import { WarningAlertComponent } from './warning-alert/warning-alert.component';
 
 
 @NgModule({
-  declarations: [
+  declarations: [		
     AppComponent,
     ServerComponent,
     ServersComponent,
     SuccessAlertComponent,
-    WarningAlertComponent
-  ],
+    WarningAlertComponent,
+   ],
   imports: [
     BrowserModule,
     NgbModule,
