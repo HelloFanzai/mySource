@@ -9,6 +9,7 @@ import { ServerComponent } from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
 import { SuccessAlertComponent } from './success-alert/success-alert.component';
 import { WarningAlertComponent } from './warning-alert/warning-alert.component';
+import { Assignment1Component } from './assignment/assignment1/assignment1.component';
 
 
 
@@ -19,6 +20,7 @@ import { WarningAlertComponent } from './warning-alert/warning-alert.component';
     ServersComponent,
     SuccessAlertComponent,
     WarningAlertComponent,
+    Assignment1Component,
    ],
   imports: [
     BrowserModule,

@@ -1,0 +1,6 @@
+<p>assignment1 works!</p>
+<input type="text" class="form-control" [(ngModel)]="theUserName" >
+<button (click)="theRest()" [disabled]=' theUserName=="" ' >Reset1</button>
+<button (click)=" theUserName='' " [disabled]=' theUserName=="" '  >Reset2</button>
+<p>{{theUserName}}</p>
+
