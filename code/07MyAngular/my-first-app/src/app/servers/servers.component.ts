@@ -18,6 +18,8 @@ export class ServersComponent implements OnInit {
   theColor = 'green'
   allowIt = false
   theTime = new Date()
+  theSstatus = 'not did it yet'
+  theServerName='theTest'
 
   theFn1() {
     console.log('fn111');
@@ -44,7 +46,7 @@ export class ServersComponent implements OnInit {
     setInterval(() => {
       this.theTime = new Date();
     }, 1)
-  
+
 
     this.theFn13()
 
@@ -52,10 +54,18 @@ export class ServersComponent implements OnInit {
 
   ngOnInit(): void {
     this.theFn1()
-
-
   }
 
+  onCreatetheS() {
+    this.theSstatus == 'Yes, did it '+ this.theServerName ? this.theSstatus = 'not did it yet' : this.theSstatus = 'Yes, did it '+ this.theServerName
+  }
+
+  onUpdateTheServerName(e: any){
+    console.log( e.target.value )
+    // this.theServerName=(<HTMLInputElement>event.target).value
+    this.theServerName=e.target.value
+    
+  }
 
 
 }
