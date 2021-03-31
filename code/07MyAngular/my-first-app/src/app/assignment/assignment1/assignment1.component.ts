@@ -8,15 +8,22 @@ import { Component, OnInit } from '@angular/core';
 export class Assignment1Component implements OnInit {
 
   theUserName='theUse1'
+  theChangeBtn=1
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  theRest(){
+  theRest1(){
     console.log(this);
     this.theUserName=''
-    
+  }
+  theRest2(e){
+    console.log(e);
+    // this.theUserName=''
+  }
+  theTaggle(){
+    this.theChangeBtn==1?this.theChangeBtn=2:this.theChangeBtn=1
   }
 }

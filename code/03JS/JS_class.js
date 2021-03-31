@@ -1,7 +1,7 @@
 class theFn {
-    constructor(name, speed) {
-        this.name = name
-        this.speed = speed
+    constructor(name1, speed1) {
+        this.name = name1
+        this.speed = speed1
 
         this.add = () => {
             this.speed += 25
@@ -20,5 +20,4 @@ class theFn {
 let theP = new theFn('a', 100)
 theP.add()
 theP.sub()
-
 console.log( theP );
