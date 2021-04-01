@@ -1,2 +1,6 @@
 <p>server component worded</p>
-<span> {{'server'}} the Id: {{serverId}}, is {{ getServerStatus() }} </span>
+<span 
+    [ngStyle]="{'background-color': getColor()}" 
+    [ngClass]="{yes: serverStatus == 'yes'}"
+> {{'server'}} the Id: {{serverId}}, is {{ getServerStatus() }} </span>
+<p (click)="theReDo()" > {{serverStatus}} 👈click</p> 

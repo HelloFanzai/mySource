@@ -19,7 +19,9 @@ export class ServersComponent implements OnInit {
   allowIt = false
   theTime = new Date()
   theSstatus = 'not did it yet'
-  theServerName='theTest'
+  theServerName = 'theTest'
+  theServerCreated = false
+  theServers = ['theTest 1', 'theTest 2']
 
   theFn1() {
     console.log('fn111');
@@ -47,7 +49,6 @@ export class ServersComponent implements OnInit {
       this.theTime = new Date();
     }, 1)
 
-
     this.theFn13()
 
   }
@@ -57,14 +58,16 @@ export class ServersComponent implements OnInit {
   }
 
   onCreatetheS() {
-    this.theSstatus == 'Yes, did it '+ this.theServerName ? this.theSstatus = 'not did it yet' : this.theSstatus = 'Yes, did it '+ this.theServerName
+    this.theServerCreated = true
+    this.theSstatus == 'Yes, did it ' + this.theServerName ? this.theSstatus = 'not did it yet' : this.theSstatus = 'Yes, did it ' + this.theServerName
+    this.theServers.push(this.theServerName)
   }
 
-  onUpdateTheServerName(e: any){
-    console.log( e.target.value )
+  onUpdateTheServerName(e: any) {
+    console.log(e.target.value)
     // this.theServerName=(<HTMLInputElement>event.target).value
-    this.theServerName=e.target.value
-    
+    this.theServerName = e.target.value
+
   }
 
 

@@ -1,16 +1,16 @@
-let theString='ABCD'
+let theString = 'ABCD'
 let myAnser
 
-myAnser=theString.split('') //[ 'A', 'B', 'C' ]
+myAnser = theString.split('') //[ 'A', 'B', 'C' ]
 // myAnser=[1,2,3,4,5]
-myAnser=myAnser.reduce((baba,son)=>{
-    console.log( `baba=${baba} ~~ son=${son}` );
-    if (baba.length==1) {
-        baba=baba+baba
+myAnser = myAnser.reduce((baba, son) => {
+    console.log(`baba=${baba} ~~ son=${son}`);
+    if (baba.length == 1) {
+        baba = baba + baba
     }
-    return baba= baba + son + son
+    return baba = baba + son + son
 })
-console.log( myAnser  );
+console.log(myAnser);
 
 // 1r: A B C D  baba=A son = B   baba +/-/*// son
 // 2r: ab C D   baba=AB son=C

@@ -10,6 +10,7 @@ import { ServersComponent } from './servers/servers.component';
 import { SuccessAlertComponent } from './success-alert/success-alert.component';
 import { WarningAlertComponent } from './warning-alert/warning-alert.component';
 import { Assignment1Component } from './assignment/assignment1/assignment1.component';
+import { Assignment2Component } from './assignment/assignment2/assignment2.component';
 
 
 
@@ -21,6 +22,7 @@ import { Assignment1Component } from './assignment/assignment1/assignment1.compo
     SuccessAlertComponent,
     WarningAlertComponent,
     Assignment1Component,
+    Assignment2Component,
    ],
   imports: [
     BrowserModule,
