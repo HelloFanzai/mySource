@@ -9,6 +9,8 @@ Run the application:
   ng serve --open    // ng serve --port 2333
 --open（或只用 -o）选项会自动打开浏览器，并访问 http://localhost:4200/。
 
+npm install 命令用来安装模块到 node_modules 目录
+
 ➕New Component
   ng generate component xyz     //   ng g c xyz
 
