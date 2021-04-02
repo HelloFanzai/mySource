@@ -1,0 +1,29 @@
+<p>assignment2 works!</p>
+<ol>
+    <li>Add A button which says 'Display Details'</li>
+    <li>Add a paragraph with any content of your choice (e.g. 'Secret Password = tuna')</li>
+    <li>Toggle the displaying of that paragraph with the button created in the first step</li>
+    <li>Log all button clicks in an array and output that array below the secret paragraph (maybe log a timestamp or
+        simply an incrementing number)</li>
+    <li>Starting at the 5th log item, give all future log items a blue background (via ngStyle) and white color
+        (ngClass)</li>
+        
+</ol>
+<button class="btn btn-primary" (click)=" the123Fn() ">Chang to 123Person</button>&nbsp;
+<button class="btn btn-primary" (click)=" theABCFn() ">Change to ABCPerson</button>&nbsp;
+<!-- <button class="btn btn-primary" (click)="theShows=!theShows" >Display Details</button> -->
+<input type="text" class="form-control" [(ngModel)]="theInput" onfocus="this.select()">
+<button class="btn btn-primary" (click)="theLogFn()">Display Details & Add one</button>&nbsp;
+<button class="btn btn-primary" (click)=" theDeleteFirst() ">Delete First</button>&nbsp;
+<button class="btn btn-primary" (click)=" theDeleteLast() ">Delete Last</button>&nbsp;
+
+<p *ngIf="theShows">This is a sentence</p>
+<ol>
+<li *ngFor="let item of theLogArray let i=index" [ngStyle]="{'background-color': i>=4?'pink':'none',height:'50px' }">
+    <hr>
+    <input type="checkbox" name="" id="">
+    <input type="text" value="{{item}}" style="width: 60%;" >
+    <button (click)=" theLogSubFn2(i) ">delete</button>
+</li>
+</ol>
+<hr>

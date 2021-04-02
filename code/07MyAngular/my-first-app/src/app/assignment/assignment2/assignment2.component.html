@@ -1,9 +1,0 @@
-<p>assignment2 works!</p>
-<!-- <button class="btn btn-primary" (click)="theShows=!theShows" >Display Details</button> -->
-<button class="btn btn-primary" (click)="theLogFn()">Display Details & add one</button>
-<button class="btn btn-primary" (click)=" theLogSubFn() " >Delete Last</button>
-<p *ngIf="theShows">This is a sentence</p>
-<div *ngFor="let item of theLogArray let i=index" [ngStyle]="{'background-color': i>=4?'pink':'none',height:'50px' }"
-    >{{item}} <button (click)=" theLogSubFn2(i) " >delete</button> </div>
-
-<hr>

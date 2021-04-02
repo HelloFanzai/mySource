@@ -1,0 +1,15 @@
+<p>assignment1 works!</p>
+<ol>
+    <li>Add a Input field which updates a property ('username') via Two-Way-Binding</li>
+    <li>Output the username property via String Interpolation (in a paragraph below the input)</li>
+    <li>Add a button which may only be clicked if the username is NOT an empty string</li>
+    <li>Upon clicking the button, the username should be reset to an empty string</li>
+</ol>
+
+<input type="text" class="form-control" [(ngModel)]="theUserName">
+<button (click)="theRest1()" [disabled]=' theUserName=="" '>Reset1</button>
+<button (click)="theRest2(this)">Reset2</button><span>{{theUserName}}</span>
+<br>
+<button (click)="theTaggle()" [disabled]=' theChangeBtn==1 '>TaggleBan1</button>
+<button (click)="theTaggle()" [disabled]=' theChangeBtn==2 '>TaggleBan2</button>
+<p appTurnGreen> 123 </p>
