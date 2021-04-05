@@ -2,8 +2,12 @@
 <!-- <app-home></app-home>
 <app-about></app-about>
 <app-contect></app-contect> -->
-<a [routerLink]="['/home']" routerLinkActive='theActive'>home</a> &nbsp;
-<a [routerLink]="['/about']" routerLinkActive='theActive'>about</a> &nbsp;
+<a [routerLink]="['home']" routerLinkActive='theActive'>home</a> &nbsp;
+<a [routerLink]="['home/about']" routerLinkActive='theActive'>about</a> &nbsp;
 <!-- <a routerLink="['/contect']" routerLinkActive='theActive'><span (click)="theContect(this)" >contect</span></a> &nbsp; -->
-<a [routerLink]="['/contect']" routerLinkActive='theActive' >contect</a> &nbsp;
+<a [routerLink]="['contect']" routerLinkActive='theActive' >contect</a> &nbsp;
+
+
+
 <router-outlet></router-outlet>
+

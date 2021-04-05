@@ -21,7 +21,7 @@ import { Routes, RouterModule } from '@angular/router'; // CLI imports router
 const myRoutes: Routes = [
   { path: '', component: MycodingComponent },
   { path: 'home', component: HomeComponent },
-  { path: 'about', component: AboutComponent },
+  { path: 'home/about', component: AboutComponent },
   { path: 'contect', component: ContectComponent },
 
   //{ path: 'path/:routeParam', component: MyComponent },
@@ -30,7 +30,7 @@ const myRoutes: Routes = [
   //{ path: 'oldPath', redirectTo: '/staticPath' },
   //{ path: ..., component: ..., data: { message: 'Custom' }
 ];
-var myroutes = RouterModule.forRoot(myRoutes)
+var myroutes1 = RouterModule.forRoot(myRoutes)
 
 @NgModule({
   declarations: [
@@ -52,7 +52,7 @@ var myroutes = RouterModule.forRoot(myRoutes)
     BrowserModule,
     NgbModule,
     FormsModule,
-    myroutes,
+    myroutes1,
 
   ],
   providers: [],

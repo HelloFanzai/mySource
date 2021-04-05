@@ -1,17 +1,13 @@
-function theFn(theParams) {
-
-    function theSubFn1(e) {
-        console.log(this);
-
-        
-    }
-
-    return theSubFn1
+function theFn(theA,theB) {
+    theA.unshift(theA.pop())
+    console.log( theA );
+    return theB
 }
 
 
 
 
-let theA = 123
-console.log(theFn(theA));
+let theA = [2,3,4]
+let theB = ['B','C','D']
+console.log(theFn(theA,theB));
 
