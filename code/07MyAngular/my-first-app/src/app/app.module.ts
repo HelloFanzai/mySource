@@ -53,6 +53,7 @@ var myroutes1 = RouterModule.forRoot(myRoutes)
     NgbModule,
     FormsModule,
     myroutes1,
+    
 
   ],
   providers: [],
