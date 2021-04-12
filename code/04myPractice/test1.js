@@ -1,6 +1,6 @@
-function theFn(theParams) {
-    return theParams
+function theFn(params) {
+    return params    
 }
 
-let theA = 123
-console.log(theFn(theA));
+let theA='abc'
+console.log( theFn(theA) );

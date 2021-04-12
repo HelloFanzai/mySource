@@ -21,8 +21,8 @@ function swapBits( x)
     return (even_bits | odd_bits);
 }
 // Driver Code
-
-let x = 43;// 00010111
+// 偶右交换 奇左交换
+let x = 43;   // 00010111
 // Output is 43 (00101011)
 
 console.log(  swapBits(23)  ); 

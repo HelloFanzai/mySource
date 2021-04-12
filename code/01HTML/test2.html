@@ -5,8 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+        function theFn(e) {
+            e.disabled=true
+            console.log( e.disabled );
+        }
+    </script>
 </head>
 <body>
-    
+    <button onclick="theFn(this)" >1111</button>
+    <button onclick="theFn(this)" >2222</button>
+    <button onclick="theFn(this)" >2222</button>
+    <button onclick="theFn(this)" >2222</button>
+    <button onclick="theFn(this)" >2222</button>
+    <button onclick="theFn(this)" >2222</button>
 </body>
 </html>

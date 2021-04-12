@@ -18,6 +18,14 @@ import { AboutComponent } from './mycoding/about/about.component';
 import { ContectComponent } from './mycoding/contect/contect.component';
 import { Routes, RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { HeaderComponent } from './study2/theShopListApp/header/header.component';
+import { Study2Component } from './study2/study2.component';
+import { RecipesComponent } from './study2/theShopListApp/recipes/recipes.component';
+import { RecipeListComponent } from './study2/theShopListApp/recipes/recipe-list/recipe-list.component';
+import { RecipeDetailComponent } from './study2/theShopListApp/recipes/recipe-detail/recipe-detail.component';
+import { RecipeItemComponent } from './study2/theShopListApp/recipes/recipe-detail/recipe-item/recipe-item.component';
+import { ShoppingListComponent } from './study2/theShopListApp/shopping-list/shopping-list.component';
+import { ShoppingEditComponent } from './study2/theShopListApp/shopping-list/shopping-edit/shopping-edit.component';
 
 
 const myRoutes: Routes = [
@@ -48,6 +56,14 @@ var myroutes1 = RouterModule.forRoot(myRoutes)
     HomeComponent,
     AboutComponent,
     ContectComponent,
+    HeaderComponent,
+    Study2Component,
+    RecipesComponent,
+    RecipeListComponent,
+    RecipeDetailComponent,
+    RecipeItemComponent,
+    ShoppingListComponent,
+    ShoppingEditComponent,
     
 
   ],
