@@ -16,7 +16,9 @@ import { MycodingComponent } from './mycoding/mycoding.component';
 import { HomeComponent } from './mycoding/home/home.component';
 import { AboutComponent } from './mycoding/about/about.component';
 import { ContectComponent } from './mycoding/contect/contect.component';
-import { Routes, RouterModule } from '@angular/router'; // CLI imports router
+import { Routes, RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+
 
 const myRoutes: Routes = [
   { path: '', component: MycodingComponent },
@@ -46,6 +48,7 @@ var myroutes1 = RouterModule.forRoot(myRoutes)
     HomeComponent,
     AboutComponent,
     ContectComponent,
+    
 
   ],
   imports: [
@@ -53,6 +56,7 @@ var myroutes1 = RouterModule.forRoot(myRoutes)
     NgbModule,
     FormsModule,
     myroutes1,
+    HttpClientModule,
     
 
   ],
