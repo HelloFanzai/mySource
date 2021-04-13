@@ -3,19 +3,30 @@
         <button class="btn btn-success">New Recipe</button>
     </div>
 </div>
+<hr>
 <div class="row">
     <div class="col-xs-12">
-        <a href="#" class="list-group-item clearfix" ngfor>
+        <a 
+            href="#" 
+            class="list-group-item clearfix" 
+            *ngFor="let theItem of theRecipes"
+        >
             <div class="pull-left">
-                <h4 class="list-group-item-heading">Recipe Name</h4>
-                <p class="list-group-item-text">Description</p>
+                <h4 class="list-group-item-heading"> {{theItem.theName}} </h4>
+                <p class="list-group-item-text">{{ theItem.theDescription }}</p>
             </div>
             <span class="pull-right">
-                <img src="https://images-gmi-pmc.edge-generalmills.com/1e24b5e7-e3e3-43ce-b737-a2215397f006.jpg" alt="" class="img-responsive" style="max-height: 50px;">
+                <img 
+                    [src]="theItem.imagePath"
+                    alt=" {{theItem.name}} " 
+                    class="img-responsive" 
+                    style="max-height: 50px;"
+                >
             </span>
 
         </a>
         <app-recipe-item></app-recipe-item>
+    
 
     </div>
  

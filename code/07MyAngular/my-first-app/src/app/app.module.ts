@@ -23,7 +23,7 @@ import { Study2Component } from './study2/study2.component';
 import { RecipesComponent } from './study2/theShopListApp/recipes/recipes.component';
 import { RecipeListComponent } from './study2/theShopListApp/recipes/recipe-list/recipe-list.component';
 import { RecipeDetailComponent } from './study2/theShopListApp/recipes/recipe-detail/recipe-detail.component';
-import { RecipeItemComponent } from './study2/theShopListApp/recipes/recipe-detail/recipe-item/recipe-item.component';
+import { RecipeItemComponent } from './study2/theShopListApp/recipes/recipe-list/recipe-item/recipe-item.component';
 import { ShoppingListComponent } from './study2/theShopListApp/shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './study2/theShopListApp/shopping-list/shopping-edit/shopping-edit.component';
 
