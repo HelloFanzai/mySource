@@ -26,6 +26,8 @@ import { RecipeDetailComponent } from './study2/theShopListApp/recipes/recipe-de
 import { RecipeItemComponent } from './study2/theShopListApp/recipes/recipe-list/recipe-item/recipe-item.component';
 import { ShoppingListComponent } from './study2/theShopListApp/shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './study2/theShopListApp/shopping-list/shopping-edit/shopping-edit.component';
+import { CockpitComponent } from './server-study/server-study.component';
+import { ServerElementComponent } from './server-study/server-element/server-element.component';
 
 
 const myRoutes: Routes = [
@@ -64,6 +66,8 @@ var myroutes1 = RouterModule.forRoot(myRoutes)
     RecipeItemComponent,
     ShoppingListComponent,
     ShoppingEditComponent,
+    CockpitComponent,
+    ServerElementComponent,
     
 
   ],
