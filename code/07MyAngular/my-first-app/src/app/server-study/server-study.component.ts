@@ -13,6 +13,21 @@ export class ServerStudyComponent implements OnInit {
     { type:'server', name:'Testserver', content:'a conten' },
   ];
 
+  onServerAdded(theServerData:{serverName:string,serverContent:string}) {
+    this.serverElements.push({
+      type: 'server',
+      name: theServerData.serverName,
+      content: theServerData.serverContent,
+    });
+  }
+
+  onBlueprintAdded(theBluePrintCreated:{serverName:string,serverContent:string}) {
+    this.serverElements.push({
+      type: 'blueprint',
+      name: theBluePrintCreated.serverName,
+      content: theBluePrintCreated.serverContent
+    });
+  }
 
 
   constructor() { }
