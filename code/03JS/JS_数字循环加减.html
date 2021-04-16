@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="theDiv"></div>
+    <script>
+
+        let theShowing = 0
+
+        function theAddFn() {
+            let theAddTimer = setInterval(() => {
+                theShowing = theShowing + 1
+                document.getElementById('theDiv').innerHTML = theShowing + ' ++'
+                if (theShowing >= 10) {
+                    clearInterval(theAddTimer)
+                    theSubFn()
+                }
+            }, 250);
+        }
+        function theSubFn() {
+            let theSubTimer = setInterval(() => {
+                theShowing = theShowing - 1
+                document.getElementById('theDiv').innerHTML = theShowing + ' --'
+                if (theShowing <= 0) {
+                    clearInterval(theSubTimer)
+                    theAddFn()
+                }
+            }, 250);
+        }
+        // theAddFn()
+        theSubFn()
+    </script>
+</body>
+
+</html>
