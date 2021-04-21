@@ -3,4 +3,5 @@ function theFn(params) {
 }
 
 let theA='abc'
+
 console.log( theFn(theA) );
