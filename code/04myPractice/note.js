@@ -50,6 +50,9 @@
         // 字符转ascii码：用charCodeAt();
         // ascii码砖字符：用fromCharCode();
 
+        // ~~5.5  // 得到整数5 按位取反2次,最快的取整
+        //  https://www.cnblogs.com/qqhfeng/p/11414602.html 
+
 
 //using Exclamation mark(!)
 console.log(!!null); //logs false
