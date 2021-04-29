@@ -15,12 +15,7 @@
 
 // };
 var addDigits = function (num) {
-    if (num<10) {
-        return num
-    } else {
-        console.log('num=',num/10,num%10);
-        return addDigits( ~~(num / 10) + (num % 10))
-    }
+   m
 };
 
 let num = 10

@@ -7,7 +7,9 @@ function theFn(theA,theB) {
 
 
 
-let theA = [2,3,4]
+let theA = [5,7,4]
 let theB = ['B','C','D']
 console.log(theFn(theA,theB));
 
+theN=[]
+console.log( !!theN.length );

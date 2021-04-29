@@ -5,7 +5,8 @@
         // slice():方法可从已有的数组中返回选定的元素,arrayObject.slice(start,end)
         // slice()方法并不会修改数组，而是返回一个子数组
         // arrayObject.splice(index,howmany,item1,.....,itemX)
-        // splice() 方法用于添加或删除数组中的元素，修改原数组，可替换元素
+        // splice() 方法用于添加或删除数组中的元素，修改原数组，可替换,插入元素
+        //     arrayObject.splice(index,howmany,item1,.....,itemX)
         var s1 = "America";
         console.log(s1.substring(2,5)) //eri
         // substring() 方法用于提取字符串中介于两个指定下标之间的字符。 

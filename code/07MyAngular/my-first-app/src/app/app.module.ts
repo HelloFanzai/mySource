@@ -70,7 +70,7 @@ var myroutes1 = RouterModule.forRoot(myRoutes)
     ServerStudyComponent,
     CockpitComponent,
     ServerElementComponent,
-    
+
 
   ],
   imports: [
@@ -79,7 +79,7 @@ var myroutes1 = RouterModule.forRoot(myRoutes)
     FormsModule,
     myroutes1,
     HttpClientModule,
-    
+
 
   ],
   providers: [],
