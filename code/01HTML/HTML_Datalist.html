@@ -10,6 +10,7 @@
 
         let newOpition = document.createElement("option");
         newOpition.setAttribute("value", myValue.value);
+        newOpition.setAttribute("label", 'This is Lable');
         document.getElementById("myList").appendChild(newOpition);
         myValue.value='';
         }
@@ -19,7 +20,7 @@
     <input type="text" list="myList" id="myInput" >
     <datalist id="myList" >
         <option value="Yes1" >
-        <option value="Yes2" >
+        <option value="Yes2" disabled>
         <option value="Yes3" >
     </datalist>
     <button onclick="myAdd()" > Add </button>
