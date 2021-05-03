@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let theTaggle = true
+        function eatWhat() {
+            let theList = ['中餐', '韩餐', '炸鸡', '汉堡王']
+            let theINdex = ~~(Math.random() * 4)
+            document.getElementById("theList").innerHTML = theList
+            document.getElementById("theId").innerHTML = +theINdex + theList[theINdex]
+        }
+        // eatWhat()
+        let theEat
+
+        function stopTheFn() {
+            if (theTaggle) {
+                theEat = setInterval(eatWhat, 50)
+                theTaggle = false
+                document.getElementById("theBtn").textContent = '停~~'
+            } else {
+                clearInterval(theEat)
+                theTaggle = true
+                document.getElementById("theBtn").textContent = '吃啥？'
+
+            }
+            console.log(theTaggle);
+        }
+
+
+
+    </script>
+</head>
+
+<body>
+    <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); text-align: center;">
+        <h1 id="theList"></h1>
+        <h1 id="theId"></h1>
+        <br>
+        <button id="theBtn" onclick="stopTheFn()"> 吃啥? </button>
+    </div>
+
+</body>
+
+</html>
