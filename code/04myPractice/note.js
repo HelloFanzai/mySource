@@ -11,7 +11,7 @@
         console.log(s1.substring(2,5)) //eri
         // substring() 方法用于提取字符串中介于两个指定下标之间的字符。 
         // substring() 方法返回的子串包括开始处的字符，但不包括结束处的字符。
-        lastIndexOf()
+        s1.lastIndexOf('a')
         //lastIndexOf() 方12法可返回一个指定的字符串值最后出现的位置
         stringObject.replace(regexp/substr,replacement) //只能用于string
         // trim() 方法用于删除字符串的头尾空白符
@@ -46,6 +46,12 @@
         // parseInt(x,2);
         // parseInt(x,8);
         // parseInt(x,16);
+
+        console.log( (5/3).toFixed(4) );  //1.6667
+        // toFixed() 方法可以将数字转换为字符串，并指定小数点后保留几位。
+        // 若小数位数不够指定的位数，不足的部分会补0，使用银行家取舍(Banker's rounding)
+        var num = 0.005;
+        console.log(num.toFixed(2));  //0.01 银行家取舍的弊端
 
         // 大写字母A 到Z 的值是从65 到90 小写a到z 是从91 到 122
         // 字符转ascii码：用charCodeAt();

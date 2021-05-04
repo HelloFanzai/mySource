@@ -10,7 +10,7 @@
         let theTaggle = true
         function eatWhat() {
             let theList = ['中餐', '韩餐', '炸鸡', '汉堡王']
-            let theINdex = ~~(Math.random() * 4)
+            let theINdex = ~~(Math.random() * theList.length)
             document.getElementById("theList").innerHTML = theList
             document.getElementById("theId").innerHTML = +theINdex + theList[theINdex]
         }
@@ -30,7 +30,7 @@
             }
             console.log(theTaggle);
         }
-
+        console.log( (5/3).toFixed(4) );
 
 
     </script>
