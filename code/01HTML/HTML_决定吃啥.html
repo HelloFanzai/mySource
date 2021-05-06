@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
+        let theList = ['脚力闭', '泡泡爱']
         let theTaggle = true
         function eatWhat() {
-            let theList = ['火锅', '炸鸡', '豆腐', '韩餐']
             let theINdex = ~~(Math.random() * theList.length)
             document.getElementById("theList").innerHTML = theList
             document.getElementById("theId").innerHTML = +theINdex + theList[theINdex]
@@ -31,15 +31,37 @@
             console.log(theTaggle);
         }
 
+        function the5SCounter() {
+            let i = 3
+            document.getElementById("theList").innerHTML = theList
+            theEat = setInterval(eatWhat, 50)
+            function the1SFn() {
+                setTimeout(() => {
+                    if (i >=1) {
+                        document.getElementById("theCounter").innerHTML = +i
+                        --i
+                        console.log(i);
+                        return the1SFn()
+                    } else {
+                        document.getElementById("theCounter").innerHTML = ' '
+                        return clearInterval(theEat)
+                    }
+                }, 1000);
+            }
+            the1SFn()
+        }
+
     </script>
 </head>
 
 <body>
     <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); text-align: center;">
         <h1 id="theList"></h1>
-        <h1 id="theId"></h1>
+        <h1 style="display: inline; color: crimson;" id="theCounter"></h1> &nbsp; <h1 style="display: inline;" id="theId"></h1>
+        
         <br>
-        <button id="theBtn" onclick="stopTheFn()"> 吃啥? </button>
+        <button style="height: 25vh; width: 66vw;" id="theBtn" onclick="stopTheFn()"> 吃啥?(手动停) </button>
+        <button style="height: 25vh; width: 66vw;" id="theBtn2" onclick="the5SCounter()"> 吃啥?(3S自动停) </button>
     </div>
 
 </body>
