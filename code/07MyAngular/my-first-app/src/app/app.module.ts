@@ -29,6 +29,10 @@ import { ShoppingEditComponent } from './study2/theShopListApp/shopping-list/sho
 import { ServerStudyComponent } from './server-study/server-study.component';
 import { CockpitComponent } from './server-study/cockpit/cockpit.component';
 import { ServerElementComponent } from './server-study/server-element/server-element.component';
+import { Study3Component } from './study3/study3.component';
+import { GameControlComponent } from './study3/game-control/game-control.component';
+import { OddComponent } from './study3/odd/odd.component';
+import { EvenComponent } from './study3/even/even.component';
 
 
 const myRoutes: Routes = [
@@ -70,6 +74,10 @@ var myroutes1 = RouterModule.forRoot(myRoutes)
     ServerStudyComponent,
     CockpitComponent,
     ServerElementComponent,
+    Study3Component,
+    GameControlComponent,
+    OddComponent,
+    EvenComponent,
 
 
   ],
