@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        let theList = [ '24味','西安风味','成都7味面','快乐小羊','TUFU HOUSE','KBG BBQ']
+        let theList = [ '小时代','24味','西安风味','成都7味面','快乐小羊','TUFU HOUSE','KBG BBQ']
         let theTaggle = true
         function eatWhat() {
             let theINdex = ~~(Math.random() * theList.length)
@@ -32,11 +32,12 @@
         }
 
         function the5SCounter() {
-            let i = 3
+            let i = 2
             document.getElementById("theList").innerHTML = theList
             theEat = setInterval(eatWhat, 50)
             function the1SFn() {
                 setTimeout(() => {
+                    document.getElementById('theBtn2').innerHTML=i
                     if (i >=1) {
                         document.getElementById("theCounter").innerHTML = +i
                         --i
@@ -44,6 +45,7 @@
                         return the1SFn()
                     } else {
                         document.getElementById("theCounter").innerHTML = ' '
+                        document.getElementById('theBtn2').innerHTML='吃啥?(3S自动停)'
                         return clearInterval(theEat)
                     }
                 }, 1000);
@@ -57,11 +59,12 @@
 <body>
     <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); text-align: center;">
         <h1 id="theList"></h1>
-        <h1 style="display: inline; color: crimson;" id="theCounter"></h1> &nbsp; <h1 style="display: inline;" id="theId"></h1>
+        <h1 style="display: inline; color: crimson;" id="theCounter"></h1>
+        <br> &nbsp; <h1 style="display: inline;" id="theId"></h1>
         
         <br>
-        <button style="height: 25vh; width: 66vw;" id="theBtn" onclick="stopTheFn()"> 吃啥?(手动停) </button>
-        <button style="height: 25vh; width: 66vw;" id="theBtn2" onclick="the5SCounter()"> 吃啥?(3S自动停) </button>
+        <button style="height: 15vh; width: 33vw;" id="theBtn" onclick="stopTheFn()"> 吃啥?(手动停) </button>
+        <button style="height: 15vh; width: 33vw;" id="theBtn2" onclick="the5SCounter()"> 吃啥?(3S自动停) </button>
     </div>
 
 </body>

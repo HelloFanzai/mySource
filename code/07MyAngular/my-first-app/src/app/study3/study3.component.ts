@@ -12,4 +12,9 @@ export class Study3Component implements OnInit {
   ngOnInit(): void {
   }
 
+  onIntervalFired(firedNumber: number){
+    console.log(firedNumber);
+
+  }
+
 }
