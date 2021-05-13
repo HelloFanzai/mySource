@@ -7,13 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Study3Component implements OnInit {
 
+  oddNUmbers:number[] = []
+  evenNUmbers:number[] = []
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  onIntervalFired(firedNumber: number){
-    console.log(firedNumber);
+  onIntervalFired(firedNumber: number) {
+    if (firedNumber % 2 === 0) {
+      this.evenNUmbers.push(firedNumber)
+    } else {
+      this.oddNUmbers.push(firedNumber)
+    }
 
   }
 

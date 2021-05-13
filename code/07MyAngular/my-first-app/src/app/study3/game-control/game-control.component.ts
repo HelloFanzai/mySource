@@ -23,6 +23,8 @@ export class GameControlComponent implements OnInit {
   }
 
   onPasuseGame(){
+    clearInterval(this.interval)
+    console.log('this is:',this.lastNUmber);
     
   }
 
