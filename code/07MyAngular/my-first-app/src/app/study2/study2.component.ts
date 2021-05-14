@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class Study2Component implements OnInit {
   loadedFeature='recipe'
 
+  
+
   constructor() { }
 
   ngOnInit(): void {

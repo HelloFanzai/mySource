@@ -32,8 +32,9 @@
         }
 
         function the5SCounter() {
-            let i = 2
+            let i = 3
             document.getElementById("theList").innerHTML = theList
+            document.getElementById('theBtn2').disabled = true
             theEat = setInterval(eatWhat, 50)
             function the1SFn() {
                 setTimeout(() => {
@@ -46,6 +47,7 @@
                     } else {
                         document.getElementById("theCounter").innerHTML = ' '
                         document.getElementById('theBtn2').innerHTML='吃啥?(3S自动停)'
+                        document.getElementById('theBtn2').disabled = false
                         return clearInterval(theEat)
                     }
                 }, 1000);
