@@ -5,7 +5,7 @@
 var canWinNim = function (n) {
     return n % 4 > 0
     // 因为自己先走，对手也可以移动1 or 2 or 3，所以遇4必输
-    //1234
+    //12345
 };
 
 let n = 5
