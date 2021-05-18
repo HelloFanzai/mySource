@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./study2.component.css']
 })
 export class Study2Component implements OnInit {
-  loadedFeature='recipe'
+  loadedFeature=' '
 
   
 
