@@ -1,7 +1,7 @@
-let [theA,theB,theC]=[123,'haha',true]
-console.log( theB.repeat(5) );
+let [theA,theB,theC]=[123,'haha',true] // 多重赋值
+console.log( theB.repeat(5) ); //不循环重复输出
 
-// Shorthand 
-const arr = [2, 8, 15, 4]; 
-Math.max(...arr); // 15 
-Math.min(...arr); // 2
+
+let theNumber = 123456789
+console.log( theNumber.toLocaleString() ); //https://www.bookstack.cn/read/es6-3rd/spilt.9.docs-number.mdk
+console.log( 4**3 );

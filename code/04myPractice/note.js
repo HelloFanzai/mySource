@@ -32,6 +32,11 @@
         // let b1 = [...new Set(a1)]
         // console.log(b1);   //[ 1, 2, 3, 4 ]
 
+        // 用 spread operator(展开运算符) 获得最大或最小
+        const arr = [2, 8, 15, 4]; 
+        Math.max(...arr); // 15 
+        Math.min(...arr); // 2  
+
         //parseInt 变成数字
         // S=112; S = [...(s+"" )]; //[ '1', '1', '2' ]
 // //十进制转其他
@@ -79,3 +84,11 @@ var obj = {'name' : 'fly' , 'sex' : 'male' , 'age' : '14'};
 var arr = Object.keys(obj);
 console.log(arr); // ['name','sex','age']
 console.log(arr.length); //3
+
+console.log(  );
+console.log( 4**3 ); // same with:Math.pow(4, 3)    output:64
+
+// JS new type Bigint https://www.bookstack.cn/read/es6-3rd/spilt.9.docs-number.md
+let theNumber = 123456789123456789123456789n
+console.log( typeof theNumber ) // bigint
+
