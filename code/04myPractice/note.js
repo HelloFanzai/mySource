@@ -92,3 +92,6 @@ console.log( 4**3 ); // same with:Math.pow(4, 3)    output:64
 let theNumber = 123456789123456789123456789n
 console.log( typeof theNumber ) // bigint
 
+let [theA,theB,theC]=[123,'haha',true] // 多重赋值
+console.log( theB.repeat(5) ); //不循环重复输出
+

@@ -1,5 +1,4 @@
-let [theA,theB,theC]=[123,'haha',true] // 多重赋值
-console.log( theB.repeat(5) ); //不循环重复输出
+
 
 
 let theNumber = 123456789
