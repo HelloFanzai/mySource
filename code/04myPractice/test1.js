@@ -1,6 +1,6 @@
-function eatWhat() {
-    let theList=['中餐','韩餐','炸鸡','汉堡王']
-    let theINdex= ~~(Math.random()*4)
-    console.log( theList[theINdex] );
+function theFn(theP=25) {
+    return theP
 }
-eatWhat()
+let theA=35
+console.log( theFn(theA) );
+

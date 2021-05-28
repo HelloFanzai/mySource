@@ -1,9 +1,8 @@
-function theFn(theP=25) {
-    return theP
-}
+this.a = "Apples";
+this.b = "Banana";
+console.log(this);
 
-console.log( theFn(35) );
-
-const str = 'hello world';
-str.replaceAll('l', ''); // "heo word"
-console.log( str );
+// const myBasket = () => {
+//     console.log(this);
+//   }
+//   myBasket();
