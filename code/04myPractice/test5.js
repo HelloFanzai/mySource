@@ -1,9 +1,4 @@
-this.a = "Apples";
-this.b = "Banana";
-console.log(this);
-console.log(this);
-
-// const myBasket = () => {
-//     console.log(this);
-//   }
-//   myBasket();
+const arr = [1,2,[3,4,5,[6,7],8],9,10,[11,[12,13]]];
+console.log( arr.toString().split(',') );
+// const flatten = (arr) => arr.toString().split(',').map((item) => +item);
+// console.log(flatten(arr));
