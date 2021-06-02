@@ -1,4 +1,22 @@
-const arr = [1,2,[3,4,5,[6,7],8],9,10,[11,[12,13]]];
-console.log( arr.toString().split(',') );
-// const flatten = (arr) => arr.toString().split(',').map((item) => +item);
-// console.log(flatten(arr));
+var a = {
+    i:1,
+    valueOf:function () {
+        if (this.i === 1) {
+            console.log( this.i );
+            this.i++
+            return 1
+        } else {
+            console.log( this.i );
+
+            return 12
+        }
+    }
+}
+if(a == 1 && a == 12){  
+  console.log(a,'haha');
+}
+let b ={
+    i2:2,
+    valueOf:22
+}
+console.log( b.valueOf );
