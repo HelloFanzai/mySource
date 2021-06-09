@@ -90,7 +90,7 @@ console.log( 4**3 ); // same with:Math.pow(4, 3)    output:64
 
 // JS new type Bigint https://www.bookstack.cn/read/es6-3rd/spilt.9.docs-number.md
 let theNumber = 123456789123456789123456789n
-console.log( typeof theNumber ) // bigint
+console.log( typeof theNumber ) // bigInt
 
 let [theA,theB,theC]=[123,'haha',true] // 多重赋值
 console.log( theB.repeat(5) ); //不循环重复输出
