@@ -14,16 +14,20 @@ var moveZeroes = function(nums) {
 };
 
 
-// var moveZeroes = function(nums) {
-//     for (let i = 0; i < nums.length; i++) {
-//         let getValIndex = nums.indexOf(0); 
-//         if (getValIndex !== -1) { //-1 if not found
-//             nums.splice(getValIndex, 1);
-//             nums.push(0); // add to end of array
-//         }
-//     }
-// };
-
 
 nums=[0,1,0,3,12];
 console.log( moveZeroes(nums) );
+
+let theArray=[1,2,3,0,0,4]
+function moveZero(theArray) {
+    let theS = 0
+    for (let i = 0; i < theArray.length; i++) {
+        if (theArray[i] != 0) {
+            [theArray[i], theArray[theS]] = [theArray[theS], theArray[i]]
+            theS++
+        }
+    }
+    return theArray
+}
+
+console.log(moveZero(theArray));
