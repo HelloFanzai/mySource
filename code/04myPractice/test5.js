@@ -1,6 +1,6 @@
 function theFn(theP) {
-    return theP
+    return Number(theP)
 }
 
-let theArray=[1,2,3,4,5]
+let theArray='1234'
 console.log( theFn(theArray) );
