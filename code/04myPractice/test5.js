@@ -4,3 +4,4 @@ function theFn(theP) {
 
 let theArray='1234'
 console.log( theFn(theArray) );
+console.log( null === undefined );
