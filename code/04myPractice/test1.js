@@ -1,6 +1,6 @@
-function theFn(theP=25) {
-    return theP
-}
-let theA=35
-console.log( theFn(theA) );
+let theA='hahah'
+let theB='hahah'
 
+
+
+console.log( theB.indexOf( theA[1] ) );
