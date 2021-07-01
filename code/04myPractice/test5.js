@@ -1,30 +1,25 @@
-var MAX_CHAR = 26;
- 
-// function to return true if strings have
-// common substring and no if strings have
-// no common substring
-function twoStrings(s1, s2) {
- 
-  // vector for storing character occurrences
-  var v = Array(MAX_CHAR).fill(0);
- 
-  // increment vector index for every
-  // character of str1
-  for (var i = 0; i < s1.length; i++)
-    v[s1[i] - 'a'] = true;
- 
-  // checking common substring of str2 in str1
-  for (var i = 0; i < s2.length; i++)
-    if (v[s2[i] - 'a'])
-       return true;
-  
-  return false;       
+function theFn(theP=[4,5,6]) {
+  return theP
 }
- 
-// driver program
-var str1 = "hello";
-var str2 = "world";
-if (twoStrings(str1, str2))
-   document.write( "Yes");
-else
-   document.write("No");
+let theA=[1,2,3]
+console.log( theFn(theA) );
+
+function maxNetworkRank(A, B, N) {
+  const edgeCount = {};
+  let maxRank = 0;
+  const m = A.length;
+
+  for (let i = 0; i < m; i++) {
+      edgeCount[A[i]] = (edgeCount[A[i]] ? edgeCount[A[i]] : 0) + 1;
+      edgeCount[B[i]] = (edgeCount[B[i]] ? edgeCount[B[i]] : 0) + 1;
+  }
+
+  for (let j = 0; j < m; j++) {
+      const rank = edgeCount[A[j]] + edgeCount[B[j]] - 1;
+      if (rank > maxRank) {
+          maxRank = rank;
+      }
+  }
+
+  return maxRank;
+}
