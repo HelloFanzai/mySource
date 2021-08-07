@@ -1,3 +1,14 @@
-let thes1=112; 
-let theS2=[...thes1,4]; //[ '1', '1', '2' ]
-console.log(theS2);
+function thefn() {
+    var a = 1
+    return function(){
+        var b=2
+        a++
+        b++
+        console.log(a,b);
+    }
+}
+
+let test = thefn()
+test()
+test()
+test()
