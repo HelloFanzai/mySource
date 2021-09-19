@@ -1,5 +1,11 @@
-let theArr='123'
-console.log( Array.from(theArr,n=>n*1) );
 
-let theArr2='123'
-console.log( theArr2.split('').map(n=>n/1) );
+function test(){
+    for (var i = 0; i < 10; i++) {
+    	(function(j){//闭包
+    		setTimeout(function(){
+    			console.log(j);//分别输出i的值
+    		},500)		
+    	})(i);//闭包
+    };	
+};
+test();
