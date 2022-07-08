@@ -30,3 +30,4 @@ var rotate = function(nums, k) {
 
 nums = [1,2,3,4,5,6,7], k = 3
 console.log( rotate(nums,k) );
+console.log( 3 % 3 );

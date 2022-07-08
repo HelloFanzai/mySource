@@ -29,3 +29,29 @@ theInput = "((())())"
 // theInput = "([)()]"
 // theInput = "{{{{"
 console.log(myFn(theInput));
+
+
+
+function myFN( str ) {
+    let obj = {
+        '{' : '}',
+        '(' : ')',
+        '[' : ']',
+    }
+    let arr = []
+    for (const s of str) {
+        if ( obj[s] ) {
+            arr.push(s)
+        } else if ( Object.values(obj).includes(s) ) {
+            console.log( Object.values(obj).includes(s) );
+            let top = arr.pop()
+            if ( s !== obj[top]  ) {
+                return false
+            }
+        }
+    }
+    return arr.length == 0 
+}
+
+let theString = '{()[]}]'
+console.log( myFN(theString) );

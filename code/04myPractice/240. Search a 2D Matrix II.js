@@ -15,27 +15,32 @@ var searchMatrix = function(matrix, target) {
         }
         if ( target < matrix[i][j] ) {
             --j
+            console.log('--j=>', matrix[i][j], );
         } else {
             ++i
+            console.log('++j=>', matrix[i][j], );
         }
     }
     return false;
 };
 
 // var searchMatrix = function(matrix, target) {
-//     if ( matrix.length==0 ) {
-//         return false
-//     }
-//     for (let i = 0; i < matrix.length; i++) {
-//         if ( matrix[i].includes(target) ) {
+//     for (const subArr of matrix) {
+//     if ( subArr[subArr.length-1] >= target && subArr[0] <= target ) {
+//         if ( subArr.indexOf( target ) !== -1 ) {
 //             return true
-//         }    
+//         }
+//     }else{
+//         continue
 //     }
-//     return false
+//     // console.log( subArr );
+// }
+// return false
 // };
 
 m=[];
+m= [[1,4,7,11,15],[2,5,8,12,19],[3,6,9,16,22],[10,13,14,17,24],[18,21,23,26,30]];
 t=18;
-// console.log( searchMatrix(m,t) );
+console.log( searchMatrix(m,t) );
 // console.log( ( m.length==0 ) );
-console.log( ( m==0 ) );
+// console.log( ( m==0 ) );

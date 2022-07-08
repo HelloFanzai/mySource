@@ -81,9 +81,9 @@ console.log(!![1, 2].length); //logs true
 
 // 通过Object.keys来获取obj的长度
 var obj = {'name' : 'fly' , 'sex' : 'male' , 'age' : '14'};
-var arr = Object.keys(obj);
-console.log(arr); // ['name','sex','age']
-console.log(arr.length); //3
+var arr1 = Object.keys(obj);
+console.log(arr1); // ['name','sex','age']
+console.log(arr1.length); //3
 
 console.log(  );
 console.log( 4**3 ); // same with:Math.pow(4, 3)    output:64
