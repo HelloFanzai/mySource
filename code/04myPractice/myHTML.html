@@ -3,20 +3,58 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Map</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
+<style>
+    .active{
+        color: aqua;
+    }
+    .theOption{
+        background-color: red;
+    }
+</style>
+<script>
+
+    let theValue = 0
+    function theSelectingFn() {
+        
+        let theTemp = document.getElementsByClassName("theOption") 
+        
+        for (let i = 0; i < theTemp.length; i++) {
+            theTemp[i].classList.remove('active')
+        }
+        
+        theValue >=4 ? theValue = 1 : theValue++
+        theTemp[theValue-1].classList.toggle('active')  
+
+        document.getElementById('showingResult').innerHTML = `the Result is :${theValue}`
+
+
+        
+    }
+
+
+
+
+</script>
 
 <body>
-    <div id="cont">
-        123
+
+    <div class="theAllOp" id="idOftheAllOp" >
+        <div class="theOption" >1</div>
+        <div class="theOption" >2</div>
+        <div class="theOption" >3</div>
+        <div class="theOption active" >4</div>
     </div>
+    <button onclick="theSelectingFn()" >Run</button>
+    <p id="showingResult" >the Result is :</p>
+
+
+
+<hr>
+
 </body>
 
 </html>
-<script>
-    let cont = document.getElementById('cont')
-    let m = new Map()
-    m.set(cont, 'hello,world')
-    console.log(m)
-    console.log(m.get(cont))
-</script>

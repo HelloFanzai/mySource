@@ -28,7 +28,7 @@ function myFn(S) {
 theInput = "((())())"
 // theInput = "([)()]"
 // theInput = "{{{{"
-console.log(myFn(theInput));
+// console.log(myFn(theInput));
 
 
 
@@ -43,13 +43,16 @@ function myFN( str ) {
         if ( obj[s] ) {
             arr.push(s)
         } else if ( Object.values(obj).includes(s) ) {
-            console.log( Object.values(obj).includes(s) );
+            console.log( arr, Object.values(obj).includes(s) );
             let top = arr.pop()
             if ( s !== obj[top]  ) {
                 return false
             }
         }
     }
+    setTimeout(() => {
+        
+    }, timeout);
     return arr.length == 0 
 }
 

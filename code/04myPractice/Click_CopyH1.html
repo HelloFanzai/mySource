@@ -26,11 +26,15 @@
         .dropdown:hover .dropdown-content {
             display:block;
         }
+        .theT{
+            color: red;
+        }
     </style>
     <script>
         function addMore() {
             console.log('yes');
             let newH1 = document.createElement("h1");
+            newH1.classList.add('theT')
             let theShowingDiv=document.getElementById('theShowingDiv')
             // document.body.appendChild(newH1).innerHTML = document.getElementById('baba').innerHTML;
             theShowingDiv.appendChild(newH1).innerHTML = document.getElementById('baba').innerHTML;

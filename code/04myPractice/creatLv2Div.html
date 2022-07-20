@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    .theOption{
+        background-color: red;
+    }
+
+    .theImg{
+        height: 30px;
+        width: 30px;
+    }
+
+</style>
+
+
+<script>
+
+
+    let myArr = [11,12,13,14]
+    function showSubDiv() {
+
+        for (let i = 0; i < myArr.length; i++) {
+            let theNewDiv = document.createElement('div')
+            theNewDiv.classList.add('theOption')
+
+            let theSubInput = document.createElement('input')
+            theSubInput.value = myArr[i]
+
+            let theSubBT = document.createElement('button')
+            theSubBT.innerHTML = myArr[i]
+            let theText = `alert( ${myArr[i]} )`
+            theSubBT.setAttribute("onclick", theText );
+
+            let theSubIgm = document.createElement('img')
+            theSubIgm.setAttribute('src','../images/image3.jpg')
+            theSubIgm.classList.add('theImg')
+
+
+            // theNewDiv.createElement('p').innerHTML = 666
+
+            
+            document.getElementById('theparentId').appendChild(theNewDiv).innerHTML = myArr[i]
+            theNewDiv.appendChild(theSubInput)
+            theNewDiv.appendChild(theSubBT)
+            theNewDiv.appendChild(theSubIgm)
+            
+        }
+
+    }
+
+
+</script>
+
+<body>
+
+
+    <button onclick="showSubDiv()" >
+        Run2
+    </button>
+    <div id="theparentId">
+        
+    </div>
+
+<hr>
+
+</body>
+
+</html>
