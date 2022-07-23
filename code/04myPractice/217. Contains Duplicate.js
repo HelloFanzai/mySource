@@ -15,5 +15,19 @@
     }
     return false
 };
+
+
+// var containsDuplicate = function (nums) {
+
+//     for (let i = 0; i < nums.length; i++) {
+        
+//         // if (  nums.indexOf(nums[i]) !== nums.lastIndexOf(nums[i])  ) {
+//         if (  nums.indexOf(nums[i])>-1 && nums.indexOf(nums[i],i+1)>-1  ) {
+//             return true
+//         }
+//     }
+//     return false
+// };
+
 let nums=[1,2,3,4]
 console.log( containsDuplicate(nums) );

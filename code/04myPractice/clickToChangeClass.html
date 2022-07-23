@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .theOption{
+        background-color: red;
+        float: left;
+        width: 200px;
+        text-align: center;
+    }
+    .active{
+        color:blue;
+        background-color: pink;
+    }
+</style>
+<script>
+
+    let theValue = 0
+    function theSelectingFn() {
+        
+        let theTemp = document.getElementsByClassName("theOption") 
+        
+        for (let i = 0; i < theTemp.length; i++) {
+            theTemp[i].classList.remove('active')
+        }
+        
+        // theValue >=4 ? theValue = 1 : theValue++
+        theTemp[theValue].classList.toggle('active')  
+
+        document.getElementById('showingResult').innerHTML = `the Result is :${theValue+1}`
+        
+    }
+
+    function leftOrRight( theP ) {
+
+        if ( theP == 'left' ) {
+            theValue <= 0 ? theValue = 3 : theValue--
+            theSelectingFn()
+        }
+        if ( theP == 'right' ) {
+            theValue >=3 ? theValue = 0 : theValue++
+            theSelectingFn()
+        }
+
+
+        
+
+        
+    }
+
+
+
+
+</script>
+
+<body>
+
+    <div class="theAllOp" id="idOftheAllOp" >
+        <div class="theOption" >1</div>
+        <div class="theOption" >2</div>
+        <div class="theOption" >3</div>
+        <div class="theOption active" >4</div>
+    </div>
+    <hr><br>
+        <button onclick="leftOrRight('left')" >Left</button>
+        <button onclick="theSelectingFn()" >Run</button>
+        <button onclick="leftOrRight('right')" >Right</button>
+    <br>
+    <p id="showingResult" >the Result is :</p>
+
+
+
+<hr>
+
+</body>
+
+</html>

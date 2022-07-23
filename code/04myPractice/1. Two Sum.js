@@ -17,7 +17,8 @@
 const twoSum = (nums, target) => {
     const ht = {};
     for (let i = 0; i < nums.length; i++) {
-        if (target - nums[i] in ht) {
+        // if (target - nums[i] in ht) {
+        if ( ht[target - nums[i]]  ) {
             console.log( 'the HT is: ',ht );
             return [ht[target - nums[i]], i];
             // return [i,ht[target - nums[i]]];
