@@ -2,7 +2,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-var thirdMax = function (nums) {
+ var thirdMax = function (nums) {
     // Math.max() without any args will be -Infinity
     let the1st = Math.max()
     let the2nd = Math.max()
@@ -23,8 +23,7 @@ var thirdMax = function (nums) {
             the3th = n
         }
     }
-    console.log( the3th, the1st);
-    return isNaN(the3th) ? the1st : the3th
+    // console.log( the3th, the1st);
     return the3th === Math.max() ? the1st : the3th
 };
 
