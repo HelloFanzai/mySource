@@ -65,17 +65,5 @@ theArr3.sort((a, b) => (a - b)) //箭头函数 只有一句表达式 使用圆�
 console.log(theArr1);
 console.log(theArr2);
 console.log(theArr3);
-let arr33 = [11,33,22,44]
-let new33 = []
-new33 = arr33.map( (v,i) => {
-    if (v>11) {
-        
-        return v+=1
-    } else {
-        
-        return v-=2
-    }
-})
-console.log(new33,arr33);
 
 
