@@ -106,6 +106,6 @@ let theInput= [
     
       
      
-    return theObj  //  {  'john1': 4,'john2': 6, }
+    return theObj  //  {  'john1': 4,'john2': 6, } myMxd123 Mxd@mima123
   
   }

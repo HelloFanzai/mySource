@@ -1,31 +1,47 @@
-function getMinSize(arr) {
-    // Write your code here
-
-    let theMin = Math.min(...arr)
-    let theMax = Math.max(...arr)
-    let theResult = []
-
-
-    while( theMin*2 <= theMax && arr.includes(theMax)&&arr.includes(theMin) ) {
-     
-
-        
-        
-        theMin = Math.min(...arr)
-        theMax = Math.max(...arr)
-        theResult.push(theMax)
-
-        arr.splice(arr.indexOf(theMin), 1)
-        arr.splice(arr.indexOf(theMax), 1)
-
-
-
-        console.log( 'arr:',arr );
+function myFn(theI) {
+    let theObj = {
+        add:function(theInputOfAdd) {
+            console.log('did add');
+            return theInputOfAdd
+        },
+        sub:function(theInputOfSub) {
+            console.log('did add');
+            return theInputOfSub
+        },
+        get:function() {
+            console.log('did get');
+        }
     }
-
-
-    return theResult
+    console.log('hi');
+    return theObj
 }
 
-arr = [4, 7, 8, 6]
-console.log( getMinSize(arr)  );
+let theInput = 123
+let theF = myFn()
+theF.add(theInput)
+theF.sub(theInput)
+theF.get()
+// theF()
+
+// var Person = function() {};
+
+function thePerson() {
+    return 666
+}
+
+thePerson.prototype.setAge = function(age){
+    this.age = age; 
+    return this;
+}
+thePerson.prototype.setWeight = function(weight){
+    this.weight = weight; 
+    return this;
+}
+thePerson.prototype.get = function(){
+    return `{age: ${this.age}, weight: ${this.weight}}`;
+}
+
+var person = new thePerson();
+var des = person.setAge(10).setWeight(30).get();
+// console.log(des); // {age: 10, weight: 30}
+// console.log(thePerson()); // 666

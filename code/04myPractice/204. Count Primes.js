@@ -27,5 +27,5 @@ var countPrimes = function (n) {
 
 
 
-n = 2
+n = 21
 console.log(countPrimes(n));

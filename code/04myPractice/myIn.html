@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    .theNumbers{
+        background-color: gray;
+        
+    }
+    .theOp{
+        background-color: orange;
+    }
+    .the1Stline{
+        height: 80px;
+        width: 64px;
+        margin: 0px;
+        border: 0px;
+        padding: 0px;
+    }
+    .theOtherline{
+        height: 80px;
+        width: 80px;
+    }
+    .theCssOfInput{
+        background-color: black;
+        color: lightgray;
+        height: 80px;
+        width: 100%;
+    }
+    button{
+        color: white;
+    }
+</style>
+<script>
+    let theResult = ''
+    let theResult2 = ''
+    let theResultForMore = ''
+    // let theStepOfOp = ''
+    function theNum(theInput) {
+
+        theResult += theInput
+        document.getElementById('theShowing').value = theResult
+
+    }
+    function theOp(theInput) {
+
+
+        switch (theInput) {
+            // case '+':
+            //     theResult = theResult*1 + theResult2*1
+            //     theResult2 += theResult*1
+            //     theResult = ''
+            //     theStepOfOp = '+'
+            //     break;
+            case '-':
+                theResult = theResult*1 + theResult2*1
+                theResult2 = theResult
+                theResult = ''
+                theStepOfOp = '-'
+                break;
+            case '*':
+                theResult = theResult*1 + theResult2*1
+                theResult2 += theResult*1
+                theResult = ''
+                theStepOfOp = '*'
+                
+                break;
+            case '/':
+                theResult = theResult*1 + theResult2*1
+                theResult2 += theResult*1
+                theResult = ''
+                theStepOfOp = '/'
+                
+                break;
+            case '=':
+                 switch (theStepOfOp) {
+                    case '+':
+                        theResult = theResult*1 + theResult2*1
+                        break;
+                    case '-':
+                        theResult = theResult2*1 - theResult*1 
+                        break;
+                    case '*':
+                        theResult = theResult*1 * theResult2*1
+                        break;
+                    case '/':
+                        theResult = theResult2*1 / theResult*1 
+                        break;
+                 
+                    default:
+                        break;
+                 }
+
+                // theResult2 += theResult
+                // theResult2 = eval('1+(4-2)')
+                // document.getElementById('theShowing').value = theResult2
+                document.getElementById('theShowing').value = theResult 
+                break;
+        
+            default:
+                theResult = theResult*1 + theResult2*1
+                theResult2 = theResult
+                theResult = ''
+                theStepOfOp = theInput
+                break;
+        }
+        
+    }
+
+
+
+
+    function theC() {
+        theResult = ''
+        theResult2 = '222'
+        document.getElementById('theShowing').value = '0'
+    }
+</script>
+
+<body>
+    
+
+   
+
+    <div style="width: 400px;" >
+
+        <div>
+            <input class="theCssOfInput" id="theShowing" type="text">
+        </div>
+
+        <div>
+            <button class="theOp the1Stline" onclick=" theC() " >C</button>
+            <button class="theOp the1Stline" >(</button>
+            <button class="theOp the1Stline" >)</button>
+            <button class="theOp the1Stline" >%</button>
+            <button class="theOp the1Stline" onclick=" theOp('/') " >/</button>
+        </div>
+        <div>
+            <button class="theNumbers theOtherline" onclick="theNum(7)" >7</button>
+            <button class="theNumbers theOtherline" onclick="theNum(8)" >8</button>
+            <button class="theNumbers theOtherline" onclick="theNum(9)" >9</button>
+            <button class="theOp theOtherline" onclick=" theOp('*') " >*</button>
+        </div>
+        <div>
+            <button class="theNumbers theOtherline" onclick="theNum(4)" >4</button>
+            <button class="theNumbers theOtherline" onclick="theNum(5)" >5</button>
+            <button class="theNumbers theOtherline" onclick="theNum(6)" >6</button>
+            <button class="theOp theOtherline" onclick=" theOp('-') " >-</button>
+        </div>
+        <div>
+            <button class="theNumbers theOtherline" onclick="theNum(1)" >1</button>
+            <button class="theNumbers theOtherline" onclick="theNum(2)" >2</button>
+            <button class="theNumbers theOtherline" onclick="theNum(3)" >3</button>
+            <button class="theOp theOtherline" onclick=" theOp('+') ">+</button>
+        </div>
+        <div>
+            <button class="theNumbers theOtherline" >.</button>
+            <button class="theNumbers theOtherline" onclick="theNum(0)" > 0 </button>
+            <button class="theNumbers theOtherline" > < </button>
+            <button class="theOp theOtherline" onclick="theOp('=')" > = </button>
+        </div>
+    </div>
+    
+
+</body>
+</html>
