@@ -1,0 +1,102 @@
+<html>
+
+<head>
+</head>
+<style>
+    .theRed {
+        /* background-color: red; */
+        height: 200px;
+        width: 200px;
+        /* z-index: -12; */
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+    }
+    .theWhite{
+        background-color: red;
+        width: 190px;
+        height: 190px;
+        position: relative;
+        left: 5px;
+        top: 5px;
+
+    }
+
+    .theRed::before {
+        background-color: gold;
+        content: '';
+        position: absolute;
+        width: 150px;
+        height: 250px;
+        left: 50%;
+        top: 50%;
+        z-index: -2;
+        transform-origin: 0px 0px;
+        animation: theZHuan 3s infinite linear;
+    }
+    .theRed::after{
+        content: '';
+        background-color:white;
+        width: 190px;
+        height: 190px;
+        left: 5px;
+        top: 5px;
+        position: absolute;
+        z-index: -1;
+    }
+
+
+
+    @keyframes theZHuan {
+        to {
+            transform: rotate(1turn);
+        }
+    }
+
+</style>
+
+<body>
+
+    <div class="main">
+        <div class="ul">
+            <ul>
+                <li><a href="#">test 11</a></li>
+                <li><a href="#">test 2</a></li>
+                <li><a href="#">test 3</a></li>
+            </ul>
+
+            <ul>
+                <li><a href="#">test 4</a></li>
+                <li><a href="#">test 5</a></li>
+                <li><a href="#">test 6</a></li>
+            </ul>
+            
+            <ul>
+                <li><a href="#">test 7</a></li>
+                <li><a href="#">test 9</a></li>
+                <li><a href="#">test 10</a></li>
+            </ul>
+        </div>
+        <input type="text" id="theHaha" oninput="haha()"  onfocusout="value=0">
+    </div>
+    <script>
+        function haha() {
+            let theD = document.getElementById('theHaha')
+            console.log( isNaN(theD.value),theD.value );
+            if ( !isNaN(theD.value) ) {
+                document.getElementById('theHaha').style.backgroundColor = 'red'
+            }else{
+                document.getElementById('theHaha').style.backgroundColor = 'white'
+
+            }
+        }
+    </script>
+
+    <div class="theRed">
+        <div class="theWhite">
+            1231
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,12 +1,12 @@
-let item1 ={
-    'item1' :1,
-}
-let item2 ={
-    'item2' :2,
-    'item21' :21,
-    'item22' :22,
-    'item23' :23,
-}
+let person = [{name: "john"}, {name: "jane"}, {name: "imelda"}, {name: "john"}];
 
-console.log( item2[ theTemp ] );
-console.log( item2.item23 );
+function removeDuplicates(data, key) {
+  
+  return 'abs'.push('1')
+
+};
+
+console.log( removeDuplicates(person, item => item.name) );
+
+
+

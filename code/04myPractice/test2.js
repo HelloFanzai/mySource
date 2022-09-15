@@ -18,10 +18,10 @@ function myFn(theI) {
 
 let theInput = 123
 let theF = myFn()
-theF.add(theInput)
-theF.sub(theInput)
-theF.get()
-// theF()
+// theF.add(theInput)
+// theF.sub(theInput)
+// theF.get()
+theF
 
 // var Person = function() {};
 

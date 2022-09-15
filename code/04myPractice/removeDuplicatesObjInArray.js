@@ -53,6 +53,30 @@ const result3_2 = arr.filter((thing, index, self) => {
 )
 console.log('result3_2:', result3_2)
 
+let result4 = []
+let IdOfResult4 = []
+for (const theItem of arr) {
+    if ( !IdOfResult4.includes(theItem.id) ) {
+        result4.push(theItem)
+        IdOfResult4.push(theItem.id)
+    }
+}
+console.log('result4:', result4)
+console.log('result4_id:', IdOfResult4)
+
+let result4_2 = []
+let IdOfResult4_2 = []
+arr.map(theItem=>{
+    // console.log( theItem );
+    if ( !IdOfResult4_2.includes(theItem.id) ) {
+        result4_2.push(theItem)
+        IdOfResult4_2.push(theItem.id)
+    }
+})
+
+console.log('result4_2:', result4_2)
+console.log('result4_id_2:', IdOfResult4_2)
+
 
 let theArr1 = [1, 3, 2]
 let theArr2 = [11, 33, 22]

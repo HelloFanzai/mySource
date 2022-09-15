@@ -49,6 +49,6 @@ function isBeautifulString(inputString){
     // return true;
 }
 
-inputString = 'xxy'
+inputString = 'bbbaacdafe'
 
 console.log( isBeautifulString(inputString) );

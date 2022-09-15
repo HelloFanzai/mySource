@@ -23,17 +23,20 @@ const checkGuess = (solution, guess) => {
             theG = theG.replace(theG[i],'#')
             theA.push('correct')
         }else if ( theS.includes( theG[i] ) ) {
-            console.log( theS +' @ ' + theG);
+            // console.log( theS +' @ ' + theG);
             theS = theS.replace(theG[i],'@')
             theG = theG.replace(theG[i],'#')
             theA.push('present')
-            console.log( theS +' # ' + theG);
+            // console.log( theS +' # ' + theG);
         } else {
             
             theA.push('absent')
         }
     }
     
+    console.log(theS);
+    console.log(theG);
+
     return theA
 };
 
