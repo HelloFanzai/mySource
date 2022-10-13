@@ -16,11 +16,11 @@ function myFn(theI) {
     return theObj
 }
 
-let theInput = 123
+// let theInput = 123
 let theF = myFn()
 // theF.add(theInput)
 // theF.sub(theInput)
-// theF.get()
+theF.get()
 theF
 
 // var Person = function() {};
