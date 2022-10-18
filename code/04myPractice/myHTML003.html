@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+.btn{
+    width: 100px;
+    height: 50px;
+    /* background-color: pink; */
+}
+
+.btn:hover{
+    margin-left: 3px !important; 
+}
+
+
+.parentBtnDiv:hover .btn{
+    margin-left: 330px;
+    /* transform: translate(110%,0%);  */
+    background-color: yellow;
+
+}
+
+.center{
+    position: absolute; 
+    transform: translate(-50%,-50%); 
+    left: 50%;
+    top: 50%;
+}
+</style>
+
+<body>
+    
+    <div class="center" style="height: 200px; width: 400px; background-color: gray; text-align: center;" >
+        <div >
+            <input type="text" required >
+        </div>
+        <div class="parentBtnDiv" >
+            <button class="btn" onclick="alert('You did')" onmousemove="mouseIn(this)" onmouseout="mouseOut(this)" >Test Button</button>
+        </div>
+    </div>
+
+    <script>
+        function mouseIn(res) {
+            // res.style.position = 'absolute';
+            // res.style.left = '300px';
+            // margin-left: 250px;
+            // res.style.backgroundColor = 'pink'
+            // console.log( res );
+            
+        }
+        function mouseOut(res) {
+            // res.style.left = '100px';
+            // res.style.backgroundColor = 'red'
+        }
+    </script>
+
+</body>
+</html>
