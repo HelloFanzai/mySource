@@ -8,49 +8,31 @@
 </head>
 
 <style>
-    .rel{
+    /* .rel{
         position: relative;
         border: 1px solid black;
         
-    }
+    } */
     .abs{
         position: absolute;
-        border: 1px solid black;
+        border: 1px solid red;
+        right: 5px;
+        
     }
 </style>
 
 <body>
+    <hr><br><br>
+    <div style="background-color: blue; width: 300px;height: 300px;transform: translate(0%,0%);" >
+        <div style="background-color: pink; width: 200px;height: 200px;" >
+            <div class="abs" >
+                absolute
+            </div>
+        </div>
+    </div>
     
-    <div style="background-color: pink; width: 200px;height: 200px;transform: translate(50px,0px);" >
-        <div class="abs" style="left: 50px;" >
-            absolute
-        </div>
-    </div>
-<br>
-<br>
-    <div class="rel" style="left: 50px;" >
-        relative
-    </div>
+ 
 
-    <hr>
-    <br>
-    <br>
-
-    <div style="background-color: pink;" >
-        <div class="rel" style="left: 50px;" >
-            relative
-        </div>
-    </div>
-
-    <div class="abs" style="left: 50px;" >
-        absolute
-    </div>
-
-    <hr>
-
-    <div style="position: absolute; width: 50px; height: 50px; left: 50%;top: 50%;" >
-        <p>水平</p>
-    </div>
 
 </body>
 </html>
