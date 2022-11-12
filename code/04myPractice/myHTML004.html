@@ -6,33 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
-<style>
-    /* .rel{
-        position: relative;
-        border: 1px solid black;
-        
-    } */
-    .abs{
-        position: absolute;
-        border: 1px solid red;
-        right: 5px;
-        
-    }
-</style>
-
 <body>
-    <hr><br><br>
-    <div style="background-color: blue; width: 300px;height: 300px;transform: translate(0%,0%);" >
-        <div style="background-color: pink; width: 200px;height: 200px;" >
-            <div class="abs" >
-                absolute
-            </div>
-        </div>
-    </div>
+
+    <input id="email" type="email" name="email" value ='2' >
+    <button type="button" ></button>
     
- 
+    <script>
+        console.log( email );
+        response = JSON.stringify({
+            user: {
 
-
+                email: email
+            }
+        });   
+        console.log( response );
+        </script>
 </body>
 </html>

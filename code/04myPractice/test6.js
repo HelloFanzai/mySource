@@ -4,3 +4,4 @@ function theFn1( input ) {
 
 let theInput = 123
 console.log( theFn1( theInput ) );
+console.log( theFn1.length );
