@@ -1,5 +1,5 @@
-function theFn1( input ) {
-  return input
+function theFn1( input1,input2,input3, ) {
+  return input1
 }
 
 let theInput = 123
