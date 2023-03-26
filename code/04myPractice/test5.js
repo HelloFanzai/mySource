@@ -6,4 +6,7 @@ function sum(a,b) {
   
   console.log(sum(3)(5));
   console.log(sum(3,5));
+
+  let uuid = self.crypto.randomUUID();
+  console.log(uuid);
   

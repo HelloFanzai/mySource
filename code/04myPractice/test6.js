@@ -1,7 +1,29 @@
-function theFn1( input1,input2,input3, ) {
-  return input1
+// async & await
+async function myfn1() {
+  
+  try {
+    let newData1 =  new Promise((resolve,reject ) => {
+      setTimeout(() => {
+        console.log('222');
+        reject('No')
+        resolve('Yes')
+      }, 0);  
+    }).catch((value)=>{
+      console.log('value',value);
+    })
+    
+    return console.log('newData1',newData1);
+    
+  } catch (error) {
+    
+    console.log('error',error);
+  } finally{
+    console.log('finally');
+  }
+  
+  
+  
+  // console.log('111');
 }
 
-let theInput = 123
-console.log( theFn1( theInput ) );
-console.log( theFn1.length );
+myfn1()
