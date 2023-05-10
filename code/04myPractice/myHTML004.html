@@ -6,11 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    #myInput1{
+
+        height: 80px;
+        width: 100px;
+        /* border: 1px solid red; */
+        outline: none;
+    }
+ 
+    #myInput1:hover{
+
+        border: 1px solid pink;
+        /* height: calc( 80px - px ); */
+        /* width: calc( 100px - 2px ); */
+
+    }
+    #myInput1:focus{
+
+        /* border: 2px solid red; */
+        /* height: calc( 80px - 1px );
+        width: calc( 100px - 1px ); */
+        background-color: pink;
+        
+
+    }
+
+</style>
 <body>
 
-    <input id="email" type="email" name="email" value ='2' >
+    <input id="myInput1" type="text">
+
+    <!-- <input id="email" type="email" name="email" value ='2' >
     <button type="button" ></button>
-    
+     -->
     <script>
         console.log( email );
         response = JSON.stringify({
