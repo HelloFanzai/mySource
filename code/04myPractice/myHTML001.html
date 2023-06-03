@@ -1,59 +1,27 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Vue学习</title>
-    <!-- <script src="https://unpkg.com/vue/dist/vue.js"></script> -->
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <style type="text/css">
-        .drag {
-            width: 100px;
-            height: 100px;
-            position: absolute;
-            top: 0;
-            left: 0;
-            background-color: red;
-            background: url(at-all.png);
-            background-size: cover;
-        }
-
-        .drag:hover {
-            width: 100px;
-            height: 100px;
-            position: absolute;
-            top: 0;
-            left: 0;
-            cursor: pointer;
-            background-color: red;
-            background: url(at-all.png);
-            background-size: cover;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
-<div id="app1" v-drag class="drag"></div>
-<button>123</button>
-<script>
-    // 拖动div元素
-    let vm1 = new Vue({
-        el: '#app1',
-        // 自定义指令
-        directives: {
-            drag(el, bindings) {
-                el.onmousedown = function (e) {
-                    var disx = e.pageX - el.offsetLeft;
-                    var disy = e.pageY - el.offsetTop;
-                    document.onmousemove = function (e) {
-                        el.style.left = e.pageX - disx + 'px';
-                        el.style.top = e.pageY - disy + 'px';
+<body>
+    
+    <button onclick="showIP()" >Test IP</button>
 
-                        document.onmousemove = document.onmouseup = null;
-                    }
-                }
-            }
-        }
-    })
-</script>
+    <script>
+
+
+fetch('https://api.ipify.org/?format=json')
+  .then(response => response.json())
+  .then(data => {
+    const userIP = data.ip;
+    console.log(userIP);
+  });
+
+
+    </script>
+
 </body>
-
 </html>
