@@ -1,1 +1,1 @@
-let myA = 1234
+let myA = 12
