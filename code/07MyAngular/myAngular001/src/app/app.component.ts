@@ -16,9 +16,9 @@ export class AppComponent {
     this.currentIndex = (this.currentIndex + 1) % this.lights.length;
     this.currentLight = this.lights[this.currentIndex];
   }
+
   autoBt() {
     if (this.isRunning) {
-      // 停止
       this.isRunning = false;
       clearTimeout(this.timer);
       return;
@@ -27,18 +27,19 @@ export class AppComponent {
     this.isRunning = true;
     const next = () => {
       if (!this.isRunning) return;
+      this.nextBt()
       switch (this.currentLight) {
+
         case 'red':
-          this.currentLight = 'yellow';
-          this.timer = setTimeout(next, 2000);
+          this.timer = setTimeout(next, 1500);
           break;
-        case 'yellow':
-          this.currentLight = 'green';
-          this.timer = setTimeout(next, 1000);
+
+        case 'yellow':  
+          this.timer = setTimeout(next, 500);
           break;
+
         case 'green':
-          this.currentLight = 'red';
-          this.timer = setTimeout(next, 3000);
+          this.timer = setTimeout(next, 2500);
           break;
       }
     };
