@@ -1,0 +1,9 @@
+<div class="circle-container">
+  <div *ngFor="let circle of lights, let i = index" 
+  class="circle"
+  [ngStyle]="{'background-color':currentLight === circle ? currentLight : ''}"
+  ></div>
+  
+</div>
+<button (click)="nextBt()" >Next</button>
+<button (click)="autoBt()" >Auto</button>
