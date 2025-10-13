@@ -1,0 +1,22 @@
+<li class="list-group-item">
+    <div class="mb-2 fw-bold">
+        {{ myData.items }} - {{ myData.price }} - {{ myData.id }} - {{ myData.date }} - {{ myData.note }}
+    </div>
+    <div class="row g-2">
+        <div class="col-md-3">
+            <input type="text" class="form-control" [(ngModel)]="myData.items" placeholder="Update Items">
+        </div>
+        <div class="col-md-3">
+            <input type="text" class="form-control" [(ngModel)]="myData.price" placeholder="Update Price">
+        </div>
+        <div class="col-md-3">
+            <input type="text" class="form-control" [(ngModel)]="myData.id" placeholder="Update ID">
+        </div>
+        <div class="col-md-3">
+            <input type="text" class="form-control" [(ngModel)]="myData.date" placeholder="Update Date" readonly>
+        </div>
+    </div>
+    <div class="mt-2">
+        <input type="text" class="form-control" [(ngModel)]="myData.note" placeholder="Update Note">
+    </div>
+</li>

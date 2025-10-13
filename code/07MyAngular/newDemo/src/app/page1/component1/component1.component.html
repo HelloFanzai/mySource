@@ -1,0 +1,39 @@
+<p>component1 works!</p>
+
+<input [(ngModel)]="searchPrice" placeholder="Search by price ($)">
+<p>Count: {{ filteredOrders.length }}</p>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Item</th>
+    <th>Price</th>
+    <th>Customer</th>
+    <th>Destination</th>
+    <th>Status</th>
+  </tr>
+  <tr *ngFor="let order of pagedData" (click)="myClick(order)" style="cursor:pointer;">
+    <td>{{ order.id }}</td>
+
+    <td *ngIf="!myChange" (click)="myChangeFn()" >{{ order.item }}</td>
+    <input *ngIf="myChange" placeholder="123" (click)="myChangeFn()" >
+
+    <td>${{ order.price ? (order.price / 100).toFixed(2) : 'N/A' }}</td>
+    <td>{{ order.customer }}</td>
+    <td>{{ order.destination }}</td>
+    <td>{{ order.event_name }}</td>
+  </tr>
+</table>
+
+<nav>
+  <ul class="pagination justify-content-center">
+    <li class="page-item" [class.disabled]="currentPage === 1">
+      <button class="page-link" (click)="setPage(currentPage - 1)" [disabled]="currentPage === 1">Prev</button>
+    </li>
+    <li class="page-item" [class.disabled]="currentPage * pageSize >= filteredOrders.length">
+      <button class="page-link" (click)="setPage(currentPage + 1)" [disabled]="currentPage * pageSize >= filteredOrders.length">Next</button>
+    </li>
+  </ul>
+</nav>
+
+

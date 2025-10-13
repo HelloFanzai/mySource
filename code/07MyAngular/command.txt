@@ -46,3 +46,15 @@ ng build --aot   
 
 ng build --prod   
   angular预编译    取消console等显示  尽可能合并相同功能代码    代码体积最小 
+
+
+Angular 12 以后 发布GitHub pages:
+ng build --configuration production --base-href ./
+
+
+npm install json-server
+json-server --watch db.json --port 3000
+
+
+npm install bootstrap
+

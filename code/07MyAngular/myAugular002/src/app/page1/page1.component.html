@@ -1,0 +1,21 @@
+<div class="container mt-4">
+  <div class="mb-3">
+    <input type="text" class="form-control" [(ngModel)]="serachID" placeholder="Enter ID">
+  </div>
+
+  <div class="mb-3">
+    <button class="btn btn-primary me-2" (click)="getData()">Data</button>
+    <button class="btn btn-success me-2" (click)="addData()">Add</button>
+    <button class="btn btn-warning me-2" (click)="updeLastData()">Update</button>
+    <button class="btn btn-danger" (click)="deleteLastData()">Delete</button>
+  </div>
+
+  <h2 class="mt-4">Orders</h2>
+  <ul class="list-group">
+    <li *ngFor="let client of myData" class="list-group-item">
+      <a [routerLink]="['/page1', client.id]" class="text-decoration-none">
+        {{ client.items }} - {{ client.price }} - {{ client.id }}
+      </a>
+    </li>
+  </ul>
+</div>
